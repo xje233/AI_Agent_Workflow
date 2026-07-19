@@ -157,3 +157,22 @@ def send_email(content: str) -> str:
 
 
 ALL_TOOLS = [search_tool, query_db, analyze_doc, run_python, send_email]
+
+KNOWLEDGE_TOOLS = [search_tool]
+DATA_TOOLS = [query_db]
+DOCUMENT_TOOLS = [analyze_doc, search_tool]
+CODE_TOOLS = [run_python]
+NOTIFICATION_TOOLS = [send_email]
+
+
+def select_tools(question: str):
+    text = question.lower()
+    if any(word in text for word in ("知识库", "文档", "资料", "搜索", "检索", "文件")):
+        return KNOWLEDGE_TOOLS
+    if any(word in text for word in ("sql", "数据库", "统计", "查询数据")):
+        return DATA_TOOLS
+    if any(word in text for word in ("python", "计算", "脚本", "运行代码")):
+        return CODE_TOOLS
+    if any(word in text for word in ("邮件", "通知", "发送")):
+        return NOTIFICATION_TOOLS
+    return ALL_TOOLS

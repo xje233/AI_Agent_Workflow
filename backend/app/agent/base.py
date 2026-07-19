@@ -5,7 +5,9 @@ from langchain.agents import AgentExecutor, create_tool_calling_agent
 from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder
 from app.config import get_settings
 from app.agent.tools import ALL_TOOLS
+from app.agent.tools import select_tools
 from app.agent.memory import RedisConversationMemory
+from app.agent.llm_client import get_client
 
 settings = get_settings()
 
@@ -89,21 +91,26 @@ PROMPT = ChatPromptTemplate.from_messages([
 
 @lru_cache(maxsize=4)
 def get_llm(temperature: float = 0.3):  # Reuse the HTTP client across requests.
-    return ChatOpenAI(
-        model=settings.model_name,
-        temperature=temperature,
-        openai_api_key=settings.openai_api_key,
-        base_url=settings.openai_base_url,
-        streaming=True,
-    )
+    options = {
+        "model": settings.model_name,
+        "temperature": temperature,
+        "openai_api_key": settings.openai_api_key,
+        "base_url": settings.openai_base_url,
+        "streaming": True,
+    }
+    client = get_client()
+    if client is not None:
+        options["http_async_client"] = client
+    return ChatOpenAI(**options)
 
 
-def create_agent(memory: RedisConversationMemory, temperature: float = 0.3, verbose: bool = False):
+def create_agent(memory: RedisConversationMemory, temperature: float = 0.3, verbose: bool = False, tools=None):
+    tools = tools or ALL_TOOLS
     llm = get_llm(temperature)
-    agent = create_tool_calling_agent(llm=llm, tools=ALL_TOOLS, prompt=PROMPT)
+    agent = create_tool_calling_agent(llm=llm, tools=tools, prompt=PROMPT)
     return AgentExecutor(
         agent=agent,
-        tools=ALL_TOOLS,
+        tools=tools,
         memory=memory,
         verbose=verbose,
         handle_parsing_errors=True,

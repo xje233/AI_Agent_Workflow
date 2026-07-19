@@ -5,10 +5,13 @@ import uuid
 from typing import AsyncGenerator
 
 from sqlalchemy import select
+from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
 
-from app.agent.base import create_agent
+from app.agent.base import SYSTEM_PROMPT, create_agent, get_llm
 from app.agent.guard import guard
 from app.agent.memory import RedisConversationMemory
+from app.agent.tools import ALL_TOOLS, select_tools
+from app.config import get_settings
 from app.database import get_sessionmaker
 from app.models.conversation import Conversation
 from app.models.message import Message
@@ -100,6 +103,32 @@ class ChatService:
         metrics[name] = time.perf_counter()
 
     @staticmethod
+    def count_tokens(value: str) -> int:
+        try:
+            import tiktoken
+
+            encoding = tiktoken.encoding_for_model(get_settings().model_name)
+        except Exception:
+            try:
+                encoding = tiktoken.get_encoding("cl100k_base")
+            except Exception:
+                return 0
+        return len(encoding.encode(value))
+
+    @classmethod
+    def tool_token_count(cls, tools: list) -> int:
+        schemas = []
+        for tool in tools:
+            schema = getattr(tool, "args_schema", None)
+            if schema is not None:
+                try:
+                    schema = schema.model_json_schema()
+                except AttributeError:
+                    schema = schema.schema()
+            schemas.append({"name": tool.name, "description": tool.description, "schema": schema})
+        return cls.count_tokens(json.dumps(schemas, ensure_ascii=False, default=str))
+
+    @staticmethod
     def metric_payload(metrics: dict) -> dict:
         start = metrics["request_received"]
         durations = {
@@ -113,6 +142,13 @@ class ChatService:
             "model": metrics["model"],
             "history_message_count": metrics.get("history_message_count", 0),
             "history_character_count": metrics.get("history_character_count", 0),
+            "history_token_count": metrics.get("history_token_count", 0),
+            "system_prompt_token_count": metrics.get("system_prompt_token_count", 0),
+            "tool_count": metrics.get("tool_count", 0),
+            "tool_definition_token_count": metrics.get("tool_definition_token_count", 0),
+            "model_call_count": metrics.get("model_call_count", 0),
+            "tool_call_count": metrics.get("tool_call_count", 0),
+            "first_tool_call_at_ms": metrics.get("first_tool_call_at_ms"),
             "durations_ms": durations,
             "backend_model_ttft_ms": round(
                 (metrics["first_model_token"] - metrics["model_request_started"])
@@ -121,10 +157,31 @@ class ChatService:
             )
             if "first_model_token" in metrics
             else None,
-            "backend_sse_ttft_ms": round(
-                (metrics["first_sse_yielded"] - start) * 1000, 2
+            "backend_sse_enqueue_ttft_ms": round(
+                (metrics["first_sse_enqueued"] - metrics["model_request_started"])
+                * 1000,
+                2,
             )
-            if "first_sse_yielded" in metrics
+            if "first_sse_enqueued" in metrics and "model_request_started" in metrics
+            else None,
+            "backend_sse_ttft_ms": round(
+                (metrics["first_sse_enqueued"] - metrics["model_request_started"])
+                * 1000,
+                2,
+            )
+            if "first_sse_enqueued" in metrics and "model_request_started" in metrics
+            else None,
+            "backend_model_to_sse_ms": round(
+                (metrics["first_sse_enqueued"] - metrics["first_model_token"])
+                * 1000,
+                2,
+            )
+            if "first_sse_enqueued" in metrics and "first_model_token" in metrics
+            else None,
+            "backend_request_to_sse_ms": round(
+                (metrics["first_sse_enqueued"] - start) * 1000, 2
+            )
+            if "first_sse_enqueued" in metrics
             else None,
         }
 
@@ -157,40 +214,83 @@ class ChatService:
             len(message["content"]) for message in history_messages
         )
 
+        tools = select_tools(question)
+        simple_chat = get_settings().simple_chat_enabled and tools is ALL_TOOLS
+        if simple_chat:
+            tools = []
+        metrics["tool_count"] = len(tools)
+        metrics["tool_definition_token_count"] = self.tool_token_count(tools)
+        metrics["system_prompt_token_count"] = self.count_tokens(SYSTEM_PROMPT)
+        metrics["history_token_count"] = self.count_tokens(
+            "\n".join(message["content"] for message in history_messages)
+        )
+
         memory = RedisConversationMemory(conversation_id=conversation_id)
         memory.load_from_db(history_messages)
         self.mark(metrics, "redis_ready")
         self.mark(metrics, "memory_loaded")
 
-        agent = create_agent(memory, verbose=False)
-        self.mark(metrics, "agent_created")
-        self.active_agents[conversation_id] = agent
+        agent = None
+        if not simple_chat:
+            agent = create_agent(memory, verbose=False, tools=tools)
+            self.mark(metrics, "agent_created")
+            self.active_agents[conversation_id] = agent
 
         full_response = ""
         stream_error = False
 
         try:
             self.mark(metrics, "model_request_started")
-            async for event in agent.astream_events(
-                {"input": question}, version="v2"
-            ):
-                kind = event.get("event", "")
-                if kind == "on_chat_model_stream":
-                    chunk = event.get("data", {}).get("chunk")
-                    if chunk and hasattr(chunk, "content") and chunk.content:
-                        token = chunk.content
+            if simple_chat:
+                metrics["model_call_count"] = 1
+                messages = [SystemMessage(content=SYSTEM_PROMPT)]
+                for message in history_messages:
+                    messages.append(
+                        HumanMessage(content=message["content"])
+                        if message["role"] == "user"
+                        else AIMessage(content=message["content"])
+                    )
+                messages.append(HumanMessage(content=question))
+                async for chunk in get_llm().astream(messages):
+                    token = chunk.content if hasattr(chunk, "content") else ""
+                    if token:
                         full_response += token
                         if "first_model_token" not in metrics:
                             self.mark(metrics, "first_model_token")
+                        if "first_sse_enqueued" not in metrics:
+                            self.mark(metrics, "first_sse_enqueued")
                         yield f"data: {json.dumps({'content': token, 'done': False})}\n\n"
-                        if "first_sse_yielded" not in metrics:
-                            self.mark(metrics, "first_sse_yielded")
                         await asyncio.sleep(0)
-                elif kind == "on_tool_error":
-                    err = event.get("data", {}).get("error", "未知工具错误")
-                    error_token = f"\n> ⚠️ 工具调用异常：{str(err)[:200]}\n"
-                    full_response += error_token
-                    yield f"data: {json.dumps({'content': error_token, 'done': False})}\n\n"
+            else:
+                async for event in agent.astream_events(
+                    {"input": question}, version="v2"
+                ):
+                    kind = event.get("event", "")
+                    if kind == "on_chat_model_start":
+                        metrics["model_call_count"] = metrics.get("model_call_count", 0) + 1
+                    elif kind == "on_tool_start":
+                        metrics["tool_call_count"] = metrics.get("tool_call_count", 0) + 1
+                        if "first_tool_call_at_ms" not in metrics:
+                            metrics["first_tool_call_at_ms"] = round(
+                                (time.perf_counter() - metrics["request_received"]) * 1000,
+                                2,
+                            )
+                    if kind == "on_chat_model_stream":
+                        chunk = event.get("data", {}).get("chunk")
+                        if chunk and hasattr(chunk, "content") and chunk.content:
+                            token = chunk.content
+                            full_response += token
+                            if "first_model_token" not in metrics:
+                                self.mark(metrics, "first_model_token")
+                            if "first_sse_enqueued" not in metrics:
+                                self.mark(metrics, "first_sse_enqueued")
+                            yield f"data: {json.dumps({'content': token, 'done': False})}\n\n"
+                            await asyncio.sleep(0)
+                    elif kind == "on_tool_error":
+                        err = event.get("data", {}).get("error", "tool error")
+                        error_token = f"\n> Tool error: {str(err)[:200]}\n"
+                        full_response += error_token
+                        yield f"data: {json.dumps({'content': error_token, 'done': False})}\n\n"
         except asyncio.TimeoutError:
             full_response = guard.fallback("empty_output")
             stream_error = True

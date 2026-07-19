@@ -3,12 +3,18 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.database import init_db
 from app.api import chat, knowledge, conversation, workflow
+from app.agent.llm_client import shutdown as shutdown_llm_client
+from app.agent.llm_client import startup as startup_llm_client
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     await init_db()
-    yield
+    await startup_llm_client()
+    try:
+        yield
+    finally:
+        await shutdown_llm_client()
 
 
 app = FastAPI(

@@ -10,6 +10,7 @@ class Settings(BaseSettings):
     openai_api_key: str = "sk-xxx"
     openai_base_url: str = "https://api.openai.com/v1"
     model_name: str = "gpt-4o-mini"
+    simple_chat_enabled: bool = True
 
     # Embedding（可独立配置，支持硅基流动等不同服务商）
     embedding_api_key: str = ""
