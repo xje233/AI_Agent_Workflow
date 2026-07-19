@@ -2,19 +2,11 @@ import request from './request'
 import type { KnowledgeDocument } from '@/types/knowledge'
 
 export const knowledgeApi = {
-  upload(file: File): Promise<KnowledgeDocument> {
+  upload(file: File) {
     const formData = new FormData()
     formData.append('file', file)
-    return request.post('/knowledge/upload', formData, {
-      headers: { 'Content-Type': 'multipart/form-data' },
-    }) as any
+    return request.post<KnowledgeDocument>('/knowledge/upload', formData) as unknown as Promise<KnowledgeDocument>
   },
-
-  getDocuments(): Promise<KnowledgeDocument[]> {
-    return request.get('/knowledge/documents') as any
-  },
-
-  deleteDocument(docId: string): Promise<any> {
-    return request.delete(`/knowledge/documents/${docId}`)
-  },
+  getDocuments: () => request.get<KnowledgeDocument[]>('/knowledge/documents') as unknown as Promise<KnowledgeDocument[]>,
+  deleteDocument: (id: string) => request.delete(`/knowledge/documents/${id}`),
 }

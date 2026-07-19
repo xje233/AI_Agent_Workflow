@@ -11,6 +11,6 @@ export interface Conversation {
 }
 
 export interface ChatRequest {
-  conversation_id?: string
+  conversation_id?: string | null
   message: string
 }

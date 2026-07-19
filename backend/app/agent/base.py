@@ -1,3 +1,5 @@
+from functools import lru_cache
+
 from langchain_openai import ChatOpenAI
 from langchain.agents import AgentExecutor, create_tool_calling_agent
 from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder
@@ -85,7 +87,8 @@ PROMPT = ChatPromptTemplate.from_messages([
 ])
 
 
-def get_llm(temperature: float = 0.3):  # 降低温度减少幻觉
+@lru_cache(maxsize=4)
+def get_llm(temperature: float = 0.3):  # Reuse the HTTP client across requests.
     return ChatOpenAI(
         model=settings.model_name,
         temperature=temperature,

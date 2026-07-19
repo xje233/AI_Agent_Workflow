@@ -1,56 +1,25 @@
-import { defineStore } from 'pinia'
-import { ref } from 'vue'
-import type { NodeState, NodeName } from '@/types/workflow'
+import { create } from 'zustand'
+import type { NodeName, NodeState } from '@/types/workflow'
 
-interface WorkflowLog {
-  node: NodeName
-  status: string
-  summary: string
+interface WorkflowLog { node: NodeName; status: string; summary: string }
+interface WorkflowState {
+  nodes: NodeState[]
+  status: 'idle' | 'running' | 'completed' | 'error'
+  logs: WorkflowLog[]
+  finalAnswer: string
+  reviewNote: string
+  streamContent: string
+  errorMessage: string
+  reset: () => void
+  updateNode: (name: NodeName, status: string, summary?: string) => void
+  addLog: (log: WorkflowLog) => void
 }
 
-export const useWorkflowStore = defineStore('workflow', () => {
-  const nodes = ref<NodeState[]>([
-    { name: 'analyze', status: 'pending', summary: '' },
-    { name: 'research', status: 'pending', summary: '' },
-    { name: 'execute', status: 'pending', summary: '' },
-    { name: 'review', status: 'pending', summary: '' },
-  ])
+const initialNodes = (): NodeState[] => ['analyze', 'research', 'execute', 'review'].map((name) => ({ name: name as NodeName, status: 'pending', summary: '' }))
 
-  const status = ref<'idle' | 'running' | 'completed' | 'error'>('idle')
-  const logs = ref<WorkflowLog[]>([])
-  const finalAnswer = ref('')
-  const reviewNote = ref('')
-  const streamContent = ref('')
-  const errorMessage = ref('')
-
-  function reset() {
-    nodes.value.forEach((n) => {
-      n.status = 'pending'
-      n.summary = ''
-    })
-    status.value = 'idle'
-    logs.value = []
-    finalAnswer.value = ''
-    reviewNote.value = ''
-    streamContent.value = ''
-    errorMessage.value = ''
-  }
-
-  function updateNode(nodeName: NodeName, nodeStatus: string, summary?: string) {
-    const node = nodes.value.find((n) => n.name === nodeName)
-    if (node) {
-      node.status = nodeStatus as any
-      if (summary) node.summary = summary
-      node.timestamp = new Date().toISOString()
-    }
-  }
-
-  function addLog(log: WorkflowLog) {
-    logs.value.push(log)
-  }
-
-  return {
-    nodes, status, logs, finalAnswer, reviewNote, streamContent, errorMessage,
-    reset, updateNode, addLog,
-  }
-})
+export const useWorkflowStore = create<WorkflowState>((set) => ({
+  nodes: initialNodes(), status: 'idle', logs: [], finalAnswer: '', reviewNote: '', streamContent: '', errorMessage: '',
+  reset: () => set({ nodes: initialNodes(), status: 'idle', logs: [], finalAnswer: '', reviewNote: '', streamContent: '', errorMessage: '' }),
+  updateNode: (name, status, summary) => set((state) => ({ nodes: state.nodes.map((node) => node.name === name ? { ...node, status: status as NodeState['status'], summary: summary || node.summary, timestamp: new Date().toISOString() } : node) })),
+  addLog: (log) => set((state) => ({ logs: [...state.logs, log] })),
+}))

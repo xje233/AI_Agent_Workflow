@@ -1,27 +1,43 @@
 import json
+
 from langchain.memory import ConversationBufferMemory
+
 from app.config import get_settings
 
+
 settings = get_settings()
+_redis_client = None
+_redis_initialized = False
+
+
+def _get_redis_client():
+    global _redis_client, _redis_initialized
+    if _redis_initialized:
+        return _redis_client
+
+    _redis_initialized = True
+    try:
+        import redis
+
+        _redis_client = redis.from_url(
+            settings.redis_url,
+            decode_responses=True,
+            socket_connect_timeout=0.2,
+            socket_timeout=0.2,
+        )
+    except Exception:
+        _redis_client = None
+    return _redis_client
 
 
 class RedisConversationMemory(ConversationBufferMemory):
-    """基于 Redis 的会话记忆，Redis 不可用时降级为纯内存模式"""
+    """Conversation memory with lazy, shared Redis access."""
 
     def __init__(self, conversation_id: str, ttl: int = 3600 * 24 * 7):
         super().__init__(memory_key="chat_history", return_messages=True)
         object.__setattr__(self, "conversation_id", conversation_id)
         object.__setattr__(self, "ttl", ttl)
-
-        redis_client = None
-        try:
-            import redis
-            r = redis.from_url(settings.redis_url, decode_responses=True, socket_connect_timeout=1)
-            r.ping()  # 立即验证连接
-            redis_client = r
-        except Exception:
-            print("[Memory] Redis unavailable, using in-memory mode")
-        object.__setattr__(self, "redis_client", redis_client)
+        object.__setattr__(self, "redis_client", _get_redis_client())
 
     def load_from_db(self, messages: list[dict]):
         for msg in messages:
@@ -37,7 +53,7 @@ class RedisConversationMemory(ConversationBufferMemory):
                 key = f"memory:{self.conversation_id}"
                 data = json.dumps(
                     [msg.to_json() for msg in self.chat_memory.messages],
-                    default=str
+                    default=str,
                 )
                 self.redis_client.setex(key, self.ttl, data)
             except Exception:
@@ -51,7 +67,6 @@ class RedisConversationMemory(ConversationBufferMemory):
                 if data:
                     messages = json.loads(data)
                     for msg in messages:
-                        # to_json() 输出格式: {"type": "human"/"ai", "content": "...", ...}
                         msg_type = msg.get("type", "")
                         msg_content = msg.get("content", "")
                         if msg_type == "human":
@@ -65,7 +80,6 @@ class RedisConversationMemory(ConversationBufferMemory):
         super().clear()
         if self.redis_client:
             try:
-                key = f"memory:{self.conversation_id}"
-                self.redis_client.delete(key)
+                self.redis_client.delete(f"memory:{self.conversation_id}")
             except Exception:
                 pass

@@ -1,55 +1,43 @@
-import { defineStore } from 'pinia'
-import { ref } from 'vue'
+import { create } from 'zustand'
 import { chatApi } from '@/api/chat'
-import type { Message, Conversation } from '@/types/chat'
+import type { Conversation, Message } from '@/types/chat'
 
-export const useChatStore = defineStore('chat', () => {
-  const conversations = ref<Conversation[]>([])
-  const currentId = ref<string | null>(null)
-  const messages = ref<Message[]>([])
-  const streaming = ref(false)
-  const tokenCount = ref(0)
+interface ChatState {
+  conversations: Conversation[]
+  currentId: string | null
+  messages: Message[]
+  streaming: boolean
+  tokenCount: number
+  loadConversations: () => Promise<void>
+  loadMessages: (id: string) => Promise<void>
+  newConversation: () => Promise<void>
+  deleteConversation: (id: string) => Promise<void>
+  addMessage: (message: Message) => void
+  updateLastMessage: (content: string) => void
+}
 
-  async function loadConversations() {
-    conversations.value = await chatApi.getConversations()
-  }
-
-  async function loadMessages(convId: string) {
-    currentId.value = convId
-    const res = await chatApi.getMessages(convId)
-    messages.value = res.messages
-  }
-
-  async function newConversation() {
-    const res = await chatApi.newConversation()
-    currentId.value = res.conversation_id
-    messages.value = []
-    await loadConversations()
-  }
-
-  async function deleteConversation(convId: string) {
-    await chatApi.deleteConversation(convId)
-    if (currentId.value === convId) {
-      currentId.value = null
-      messages.value = []
-    }
-    await loadConversations()
-  }
-
-  function addMessage(msg: Message) {
-    messages.value.push(msg)
-  }
-
-  function updateLastMessage(content: string) {
-    const last = messages.value[messages.value.length - 1]
-    if (last && last.role === 'assistant') {
-      last.content += content
-    }
-  }
-
-  return {
-    conversations, currentId, messages, streaming, tokenCount,
-    loadConversations, loadMessages, newConversation, deleteConversation,
-    addMessage, updateLastMessage,
-  }
-})
+export const useChatStore = create<ChatState>((set, get) => ({
+  conversations: [], currentId: null, messages: [], streaming: false, tokenCount: 0,
+  loadConversations: async () => set({ conversations: await chatApi.getConversations() }),
+  loadMessages: async (id) => {
+    const result = await chatApi.getMessages(id)
+    set({ currentId: id, messages: result.messages })
+  },
+  newConversation: async () => {
+    const result = await chatApi.newConversation()
+    set({ currentId: result.conversation_id, messages: [] })
+    await get().loadConversations()
+  },
+  deleteConversation: async (id) => {
+    await chatApi.deleteConversation(id)
+    set((state) => ({ currentId: state.currentId === id ? null : state.currentId, messages: state.currentId === id ? [] : state.messages }))
+    await get().loadConversations()
+  },
+  addMessage: (message) => set((state) => ({ messages: [...state.messages, message] })),
+  updateLastMessage: (content) => set((state) => {
+    const messages = [...state.messages]
+    const last = messages[messages.length - 1]
+    if (last?.role === 'assistant') messages[messages.length - 1] = { ...last, content: last.content + content }
+    return { messages }
+  }),
+}))

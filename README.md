@@ -1,6 +1,6 @@
 # 企业级 AI Agent 工作流平台
 
-基于 **LangChain** + **FastAPI** + **Vue3** 构建的企业级 AI Agent 工作流平台，支持多轮对话、RAG 知识库、工具调用、流式输出。
+基于 **LangChain** + **FastAPI** + **React** 构建的企业级 AI Agent 工作流平台，支持多轮对话、RAG 知识库、工具调用、流式输出。
 
 > 当前阶段：**Phase 1 — LangChain Agent 基础版** ✅
 
@@ -10,8 +10,8 @@
 
 ```
 ┌──────────────────────────────────────┐
-│       前端 (Vue3 + Vite + TS)         │
-│   Pinia + Element Plus + TailwindCSS │
+│       前端 (React + Vite + TS)        │
+│   Zustand + Ant Design + TailwindCSS  │
 └────────────────┬─────────────────────┘
                  │ SSE / REST
                  ▼
@@ -42,7 +42,7 @@
 | **Agent** | LangChain ReAct Agent + Tool Calling |
 | **后端** | FastAPI + SSE 流式 + Pydantic |
 | **数据库** | PostgreSQL (SQLAlchemy async) + Redis + Chroma |
-| **前端** | Vue3 + Vite + Pinia + Element Plus + TypeScript |
+| **前端** | React + Vite + Zustand + Ant Design + TypeScript |
 | **RAG** | LangChain Loader → RecursiveCharacterTextSplitter → Chroma |
 | **部署** | Docker Compose |
 
@@ -84,10 +84,10 @@ ai-agent-workflow/
     ├── vite.config.ts
     ├── tailwind.config.ts
     └── src/
-        ├── main.ts                 # Vue3 入口
+        ├── main.tsx                # React 入口
         ├── App.vue
         ├── router/index.ts         # 路由 (/, /knowledge)
-        ├── stores/                 # Pinia 状态管理
+        ├── stores/                 # Zustand 状态管理
         │   ├── chat.ts
         │   └── knowledge.ts
         ├── api/                    # Axios 封装
@@ -229,14 +229,14 @@ data: {"content": "", "done": true}
 - [x] **5 个内置工具** — 知识搜索、SQL 查询、文档分析、Python 执行、邮件发送
 - [x] **会话记忆** — Redis 持久化的 ConversationBufferMemory
 - [x] **历史会话管理** — 会话列表、消息回溯、删除
-- [x] **Vue3 前端** — Element Plus 组件库、Pinia 状态管理、SSE 流式渲染
+- [x] **React 前端** — Ant Design 组件库、Zustand 状态管理、SSE 流式渲染
 - [x] **Markdown 渲染** — 代码高亮、表格、引用等
 
 ### 后续阶段
 
 | 阶段 | 状态 | 内容 |
 |------|------|------|
-| Phase 2 | 🔜 | Vue3 前端完善（工作流监控页等） |
+| Phase 2 | 🔜 | React 前端完善（工作流监控页等） |
 | Phase 3 | 🔜 | LangGraph 工作流升级（StateGraph、Checkpoint、Human-in-the-Loop） |
 | Phase 4 | 🔜 | 多 Agent 协作 |
 | Phase 5 | 🔜 | 生产部署（Docker 化、鉴权、日志） |
@@ -254,3 +254,6 @@ data: {"content": "", "done": true}
 ---
 
 > 详见 `PRE.md` 了解完整项目需求与技术方案。
+## Frontend Stack
+
+The frontend is implemented with React 18, TypeScript, Vite, React Router 6, Zustand, and Ant Design. It keeps the existing REST and Server-Sent Events API contracts.

@@ -2,19 +2,8 @@ import request from './request'
 import type { Conversation, Message } from '@/types/chat'
 
 export const chatApi = {
-  getConversations(): Promise<Conversation[]> {
-    return request.get('/conversations') as any
-  },
-
-  getMessages(conversationId: string): Promise<{ messages: Message[] }> {
-    return request.get(`/conversations/${conversationId}/messages`) as any
-  },
-
-  deleteConversation(conversationId: string): Promise<any> {
-    return request.delete(`/conversations/${conversationId}`)
-  },
-
-  newConversation(): Promise<{ conversation_id: string }> {
-    return request.post('/chat/new')
-  },
+  getConversations: () => request.get<Conversation[]>('/conversations') as unknown as Promise<Conversation[]>,
+  getMessages: (id: string) => request.get<{ messages: Message[] }>(`/conversations/${id}/messages`) as unknown as Promise<{ messages: Message[] }>,
+  deleteConversation: (id: string) => request.delete(`/conversations/${id}`),
+  newConversation: () => request.post<{ conversation_id: string }>('/chat/new') as unknown as Promise<{ conversation_id: string }>,
 }

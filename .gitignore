@@ -1,0 +1,76 @@
+# ── Python ──
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+
+# ── 虚拟环境 ──
+.venv/
+venv/
+env/
+
+# ── 环境变量 ──
+.env
+.env.local
+.env.*.local
+
+# ── IDE ──
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.agents
+.claude
+.codebuddy
+!.codex/
+.codex/*
+!.codex/config.toml
+!.codex/hooks/
+!.codex/hooks/*
+
+# ── Node / 前端 ──
+node_modules/
+frontend/dist/
+frontend/.vite/
+*.tsbuildinfo
+.worktrees/
+
+# ── 数据库 / 持久化数据 ──
+*.db
+*.sqlite3
+backend/data/
+backend/chroma_db/
+chroma_db/
+
+# ── 上传文件 ──
+backend/uploads/
+
+# ── 日志 ──
+*.log
+logs/
+
+# ── OS ──
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ── Docker ──
+docker-compose.override.yml
+
+# ── 文档文件（不纳入版本控制） ──
+docx
+*.docx
+*.doc
+*.xlsx
+*.xls
+*.pptx
+*.ppt
+*.pdf
+!docx/
+docx/*
+!docx/项目优化记录/
+!docx/项目优化记录/项目优化记录.md

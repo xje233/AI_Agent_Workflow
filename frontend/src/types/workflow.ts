@@ -1,5 +1,4 @@
 export type NodeName = 'analyze' | 'research' | 'execute' | 'review'
-
 export type NodeStatus = 'pending' | 'running' | 'completed' | 'error'
 
 export interface NodeState {
@@ -18,9 +17,4 @@ export interface WorkflowEvent {
   final_answer?: string
   review_note?: string
   message?: string
-}
-
-export interface WorkflowRequest {
-  question: string
-  conversation_id?: string
 }

@@ -1,30 +1,21 @@
-import { defineStore } from 'pinia'
-import { ref } from 'vue'
+import { create } from 'zustand'
 import { knowledgeApi } from '@/api/knowledge'
 import type { KnowledgeDocument } from '@/types/knowledge'
 
-export const useKnowledgeStore = defineStore('knowledge', () => {
-  const documents = ref<KnowledgeDocument[]>([])
-  const uploading = ref(false)
+interface KnowledgeState {
+  documents: KnowledgeDocument[]
+  uploading: boolean
+  loadDocuments: () => Promise<void>
+  uploadDocument: (file: File) => Promise<void>
+  deleteDocument: (id: string) => Promise<void>
+}
 
-  async function loadDocuments() {
-    documents.value = await knowledgeApi.getDocuments()
-  }
-
-  async function uploadDocument(file: File) {
-    uploading.value = true
-    try {
-      await knowledgeApi.upload(file)
-      await loadDocuments()
-    } finally {
-      uploading.value = false
-    }
-  }
-
-  async function deleteDocument(docId: string) {
-    await knowledgeApi.deleteDocument(docId)
-    await loadDocuments()
-  }
-
-  return { documents, uploading, loadDocuments, uploadDocument, deleteDocument }
-})
+export const useKnowledgeStore = create<KnowledgeState>((set, get) => ({
+  documents: [], uploading: false,
+  loadDocuments: async () => set({ documents: await knowledgeApi.getDocuments() }),
+  uploadDocument: async (file) => {
+    set({ uploading: true })
+    try { await knowledgeApi.upload(file); await get().loadDocuments() } finally { set({ uploading: false }) }
+  },
+  deleteDocument: async (id) => { await knowledgeApi.deleteDocument(id); await get().loadDocuments() },
+}))
