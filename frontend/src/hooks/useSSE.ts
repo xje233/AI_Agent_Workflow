@@ -8,9 +8,31 @@ const MAX_RETRIES = 1
 export function useSSE() {
   const abortRef = useRef<AbortController | null>(null)
   const lastQuestion = useRef('')
+  const pendingContent = useRef('')
+  const frameId = useRef<number | null>(null)
   const store = useChatStore()
 
+  function flushPendingContent() {
+    if (frameId.current !== null) {
+      window.cancelAnimationFrame(frameId.current)
+      frameId.current = null
+    }
+    if (!pendingContent.current) return
+    useChatStore.getState().updateLastMessage(pendingContent.current)
+    pendingContent.current = ''
+  }
+
+  function queueContent(content: string) {
+    pendingContent.current += content
+    if (frameId.current !== null) return
+    frameId.current = window.requestAnimationFrame(() => {
+      frameId.current = null
+      flushPendingContent()
+    })
+  }
+
   async function sendMessage(content: string) {
+    flushPendingContent()
     lastQuestion.current = content
     store.addMessage({ role: 'user', content })
     store.addMessage({ role: 'assistant', content: '' })
@@ -42,19 +64,21 @@ export function useSSE() {
           buffer = lines.pop() || ''
           for (const line of lines) {
             if (!line.startsWith('data: ')) continue
-            try { const data = JSON.parse(line.slice(6)); if (!data.done) useChatStore.getState().updateLastMessage(data.content || '') } catch { /* 忽略不完整或损坏的流式帧 */ }
+            try { const data = JSON.parse(line.slice(6)); if (!data.done) queueContent(data.content || '') } catch { /* 忽略不完整或损坏的流式帧 */ }
           }
         }
+        flushPendingContent()
         useChatStore.setState({ streaming: false })
         await useChatStore.getState().loadConversations()
         return
       } catch (error) {
         window.clearTimeout(timer)
+        flushPendingContent()
         if (error instanceof DOMException && error.name === 'AbortError') { useChatStore.setState({ streaming: false }); useChatStore.getState().updateLastMessage('\n\n> 请求已取消或超时'); return }
         if (retries >= MAX_RETRIES) { useChatStore.setState({ streaming: false }); useChatStore.getState().updateLastMessage(`\n\n> ${error instanceof Error ? error.message : '网络连接失败'}，请稍后重试`); return }
       }
     }
   }
 
-  return { sendMessage, stopStreaming: () => { abortRef.current?.abort(); useChatStore.setState({ streaming: false }) }, retry: () => lastQuestion.current && sendMessage(lastQuestion.current) }
+  return { sendMessage, stopStreaming: () => { flushPendingContent(); abortRef.current?.abort(); useChatStore.setState({ streaming: false }) }, retry: () => lastQuestion.current && sendMessage(lastQuestion.current) }
 }
