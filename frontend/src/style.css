@@ -1,3 +1,4 @@
+/* 全局样式入口：引入 Tailwind 层级并定义应用通用视觉规则。 */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

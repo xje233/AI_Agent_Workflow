@@ -63,9 +63,11 @@ _checkpointer_ctx = None
 async def get_workflow():
     global _workflow, _checkpointer_ctx
     if _workflow is None:
+        # 仅在首个工作流请求时创建图和检查点连接，后续请求复用同一实例。
         builder = build_workflow()
         db_path = BASE_DIR / "data" / "workflow_checkpoints.db"
         db_path.parent.mkdir(parents=True, exist_ok=True)
+        # 上下文管理器需要长期持有，以保持检查点 SQLite 连接在应用生命周期内可用。
         _checkpointer_ctx = AsyncSqliteSaver.from_conn_string(str(db_path))
         checkpointer = await _checkpointer_ctx.__aenter__()
         _workflow = builder.compile(checkpointer=checkpointer)

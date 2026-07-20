@@ -17,6 +17,7 @@ def _load_pdf_with_ocr_fallback(file_path: str) -> list[Document]:
     docs = loader.load()
 
     # 检查是否有有效文本内容
+    # 只有全部页面都没有文字时才触发较慢的 OCR 路径。
     has_text = any(doc.page_content.strip() for doc in docs)
     if has_text:
         return docs

@@ -1,3 +1,4 @@
+"""数据库基础设施：优先连接 PostgreSQL，不可用时回退到本地 SQLite。"""
 import socket
 from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession, async_sessionmaker
 from sqlalchemy.orm import DeclarativeBase
@@ -34,6 +35,7 @@ def get_engine():
         _engine = create_async_engine(settings.database_url, echo=settings.debug)
         print("[DB] PostgreSQL connected")
     else:
+        # 本地开发时即使 PostgreSQL 未启动，API 仍可借助 SQLite 继续工作。
         import os
         sqlite_path = BASE_DIR / "data" / "agent.db"
         sqlite_path.parent.mkdir(parents=True, exist_ok=True)
@@ -41,6 +43,7 @@ def get_engine():
         _engine = create_async_engine(db_url, echo=settings.debug)
         print(f"[DB] PostgreSQL unavailable, fallback to SQLite: {sqlite_path}")
 
+    # 关闭自动过期，提交后服务层仍可读取刚写入对象的字段。
     _sessionmaker = async_sessionmaker(_engine, class_=AsyncSession, expire_on_commit=False)
     return _engine
 
@@ -50,6 +53,7 @@ def get_sessionmaker():
 
 
 async def get_db() -> AsyncSession:
+    # 生成器依赖确保每个请求结束后都会关闭独立会话。
     sm = get_sessionmaker()
     async with sm() as session:
         try:

@@ -1,3 +1,4 @@
+// 应用根组件：定义页面路由并按页面粒度延迟加载。
 import { lazy, Suspense } from 'react'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 

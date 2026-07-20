@@ -1,3 +1,4 @@
+// 前端应用入口：挂载 React 根节点并注册全局 UI 配置。
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { ConfigProvider } from 'antd'

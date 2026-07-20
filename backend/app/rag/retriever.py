@@ -75,6 +75,7 @@ async def add_documents(documents: list[Document], collection_name: str = "knowl
 async def similarity_search(query: str, k: int = 4, collection_name: str = "knowledge_base") -> list[Document]:
     """异步相似度检索"""
     vector_store = get_vector_store(collection_name)
+    # Chroma SDK 为同步接口，移入线程后避免阻塞 FastAPI 事件循环。
     return await asyncio.to_thread(vector_store.similarity_search, query, k=k)
 
 

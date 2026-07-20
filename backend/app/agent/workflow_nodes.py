@@ -39,6 +39,7 @@ def analyze_node(state: dict) -> dict:
     content = result.content
 
     try:
+        # 模型未严格输出 JSON 时保留原文，确保后续节点仍能继续执行。
         plan = json.loads(content)
     except json.JSONDecodeError:
         plan = {"intent": "general", "subtasks": [], "expected_output": content}
@@ -58,6 +59,7 @@ async def research_node(state: dict) -> dict:
 
     # 知识库检索（异步）
     try:
+        # RAG 不可用不阻断工作流；将失败信息交给生成节点透明处理。
         docs = await similarity_search(question, k=4)
         knowledge_context = "\n\n".join(
             f"[文档{i+1}] {doc.page_content[:500]}" for i, doc in enumerate(docs)
@@ -137,6 +139,7 @@ def review_node(state: dict) -> dict:
     guard_result = _guard.validate(draft)
 
     # guard_result 结构：{"text", "has_issue", "issues", "used_fallback"}
+    # 护栏的兜底结果优先级最高，警告结果则保留草稿并附加人工复核提示。
     if guard_result["used_fallback"]:
         # 质量问题严重，使用兜底回复作为最终答案
         final_answer = guard_result["text"]

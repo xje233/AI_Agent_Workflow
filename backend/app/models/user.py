@@ -1,3 +1,4 @@
+"""用户 ORM 模型：保存用户身份和创建时间。"""
 import uuid
 from datetime import datetime
 from sqlalchemy import String, DateTime, func

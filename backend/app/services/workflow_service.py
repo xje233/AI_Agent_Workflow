@@ -34,6 +34,7 @@ async def run_workflow_stream(
     LangGraph astream 返回格式: {node_name: node_output_dict}
     其中 node_output_dict 是对应节点函数的返回值（只含更新字段）
     """
+    # 工作流与 SQLite checkpoint saver 为进程级单例，首次调用时才初始化。
     workflow = await get_workflow()
     config = {"configurable": {"thread_id": thread_id}}
 
@@ -55,6 +56,7 @@ async def run_workflow_stream(
         completed_nodes = set()
 
         # astream 逐节点执行，chunk 格式: {node_name: node_output_dict}
+        # LangGraph 按节点产生增量结果；这里将其转换为前端约定的 SSE 事件。
         async for chunk in workflow.astream(initial_state, config):
             # chunk 是 dict，key 是节点名，value 是节点输出 dict
             # 例: {"analyze": {"plan": "...", "parsed_plan": {...}, "current_node": "analyze", "node_status": "completed"}}
@@ -123,6 +125,7 @@ async def run_workflow_stream(
 def _sse_event(event_type: str, data: dict) -> str:
     """构造 SSE 事件字符串"""
     payload = {"type": event_type, **data}
+    # SSE 规范要求每个 data 帧以一个空行结束。
     return f"data: {json.dumps(payload, ensure_ascii=False, default=str)}\n\n"
 
 

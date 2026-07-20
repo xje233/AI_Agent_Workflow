@@ -1,3 +1,4 @@
+// 文件上传组件：限制允许类型，并触发知识库索引流程。
 import { InboxOutlined } from '@ant-design/icons'
 import { message, Upload } from 'antd'
 import { useKnowledgeStore } from '@/stores/knowledge'

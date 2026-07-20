@@ -45,6 +45,7 @@ async def upload_document(file: UploadFile = File(...)):
         await db.refresh(doc)
 
         try:
+            # 状态先落库，前端可据此区分上传完成与向量索引完成。
             doc.vector_status = "indexing"
             await db.commit()
 
@@ -78,6 +79,7 @@ async def upload_document(file: UploadFile = File(...)):
                 detail = str(e)  # ValueError 的信息已经是用户友好的
             raise HTTPException(status_code=500, detail=detail)
         finally:
+            # 成功、失败两条路径都持久化最终索引状态。
             await db.commit()
 
     return {

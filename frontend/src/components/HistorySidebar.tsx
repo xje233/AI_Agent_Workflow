@@ -1,3 +1,4 @@
+// 历史会话侧栏：创建、切换和删除聊天会话。
 import { DeleteOutlined, MessageOutlined, PlusOutlined } from '@ant-design/icons'
 import { Button } from 'antd'
 import { useChatStore } from '@/stores/chat'

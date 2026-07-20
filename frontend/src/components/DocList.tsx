@@ -1,3 +1,4 @@
+// 文档列表组件：展示索引状态并提供删除入口。
 import { DeleteOutlined, FileTextOutlined, FileWordOutlined, FileMarkdownOutlined, FileUnknownOutlined } from '@ant-design/icons'
 import { Button, Space, Table, Tag } from 'antd'
 import { useKnowledgeStore } from '@/stores/knowledge'

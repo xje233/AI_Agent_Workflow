@@ -79,6 +79,7 @@ class OutputGuard:
         """
         issues = []
 
+        # 按严重程度由高到低执行：空输出和重复直接兜底，幻觉仅追加提醒。
         # 1. 空检查
         result = cls.check_empty(text)
         if not result["ok"]:

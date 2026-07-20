@@ -1,3 +1,4 @@
+"""工作流 API：启动 LangGraph 任务并提供状态查询接口。"""
 from fastapi import APIRouter, HTTPException
 from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
@@ -20,6 +21,7 @@ async def start_workflow(req: WorkflowRequest) -> StreamingResponse:
 
     thread_id = str(uuid.uuid4())
 
+    # thread_id 同时作为 LangGraph checkpoint 的隔离键，避免并发任务串状态。
     return StreamingResponse(
         run_workflow_stream(
             question=req.question,

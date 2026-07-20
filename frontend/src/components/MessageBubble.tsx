@@ -1,3 +1,4 @@
+// 消息气泡：渲染角色样式、Markdown 内容与流式输入光标。
 import { RobotOutlined, UserOutlined } from '@ant-design/icons'
 import { renderMarkdown } from '@/hooks/useMarkdown'
 import type { Message } from '@/types/chat'

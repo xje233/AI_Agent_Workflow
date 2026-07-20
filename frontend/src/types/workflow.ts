@@ -1,3 +1,4 @@
+// 工作流领域类型：约束节点名称、节点进度及流式事件结构。
 export type NodeName = 'analyze' | 'research' | 'execute' | 'review'
 export type NodeStatus = 'pending' | 'running' | 'completed' | 'error'
 

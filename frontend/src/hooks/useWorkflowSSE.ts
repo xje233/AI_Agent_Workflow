@@ -1,3 +1,4 @@
+// 工作流流 Hook：将节点和文本事件映射到工作流状态。
 import { useRef } from 'react'
 import { message } from 'antd'
 import { useWorkflowStore } from '@/stores/workflow'
@@ -9,6 +10,7 @@ export function useWorkflowSSE() {
   async function startWorkflow(question: string) {
     const set = useWorkflowStore.setState
     const get = useWorkflowStore.getState
+    // 每次启动先清除上一轮结果，再建立本轮请求的取消控制器。
     get().reset(); set({ status: 'running' }); abortRef.current = new AbortController()
     try {
       const response = await fetch('/api/workflow/start', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ question }), signal: abortRef.current.signal })
@@ -18,6 +20,7 @@ export function useWorkflowSSE() {
       const decoder = new TextDecoder(); let buffer = ''
       while (true) {
         const { done, value } = await reader.read(); if (done) break
+        // 与聊天流一致：保留跨网络分块的不完整尾行。
         buffer += decoder.decode(value, { stream: true }); const lines = buffer.split('\n'); buffer = lines.pop() || ''
         for (const line of lines) if (line.startsWith('data: ')) { try { handleEvent(JSON.parse(line.slice(6))) } catch { /* ignore malformed chunks */ } }
       }
@@ -30,6 +33,7 @@ export function useWorkflowSSE() {
   }
 
   function handleEvent(event: WorkflowEvent) {
+    // 后端事件类型与 Store 动作一一对应，组件只消费最终状态。
     const store = useWorkflowStore.getState()
     if (event.type === 'node_start' && event.node) { store.updateNode(event.node, 'running'); store.addLog({ node: event.node, status: 'running', summary: '' }) }
     if (event.type === 'node_complete' && event.node) { store.updateNode(event.node, 'completed', event.summary); store.addLog({ node: event.node, status: 'completed', summary: event.summary || '' }) }

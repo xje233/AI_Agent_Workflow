@@ -1,3 +1,4 @@
+"""聊天 API：创建会话并以 SSE 持续返回 Agent 输出。"""
 from fastapi import APIRouter, HTTPException
 from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
@@ -27,6 +28,7 @@ async def send_message(req: ChatRequest) -> StreamingResponse:
     if not req.message.strip():
         raise HTTPException(status_code=400, detail="消息不能为空")
 
+    # 请求指标贯穿服务层，用于分析模型首 token 和 SSE 输出时延。
     metrics = {
         "request_id": str(uuid.uuid4()),
         "conversation_id": req.conversation_id or "",
@@ -43,6 +45,7 @@ async def send_message(req: ChatRequest) -> StreamingResponse:
         headers={
             "Cache-Control": "no-cache",
             "Connection": "keep-alive",
+            # 禁止反向代理缓冲，否则前端无法实时收到 token。
             "X-Accel-Buffering": "no",
             "X-Conversation-Id": conversation_id,
         },

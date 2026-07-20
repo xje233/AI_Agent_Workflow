@@ -1,3 +1,4 @@
+// 知识库领域类型：描述文件元数据和后端返回的索引状态。
 export interface KnowledgeDocument {
   id: string
   filename: string

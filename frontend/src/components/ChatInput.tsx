@@ -1,3 +1,4 @@
+// 聊天输入框：管理本地草稿，并在发送或停止间切换操作。
 import { LoadingOutlined } from '@ant-design/icons'
 import { Button, Input } from 'antd'
 import { useState } from 'react'

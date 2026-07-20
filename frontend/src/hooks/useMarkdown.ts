@@ -1,3 +1,4 @@
+// Markdown 渲染：将模型输出转换为带代码高亮的受控 HTML。
 import { marked } from 'marked'
 import hljs from 'highlight.js/lib/core'
 import bash from 'highlight.js/lib/languages/bash'
@@ -18,6 +19,7 @@ hljs.registerLanguage('python', python)
 hljs.registerLanguage('sql', sql)
 hljs.registerLanguage('typescript', typescript)
 
+// 已注册语言优先精确高亮，未知语言回退到自动识别。
 marked.use(markedHighlight({ highlight(code, language) {
   return language && hljs.getLanguage(language) ? hljs.highlight(code, { language }).value : hljs.highlightAuto(code).value
 } }))

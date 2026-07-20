@@ -1,3 +1,4 @@
+// 聊天 API：封装会话管理和历史消息读取请求。
 import request from './request'
 import type { Conversation, Message } from '@/types/chat'
 

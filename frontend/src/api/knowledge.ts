@@ -1,3 +1,4 @@
+// 知识库 API：封装文件上传和文档管理请求。
 import request from './request'
 import type { KnowledgeDocument } from '@/types/knowledge'
 

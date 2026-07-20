@@ -1,3 +1,4 @@
+// 知识库状态：维护文档列表及上传、删除后的刷新动作。
 import { create } from 'zustand'
 import { knowledgeApi } from '@/api/knowledge'
 import type { KnowledgeDocument } from '@/types/knowledge'

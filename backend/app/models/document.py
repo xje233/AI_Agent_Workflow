@@ -1,3 +1,4 @@
+"""文档 ORM 模型：记录上传文件及其向量化状态。"""
 import uuid
 from datetime import datetime
 from sqlalchemy import String, DateTime, Text, func

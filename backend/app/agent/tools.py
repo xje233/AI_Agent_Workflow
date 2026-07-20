@@ -25,6 +25,7 @@ async def search_tool(query: str) -> str:
     """
     try:
         query = _validate_query(query)
+        # 检索器返回 Document；工具层统一格式化为模型可直接引用的文本。
         docs = await similarity_search(query, k=4)
 
         if not docs:
@@ -97,7 +98,7 @@ def run_python(code: str) -> str:
     import io
     import sys
 
-    # 安全检查
+    # 安全检查采用关键字拒绝和受限内建函数的双层限制。
     forbidden = [
         "import os", "import sys", "import subprocess", "import socket",
         "import requests", "import urllib", "__import__", "eval(", "exec(",
@@ -166,6 +167,7 @@ NOTIFICATION_TOOLS = [send_email]
 
 
 def select_tools(question: str):
+    # 按问题关键词选择最小工具集，降低模型工具选择的复杂度。
     text = question.lower()
     if any(word in text for word in ("知识库", "文档", "资料", "搜索", "检索", "文件")):
         return KNOWLEDGE_TOOLS

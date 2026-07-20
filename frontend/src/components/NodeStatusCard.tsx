@@ -1,3 +1,4 @@
+// 工作流节点卡片：将节点状态映射为名称、图标与视觉标识。
 import { ArrowRightOutlined, CheckCircleOutlined, LoadingOutlined, SearchOutlined, SettingOutlined, SyncOutlined } from '@ant-design/icons'
 import { Tag } from 'antd'
 import type { NodeState } from '@/types/workflow'

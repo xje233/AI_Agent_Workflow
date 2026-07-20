@@ -1,3 +1,4 @@
+"""消息 ORM 模型：保存单个会话中的用户或助手消息。"""
 import uuid
 from datetime import datetime
 from sqlalchemy import String, DateTime, Text, ForeignKey, func

@@ -1,3 +1,4 @@
+// 知识库页面：加载文档列表并组合上传和管理组件。
 import { useEffect } from 'react'
 import NavBar from '@/components/NavBar'
 import FileUploader from '@/components/FileUploader'

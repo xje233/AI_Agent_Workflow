@@ -1,3 +1,4 @@
+// 聊天页面：组合导航、历史会话和主对话窗口。
 import { useEffect } from 'react'
 import NavBar from '@/components/NavBar'
 import HistorySidebar from '@/components/HistorySidebar'

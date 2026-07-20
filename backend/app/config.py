@@ -1,3 +1,4 @@
+"""应用配置：从环境变量加载模型、数据库和基础设施连接参数。"""
 from pydantic_settings import BaseSettings
 from functools import lru_cache
 from pathlib import Path

@@ -1,3 +1,4 @@
+// 顶部导航：依据当前路由高亮入口并处理页面跳转。
 import { RobotOutlined } from '@ant-design/icons'
 import { Menu } from 'antd'
 import { useLocation, useNavigate } from 'react-router-dom'

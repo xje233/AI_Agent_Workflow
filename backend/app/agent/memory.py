@@ -1,3 +1,4 @@
+"""会话记忆：将最近对话写入 Redis，并在不可用时降级为空记忆。"""
 import json
 
 from langchain.memory import ConversationBufferMemory
@@ -15,6 +16,7 @@ def _get_redis_client():
     if _redis_initialized:
         return _redis_client
 
+    # 首次连接失败也记录结果，避免每个请求都重复进行短超时连接。
     _redis_initialized = True
     try:
         import redis
@@ -40,6 +42,7 @@ class RedisConversationMemory(ConversationBufferMemory):
         object.__setattr__(self, "redis_client", _get_redis_client())
 
     def load_from_db(self, messages: list[dict]):
+        # 数据库是完整历史来源；Redis 只承担跨请求的热缓存。
         for msg in messages:
             if msg["role"] == "user":
                 self.chat_memory.add_user_message(msg["content"])
@@ -50,6 +53,7 @@ class RedisConversationMemory(ConversationBufferMemory):
         super().save_context(inputs, outputs)
         if self.redis_client:
             try:
+                # 序列化 LangChain 消息后按会话维度写入并设置 TTL。
                 key = f"memory:{self.conversation_id}"
                 data = json.dumps(
                     [msg.to_json() for msg in self.chat_memory.messages],

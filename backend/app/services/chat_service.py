@@ -1,3 +1,4 @@
+"""聊天服务：持久化消息、重建上下文并将 Agent 事件转换为 SSE。"""
 import asyncio
 import json
 import time
@@ -88,6 +89,7 @@ class ChatService:
     ) -> list[dict]:
         selected: list[dict] = []
         chars = 0
+        # 从最新消息向前截取，在消息数量和字符数两个维度限制上下文成本。
         for message in reversed(messages):
             content = message["content"]
             if selected and (
@@ -130,6 +132,7 @@ class ChatService:
 
     @staticmethod
     def metric_payload(metrics: dict) -> dict:
+        # 统一以请求接收时刻为基准，便于前端和日志横向对比时延阶段。
         start = metrics["request_received"]
         durations = {
             name: round((value - start) * 1000, 2)

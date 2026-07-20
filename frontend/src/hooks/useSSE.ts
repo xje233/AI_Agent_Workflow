@@ -1,3 +1,4 @@
+// 聊天流 Hook：读取后端 SSE 帧并同步更新聊天状态。
 import { useRef } from 'react'
 import { useChatStore } from '@/stores/chat'
 
@@ -15,6 +16,7 @@ export function useSSE() {
     store.addMessage({ role: 'assistant', content: '' })
     useChatStore.setState({ streaming: true })
     let retries = 0
+    // 仅对可恢复的服务端错误重试；每次尝试都使用独立的取消控制器。
     while (retries <= MAX_RETRIES) {
       abortRef.current = new AbortController()
       const timer = window.setTimeout(() => abortRef.current?.abort(), TIMEOUT)
@@ -35,11 +37,12 @@ export function useSSE() {
           const { done, value } = await reader.read()
           if (done) break
           buffer += decoder.decode(value, { stream: true })
+          // 网络分块可能截断一行 SSE 数据；尾部保留到下次读取后再解析。
           const lines = buffer.split('\n')
           buffer = lines.pop() || ''
           for (const line of lines) {
             if (!line.startsWith('data: ')) continue
-            try { const data = JSON.parse(line.slice(6)); if (!data.done) useChatStore.getState().updateLastMessage(data.content || '') } catch { /* ignore malformed chunks */ }
+            try { const data = JSON.parse(line.slice(6)); if (!data.done) useChatStore.getState().updateLastMessage(data.content || '') } catch { /* 忽略不完整或损坏的流式帧 */ }
           }
         }
         useChatStore.setState({ streaming: false })

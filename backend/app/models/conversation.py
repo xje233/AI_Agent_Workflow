@@ -1,3 +1,4 @@
+"""会话 ORM 模型：作为消息列表和用户记录的聚合根。"""
 import uuid
 from datetime import datetime
 from sqlalchemy import String, DateTime, func

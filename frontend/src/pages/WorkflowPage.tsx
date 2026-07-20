@@ -1,3 +1,4 @@
+// 工作流页面：承载 LangGraph 多步骤执行面板。
 import NavBar from '@/components/NavBar'
 import WorkflowPanel from '@/components/WorkflowPanel'
 
