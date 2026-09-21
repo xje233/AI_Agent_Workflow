@@ -1,0 +1,51 @@
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_USER: agent
+      POSTGRES_PASSWORD: agent123
+      POSTGRES_DB: agent_workflow
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+
+  chroma:
+    image: chromadb/chroma:latest
+    ports:
+      - "8001:8000"
+    volumes:
+      - chroma_data:/chroma/chroma
+
+  # ── 后端热重载开发容器（可选，与本地 uvicorn --reload 二选一）──
+  backend:
+    image: python:3.13-slim
+    working_dir: /app
+    command: >
+      sh -c "pip install --user -r requirements.txt && uvicorn app.main:app --reload --host 0.0.0.0 --port 8000"
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app                     # 代码挂载，修改即时生效
+      - backend_venv:/root/.local         # 持久化 pip 包，避免每次重建
+    environment:
+      - CHROMA_HOST=chroma
+      - CHROMA_PORT=8000
+      - REDIS_URL=redis://redis:6379/0
+      - DATABASE_URL=postgresql+asyncpg://agent:agent123@postgres:5432/agent_workflow
+    depends_on:
+      - postgres
+      - redis
+      - chroma
+    env_file:
+      - ./backend/.env                    # 继承 LLM/Embedding key 等配置
+
+volumes:
+  postgres_data:
+  chroma_data:
+  backend_venv:
