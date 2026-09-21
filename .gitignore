@@ -1,4 +1,4 @@
-# Only project-related files are tracked: backend, frontend, docker-compose, README, start.ps1.
+# Only project-related files are tracked: backend, frontend, docs/images, docker-compose, README, start.ps1.
 *
 !.gitignore
 !docker-compose.yml
@@ -8,6 +8,10 @@
 !backend/**
 !frontend/
 !frontend/**
+# README screenshots only; the rest of docs/ stays local.
+!docs/
+!docs/images/
+!docs/images/**
 
 # Secrets and local configuration.
 .env
