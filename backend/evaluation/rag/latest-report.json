@@ -1,0 +1,136 @@
+{
+  "overall": {
+    "samples": 40,
+    "recall@3": 1.0,
+    "mrr": 0.9875
+  },
+  "by_category": {
+    "cross_chunk": {
+      "samples": 15,
+      "recall@3": 1.0,
+      "mrr": 1.0
+    },
+    "fact": {
+      "samples": 15,
+      "recall@3": 1.0,
+      "mrr": 0.9667
+    },
+    "ocr": {
+      "samples": 10,
+      "recall@3": 1.0,
+      "mrr": 1.0
+    },
+    "unanswerable": {
+      "samples": 10,
+      "recall@3": 0.0,
+      "mrr": 0.0
+    }
+  },
+  "failures": [
+    {
+      "id": "none-001",
+      "category": "unanswerable",
+      "reason": "unexpected_retrieval",
+      "retrieved": [
+        "legal-001",
+        "ops-002",
+        "it-003"
+      ]
+    },
+    {
+      "id": "none-002",
+      "category": "unanswerable",
+      "reason": "unexpected_retrieval",
+      "retrieved": [
+        "cross-001a",
+        "cross-001b",
+        "cross-004a"
+      ]
+    },
+    {
+      "id": "none-003",
+      "category": "unanswerable",
+      "reason": "unexpected_retrieval",
+      "retrieved": [
+        "ocr-001",
+        "fin-003",
+        "cross-002a"
+      ]
+    },
+    {
+      "id": "none-004",
+      "category": "unanswerable",
+      "reason": "unexpected_retrieval",
+      "retrieved": [
+        "cross-004a",
+        "hr-001",
+        "hr-002"
+      ]
+    },
+    {
+      "id": "none-005",
+      "category": "unanswerable",
+      "reason": "unexpected_retrieval",
+      "retrieved": [
+        "legal-001",
+        "hr-003",
+        "ops-002"
+      ]
+    },
+    {
+      "id": "none-006",
+      "category": "unanswerable",
+      "reason": "unexpected_retrieval",
+      "retrieved": [
+        "cross-002a",
+        "cross-004a",
+        "fin-003"
+      ]
+    },
+    {
+      "id": "none-007",
+      "category": "unanswerable",
+      "reason": "unexpected_retrieval",
+      "retrieved": [
+        "cross-004a",
+        "it-002",
+        "legal-001"
+      ]
+    },
+    {
+      "id": "none-008",
+      "category": "unanswerable",
+      "reason": "unexpected_retrieval",
+      "retrieved": [
+        "it-002",
+        "cross-001b",
+        "ocr-002"
+      ]
+    },
+    {
+      "id": "none-009",
+      "category": "unanswerable",
+      "reason": "unexpected_retrieval",
+      "retrieved": [
+        "fin-001",
+        "fin-002",
+        "ocr-002"
+      ]
+    },
+    {
+      "id": "none-010",
+      "category": "unanswerable",
+      "reason": "unexpected_retrieval",
+      "retrieved": [
+        "hr-001",
+        "cross-004a",
+        "cross-001b"
+      ]
+    }
+  ],
+  "answer_evaluation": {
+    "judged_samples": 0,
+    "accuracy": null,
+    "note": "Pass --answers to score generated answers."
+  }
+}

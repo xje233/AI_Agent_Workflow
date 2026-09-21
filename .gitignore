@@ -1,76 +1,59 @@
-# ── Python ──
-__pycache__/
-*.pyc
-*.pyo
-*.egg-info/
-dist/
-build/
-*.egg
+# Only project-related files are tracked: backend, frontend, docker-compose, README, start.ps1.
+*
+!.gitignore
+!docker-compose.yml
+!README.md
+!start.ps1
+!backend/
+!backend/**
+!frontend/
+!frontend/**
 
-# ── 虚拟环境 ──
-.venv/
-venv/
-env/
-
-# ── 环境变量 ──
+# Secrets and local configuration.
 .env
-.env.local
-.env.*.local
+.env.*
+backend/.env
+backend/.env.*
+frontend/.env
+frontend/.env.*
 
-# ── IDE ──
+# Dependencies, caches, generated files, and local data.
+**/node_modules/
+**/__pycache__/
+**/*.py[cod]
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+**/dist/
+**/build/
+**/.vite/
+**/*.tsbuildinfo
+**/*.egg-info/
+**/*.db
+**/*.sqlite3
+**/venv/
+**/.venv/
+backend/data/
+backend/chroma_db/
+backend/uploads/
+
+# Raw evaluation datasets (re-download with backend/scripts/setup_flashrag_eval.py).
+backend/evaluation/flashrag/**/test.jsonl
+backend/evaluation/**/raw/
+
+# Local tooling and operating-system files.
 .vscode/
 .idea/
+.codex/
+.pi/
+.agents/
+.claude/
+.codebuddy/
+.worktrees/
+.codegraph/
 *.swp
 *.swo
 *~
-.agents
-.claude
-.codebuddy
-!.codex/
-.codex/*
-!.codex/config.toml
-!.codex/hooks/
-!.codex/hooks/*
-
-# ── Node / 前端 ──
-node_modules/
-frontend/dist/
-frontend/.vite/
-*.tsbuildinfo
-.worktrees/
-
-# ── 数据库 / 持久化数据 ──
-*.db
-*.sqlite3
-backend/data/
-backend/chroma_db/
-chroma_db/
-
-# ── 上传文件 ──
-backend/uploads/
-
-# ── 日志 ──
-*.log
-logs/
-
-# ── OS ──
 .DS_Store
 Thumbs.db
 Desktop.ini
-
-# ── Docker ──
-docker-compose.override.yml
-
-# ── 文档文件（不纳入版本控制） ──
-docx
-*.docx
-*.doc
-*.xlsx
-*.xls
-*.pptx
-*.ppt
-*.pdf
-!docx/
-docx/*
-!docx/项目优化记录/
-!docx/项目优化记录/项目优化记录.md

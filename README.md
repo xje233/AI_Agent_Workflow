@@ -138,7 +138,7 @@ npm run build
 
 - PostgreSQL 不可用时，后端自动回退到 `backend/data/agent.db`；Redis 会话缓存与 Chroma 向量检索仍需对应服务可用。
 - 工作流 checkpoint 保存在 `backend/data/workflow_checkpoints.db`。
-- `query_db`、`analyze_doc` 与 `send_email` 目前是开发阶段的模拟工具。
+- `query_db` 已接入应用数据库，仅允许查询 `conversations`、`messages`、`documents` 白名单表和字段，单次最多返回 100 行并有 5 秒超时；`analyze_doc` 与 `send_email` 仍是开发阶段的模拟工具。
 - `run_python` 采用受限内建函数与关键字过滤，不可访问网络和文件系统。
 - 请勿提交 `backend/.env` 或真实 API 密钥。
 

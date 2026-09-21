@@ -1,0 +1,24 @@
+{"id":"knowledge-001","category":"knowledge","question":"在知识库中查找员工报销制度。","expected_tools":["search_tool"],"forbidden_tools":["query_db","run_python","send_email"]}
+{"id":"knowledge-002","category":"knowledge","question":"搜索项目交付流程相关资料。","expected_tools":["search_tool"],"forbidden_tools":["query_db","analyze_doc","send_email"]}
+{"id":"knowledge-003","category":"knowledge","question":"检索知识库中的数据安全规范。","expected_tools":["search_tool"],"forbidden_tools":["query_db","run_python","send_email"]}
+{"id":"knowledge-004","category":"knowledge","question":"请搜索文档资料，确认试用期规定。","expected_tools":["search_tool"],"forbidden_tools":["query_db","run_python","send_email"]}
+{"id":"document-001","category":"document","question":"分析文档中的风险项。","expected_tools":["analyze_doc"],"forbidden_tools":["search_tool","query_db","send_email"]}
+{"id":"document-002","category":"document","question":"做一次文档分析，提取关键结论。","expected_tools":["analyze_doc"],"forbidden_tools":["search_tool","query_db","run_python"]}
+{"id":"document-003","category":"document","question":"解读文件内容并列出注意事项。","expected_tools":["analyze_doc"],"forbidden_tools":["search_tool","query_db","send_email"]}
+{"id":"data-001","category":"data","question":"查询数据库中的会话数量。","expected_tools":["query_db"],"forbidden_tools":["search_tool","run_python","send_email"]}
+{"id":"data-002","category":"data","question":"统计最近上传的文档数量。","expected_tools":["query_db"],"forbidden_tools":["search_tool","run_python","send_email"]}
+{"id":"data-003","category":"data","question":"执行 SQL 查询 messages 表中的记录。","expected_tools":["query_db"],"forbidden_tools":["search_tool","run_python","send_email"]}
+{"id":"data-004","category":"data","question":"查询数据并按创建时间排序。","expected_tools":["query_db"],"forbidden_tools":["search_tool","run_python","send_email"]}
+{"id":"compute-001","category":"compute","question":"用 Python 计算 2025 年各月平均值。","expected_tools":["run_python"],"forbidden_tools":["search_tool","query_db","send_email"]}
+{"id":"compute-002","category":"compute","question":"运行代码把这组数字转换成百分比。","expected_tools":["run_python"],"forbidden_tools":["search_tool","query_db","send_email"]}
+{"id":"compute-003","category":"compute","question":"写一个脚本计算两个方案的差异。","expected_tools":["run_python"],"forbidden_tools":["search_tool","query_db","send_email"]}
+{"id":"notification-001","category":"notification","question":"发送邮件通知项目负责人会议延期。","expected_tools":["send_email"],"forbidden_tools":["search_tool","query_db","run_python"]}
+{"id":"notification-002","category":"notification","question":"发送通知邮件，内容是本周报告已生成。","expected_tools":["send_email"],"forbidden_tools":["search_tool","query_db","run_python"]}
+{"id":"chat-001","category":"chat","question":"你好，请介绍一下你自己。","expected_tools":[],"forbidden_tools":["search_tool","query_db","analyze_doc","run_python","send_email"]}
+{"id":"chat-002","category":"chat","question":"谢谢你的帮助。","expected_tools":[],"forbidden_tools":["search_tool","query_db","analyze_doc","run_python","send_email"]}
+{"id":"chat-003","category":"chat","question":"概括一下当前项目。","expected_tools":[],"forbidden_tools":["search_tool","query_db","analyze_doc","run_python","send_email"]}
+{"id":"multi-001","category":"multi_intent","question":"检索知识库中的报销政策，并用 Python 计算报销比例。","expected_tools":["search_tool","run_python"],"forbidden_tools":["query_db","send_email"]}
+{"id":"multi-002","category":"multi_intent","question":"查询数据库中的文档数量，再用 Python 计算占比。","expected_tools":["query_db","run_python"],"forbidden_tools":["search_tool","send_email"]}
+{"id":"multi-003","category":"multi_intent","question":"分析文档并发送邮件通知负责人。","expected_tools":["analyze_doc","send_email"],"forbidden_tools":["search_tool","query_db","run_python"]}
+{"id":"multi-004","category":"multi_intent","question":"搜索资料、查询数据库并汇总结果。","expected_tools":["search_tool","query_db"],"forbidden_tools":["run_python","send_email"]}
+{"id":"boundary-001","category":"boundary","question":"只回答这个问题，不需要查询或执行工具。","expected_tools":[],"forbidden_tools":["search_tool","query_db","analyze_doc","run_python","send_email"]}

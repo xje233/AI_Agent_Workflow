@@ -9,7 +9,7 @@ import json
 from langchain_core.messages import HumanMessage
 from app.config import get_settings
 from app.agent.base import get_llm
-from app.rag.retriever import similarity_search
+from app.rag.pipeline import retrieve, validate_answer
 from app.agent.guard import OutputGuard
 
 settings = get_settings()
@@ -57,10 +57,11 @@ async def research_node(state: dict) -> dict:
     question = state.get("question", "")
     plan_data = state.get("plan", "")
 
-    # 知识库检索（异步）
+    # 执行查询路由、改写和相关性评估；RAG 不可用不阻断工作流。
+    retrieval = None
     try:
-        # RAG 不可用不阻断工作流；将失败信息交给生成节点透明处理。
-        docs = await similarity_search(question, k=4)
+        retrieval = await retrieve(question)
+        docs = retrieval.documents
         knowledge_context = "\n\n".join(
             f"[文档{i+1}] {doc.page_content[:500]}" for i, doc in enumerate(docs)
         ) if docs else "知识库中未找到相关文档。"
@@ -88,6 +89,10 @@ async def research_node(state: dict) -> dict:
         "research_data": {
             "knowledge": knowledge_context,
             "analysis": result.content,
+            "query": retrieval.query if retrieval else question,
+            "route_reason": retrieval.route.reason if retrieval else "retrieval_error",
+            "scores": retrieval.scores if retrieval else [],
+            "has_evidence": bool(retrieval and retrieval.documents),
         },
         "current_node": "research",
         "node_status": "completed",
@@ -135,8 +140,11 @@ def review_node(state: dict) -> dict:
     """LLM 自检：幻觉检测、完整性校验、格式审查"""
     draft = state.get("draft_answer", "")
 
-    # 使用 guard 模块做基础检测，返回结构化 dict
-    guard_result = _guard.validate(draft)
+    # 先做通用输出检测，再校验答案是否有知识库证据支撑。
+    research_data = state.get("research_data", {})
+    evidence_present = bool(research_data.get("has_evidence"))
+    routed_to_retrieval = research_data.get("route_reason") != "casual_chat"
+    guard_result = validate_answer(draft, [], routed_to_retrieval) if not evidence_present else _guard.validate(draft)
 
     # guard_result 结构：{"text", "has_issue", "issues", "used_fallback"}
     # 护栏的兜底结果优先级最高，警告结果则保留草稿并附加人工复核提示。

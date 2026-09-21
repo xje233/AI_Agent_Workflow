@@ -6,7 +6,7 @@ services:
       POSTGRES_PASSWORD: agent123
       POSTGRES_DB: agent_workflow
     ports:
-      - "5432:5432"
+      - "15432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
 

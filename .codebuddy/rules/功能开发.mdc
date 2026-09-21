@@ -1,9 +1,0 @@
----
-description: 当开发一个新功能或者迭代一个已有功能时使用
-alwaysApply: false
-enabled: true
-updatedAt: 2026-06-05T13:38:55.875Z
-provider: 
----
-
-当开发一个新功能或者迭代一个已有功能时你需要使用superpowers插件并遵循里面的工作流进行开发

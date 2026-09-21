@@ -1,0 +1,291 @@
+{
+  "evaluated_samples": 24,
+  "missing_traces": [],
+  "selection_accuracy": 0.625,
+  "tool_calls": 83,
+  "parameter_error_rate": 0.0,
+  "duplicate_call_rate": 0.0361,
+  "duplicate_case_rate": 0.125,
+  "tool_error_rate": 0.0,
+  "execution_error_rate": 0.0,
+  "latency_ms": {
+    "samples": 83,
+    "avg": 138.72,
+    "p50": 1.78,
+    "p95": 215.05,
+    "max": 9231.41
+  },
+  "by_category": {
+    "boundary": [
+      {
+        "selection_correct": true,
+        "tool_calls": 0,
+        "parameter_errors": 0,
+        "execution_errors": 0,
+        "duplicate_calls": 0
+      }
+    ],
+    "chat": [
+      {
+        "selection_correct": true,
+        "tool_calls": 0,
+        "parameter_errors": 0,
+        "execution_errors": 0,
+        "duplicate_calls": 0
+      },
+      {
+        "selection_correct": true,
+        "tool_calls": 0,
+        "parameter_errors": 0,
+        "execution_errors": 0,
+        "duplicate_calls": 0
+      },
+      {
+        "selection_correct": true,
+        "tool_calls": 0,
+        "parameter_errors": 0,
+        "execution_errors": 0,
+        "duplicate_calls": 0
+      }
+    ],
+    "compute": [
+      {
+        "selection_correct": false,
+        "tool_calls": 0,
+        "parameter_errors": 0,
+        "execution_errors": 0,
+        "duplicate_calls": 0
+      },
+      {
+        "selection_correct": false,
+        "tool_calls": 0,
+        "parameter_errors": 0,
+        "execution_errors": 0,
+        "duplicate_calls": 0
+      },
+      {
+        "selection_correct": false,
+        "tool_calls": 0,
+        "parameter_errors": 0,
+        "execution_errors": 0,
+        "duplicate_calls": 0
+      }
+    ],
+    "data": [
+      {
+        "selection_correct": true,
+        "tool_calls": 4,
+        "parameter_errors": 0,
+        "execution_errors": 0,
+        "duplicate_calls": 0
+      },
+      {
+        "selection_correct": true,
+        "tool_calls": 11,
+        "parameter_errors": 0,
+        "execution_errors": 0,
+        "duplicate_calls": 1
+      },
+      {
+        "selection_correct": true,
+        "tool_calls": 2,
+        "parameter_errors": 0,
+        "execution_errors": 0,
+        "duplicate_calls": 0
+      },
+      {
+        "selection_correct": true,
+        "tool_calls": 15,
+        "parameter_errors": 0,
+        "execution_errors": 0,
+        "duplicate_calls": 0
+      }
+    ],
+    "document": [
+      {
+        "selection_correct": false,
+        "tool_calls": 0,
+        "parameter_errors": 0,
+        "execution_errors": 0,
+        "duplicate_calls": 0
+      },
+      {
+        "selection_correct": false,
+        "tool_calls": 0,
+        "parameter_errors": 0,
+        "execution_errors": 0,
+        "duplicate_calls": 0
+      },
+      {
+        "selection_correct": false,
+        "tool_calls": 0,
+        "parameter_errors": 0,
+        "execution_errors": 0,
+        "duplicate_calls": 0
+      }
+    ],
+    "knowledge": [
+      {
+        "selection_correct": true,
+        "tool_calls": 1,
+        "parameter_errors": 0,
+        "execution_errors": 0,
+        "duplicate_calls": 0
+      },
+      {
+        "selection_correct": true,
+        "tool_calls": 2,
+        "parameter_errors": 0,
+        "execution_errors": 0,
+        "duplicate_calls": 0
+      },
+      {
+        "selection_correct": true,
+        "tool_calls": 2,
+        "parameter_errors": 0,
+        "execution_errors": 0,
+        "duplicate_calls": 0
+      },
+      {
+        "selection_correct": true,
+        "tool_calls": 2,
+        "parameter_errors": 0,
+        "execution_errors": 0,
+        "duplicate_calls": 0
+      }
+    ],
+    "multi_intent": [
+      {
+        "selection_correct": false,
+        "tool_calls": 2,
+        "parameter_errors": 0,
+        "execution_errors": 0,
+        "duplicate_calls": 0
+      },
+      {
+        "selection_correct": true,
+        "tool_calls": 22,
+        "parameter_errors": 0,
+        "execution_errors": 0,
+        "duplicate_calls": 1
+      },
+      {
+        "selection_correct": false,
+        "tool_calls": 0,
+        "parameter_errors": 0,
+        "execution_errors": 0,
+        "duplicate_calls": 0
+      },
+      {
+        "selection_correct": true,
+        "tool_calls": 19,
+        "parameter_errors": 0,
+        "execution_errors": 0,
+        "duplicate_calls": 1
+      }
+    ],
+    "notification": [
+      {
+        "selection_correct": false,
+        "tool_calls": 0,
+        "parameter_errors": 0,
+        "execution_errors": 0,
+        "duplicate_calls": 0
+      },
+      {
+        "selection_correct": true,
+        "tool_calls": 1,
+        "parameter_errors": 0,
+        "execution_errors": 0,
+        "duplicate_calls": 0
+      }
+    ]
+  },
+  "failures": [
+    {
+      "id": "document-001",
+      "category": "document",
+      "reason": "tool_selection_mismatch",
+      "expected": [
+        "analyze_doc"
+      ],
+      "actual": []
+    },
+    {
+      "id": "document-002",
+      "category": "document",
+      "reason": "tool_selection_mismatch",
+      "expected": [
+        "analyze_doc"
+      ],
+      "actual": []
+    },
+    {
+      "id": "document-003",
+      "category": "document",
+      "reason": "tool_selection_mismatch",
+      "expected": [
+        "analyze_doc"
+      ],
+      "actual": []
+    },
+    {
+      "id": "compute-001",
+      "category": "compute",
+      "reason": "tool_selection_mismatch",
+      "expected": [
+        "run_python"
+      ],
+      "actual": []
+    },
+    {
+      "id": "compute-002",
+      "category": "compute",
+      "reason": "tool_selection_mismatch",
+      "expected": [
+        "run_python"
+      ],
+      "actual": []
+    },
+    {
+      "id": "compute-003",
+      "category": "compute",
+      "reason": "tool_selection_mismatch",
+      "expected": [
+        "run_python"
+      ],
+      "actual": []
+    },
+    {
+      "id": "notification-001",
+      "category": "notification",
+      "reason": "tool_selection_mismatch",
+      "expected": [
+        "send_email"
+      ],
+      "actual": []
+    },
+    {
+      "id": "multi-001",
+      "category": "multi_intent",
+      "reason": "tool_selection_mismatch",
+      "expected": [
+        "run_python",
+        "search_tool"
+      ],
+      "actual": [
+        "search_tool"
+      ]
+    },
+    {
+      "id": "multi-003",
+      "category": "multi_intent",
+      "reason": "tool_selection_mismatch",
+      "expected": [
+        "analyze_doc",
+        "send_email"
+      ],
+      "actual": []
+    }
+  ]
+}

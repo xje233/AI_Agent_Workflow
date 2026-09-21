@@ -1,0 +1,485 @@
+{"id": "q-0001", "category": "fact", "question": "中国人民大学文学院前身是什么 它成立于哪一年", "relevant_doc_ids": ["doc-0001", "doc-0001"], "answer_keywords": ["1939年"]}
+{"id": "q-0002", "category": "fact", "question": "中国人民大学文学院前身是什么 它成立于哪一年 有哪些专业", "relevant_doc_ids": ["doc-0001", "doc-0001", "doc-0001"], "answer_keywords": ["汉语言文学,汉语言"]}
+{"id": "q-0003", "category": "fact", "question": "中国人民大学文学院前身是什么 它成立于哪一年 有哪些专业 汉语言专业在培育学生方面的侧重点是什么", "relevant_doc_ids": ["doc-0001", "doc-0001", "doc-0001", "doc-0001"], "answer_keywords": ["侧重培养能胜任语言研究、语言文化、语言教学等工作的专门人才。"]}
+{"id": "q-0004", "category": "fact", "question": "中国人民大学文学院前身是什么 它成立于哪一年 有哪些专业 汉语言专业在培育学生方面的侧重点是什么 汉语言文学专业“古文字学方向”获得了教育部什么优惠吗", "relevant_doc_ids": ["doc-0001", "doc-0001", "doc-0001", "doc-0001", "doc-0001"], "answer_keywords": ["教育部首批“强基计划”"]}
+{"id": "q-0005", "category": "fact", "question": "中国人民大学文学院前身是什么 它成立于哪一年 有哪些专业 汉语言专业在培育学生方面的侧重点是什么 汉语言文学专业“古文字学方向”获得了教育部什么优惠吗 学院承办世界汉学大会始于哪一年", "relevant_doc_ids": ["doc-0001", "doc-0001", "doc-0001", "doc-0001", "doc-0001", "doc-0001"], "answer_keywords": ["2007年"]}
+{"id": "q-0006", "category": "fact", "question": "中国人民大学文学院前身是什么 它成立于哪一年 有哪些专业 汉语言专业在培育学生方面的侧重点是什么 汉语言文学专业“古文字学方向”获得了教育部什么优惠吗 学院承办世界汉学大会始于哪一年 在国际交流昂面，与哪些国家的大学签订了院际学生交换协议", "relevant_doc_ids": ["doc-0001", "doc-0001", "doc-0001", "doc-0001", "doc-0001", "doc-0001", "doc-0001"], "answer_keywords": ["日本，英国，挪威，捷克，斯洛文尼亚"]}
+{"id": "q-0007", "category": "fact", "question": "中国人民大学文学院前身是什么 它成立于哪一年 有哪些专业 汉语言专业在培育学生方面的侧重点是什么 汉语言文学专业“古文字学方向”获得了教育部什么优惠吗 学院承办世界汉学大会始于哪一年 在国际交流昂面，与哪些国家的大学签订了院际学生交换协议 本科生就业情况如何？", "relevant_doc_ids": ["doc-0001", "doc-0001", "doc-0001", "doc-0001", "doc-0001", "doc-0001", "doc-0001", "doc-0001"], "answer_keywords": ["总体就业率达100%。"]}
+{"id": "q-0008", "category": "fact", "question": "中国人民大学文学院前身是什么 它成立于哪一年 有哪些专业 汉语言专业在培育学生方面的侧重点是什么 汉语言文学专业“古文字学方向”获得了教育部什么优惠吗 学院承办世界汉学大会始于哪一年 在国际交流昂面，与哪些国家的大学签订了院际学生交换协议 本科生就业情况如何？ 学生的主要就业领域和地域是哪些", "relevant_doc_ids": ["doc-0001", "doc-0001", "doc-0001", "doc-0001", "doc-0001", "doc-0001", "doc-0001", "doc-0001", "doc-0001"], "answer_keywords": ["党政机关、文化、传媒、影视、出版、教育、金融、通信等行业，北京、上海、广州、深圳等城市"]}
+{"id": "q-0009", "category": "fact", "question": "国学院有哪些下设系别 该院人才培养有哪些主要特色", "relevant_doc_ids": ["doc-0002", "doc-0002"], "answer_keywords": ["本硕培养方案七年贯通，前三年主要安排古代语言文字课程及文献学、史学、考古学的基础课程，后四年主要安排文史哲各方向的专业课，学习成绩优良者可获得硕士研究生推免资格，保研率高达80%，学生兴趣尊重，选修模块不作方向限制，通过学位论文答辩后统一授予文学-史学双主学士学位，注重古代语言功底和文献分析能力的培养，全员全时段导师制"]}
+{"id": "q-0010", "category": "fact", "question": "国学院有哪些下设系别 该院人才培养有哪些主要特色 学生主要就业方向有哪些？", "relevant_doc_ids": ["doc-0002", "doc-0002", "doc-0002"], "answer_keywords": ["政府事业单位，新闻出版单位，教育机构，大型企业"]}
+{"id": "q-0011", "category": "fact", "question": "国学院有哪些下设系别 该院人才培养有哪些主要特色 学生主要就业方向有哪些？ 保研率是多少", "relevant_doc_ids": ["doc-0002", "doc-0002", "doc-0002", "doc-0002"], "answer_keywords": ["高达 80%"]}
+{"id": "q-0012", "category": "fact", "question": "国学院有哪些下设系别 该院人才培养有哪些主要特色 学生主要就业方向有哪些？ 保研率是多少 国学院本科毕业生如何获得文学-史学双主学士学位？", "relevant_doc_ids": ["doc-0002", "doc-0002", "doc-0002", "doc-0002", "doc-0002"], "answer_keywords": ["完成“国学-古典学”全部本科课程并通过学位论文答辩"]}
+{"id": "q-0013", "category": "fact", "question": "国学院有哪些下设系别 该院人才培养有哪些主要特色 学生主要就业方向有哪些？ 保研率是多少 国学院本科毕业生如何获得文学-史学双主学士学位？ 硕士毕业生中有多少比例继续深造？", "relevant_doc_ids": ["doc-0002", "doc-0002", "doc-0002", "doc-0002", "doc-0002", "doc-0002"], "answer_keywords": ["1/3"]}
+{"id": "q-0014", "category": "fact", "question": "高瓴人工智能学院是什么时候成立的 学院的院长是谁", "relevant_doc_ids": ["doc-0003", "doc-0003"], "answer_keywords": ["文继荣担任执行院长"]}
+{"id": "q-0015", "category": "fact", "question": "高瓴人工智能学院是什么时候成立的 学院的院长是谁 学院的学科建设在2022年取得了哪些成就", "relevant_doc_ids": ["doc-0003", "doc-0003", "doc-0003"], "answer_keywords": ["学科建设取得重大突破，共建的“计算机科学与技术”一级学科成绩突出，跃升“强优”学科，进入第一方阵，学科国际影响力不断提升，互联网与信息检索方向连续两年位居国际计算机学科CSRankings排行榜世界第一"]}
+{"id": "q-0016", "category": "fact", "question": "高瓴人工智能学院是什么时候成立的 学院的院长是谁 学院的学科建设在2022年取得了哪些成就 学院的核心课程有哪些", "relevant_doc_ids": ["doc-0003", "doc-0003", "doc-0003", "doc-0003"], "answer_keywords": ["人工智能Python 程序设计，人工智能引论，人工智能数学基础，最优化理论与方法，数据结构，机器学习基础，算法分析与设计，深度学习导论"]}
+{"id": "q-0017", "category": "fact", "question": "高瓴人工智能学院是什么时候成立的 学院的院长是谁 学院的学科建设在2022年取得了哪些成就 学院的核心课程有哪些 学院与哪些机构有合作项目？", "relevant_doc_ids": ["doc-0003", "doc-0003", "doc-0003", "doc-0003", "doc-0003"], "answer_keywords": ["加拿大蒙特利尔大学计算机系，北京智源人工智能研究院，微软亚洲研究院，华为，中国联通，外文局，快手，中国科协"]}
+{"id": "q-0018", "category": "fact", "question": "中国人民大学应用经济学院是在哪一年组建的 人大的应用经济学科有什么优势", "relevant_doc_ids": ["doc-0004", "doc-0004"], "answer_keywords": ["应用经济学科连续三轮在教育部组织的一级学科评估中排名全国第一， 在第四轮评估中获评A+，并在第五轮学科评估中继续保持佳绩"]}
+{"id": "q-0019", "category": "fact", "question": "中国人民大学应用经济学院是在哪一年组建的 人大的应用经济学科有什么优势 应用经济学院的能源经济专业的教育定位是什么", "relevant_doc_ids": ["doc-0004", "doc-0004", "doc-0004"], "answer_keywords": ["引领我国能源经济学科发展，打造培养高水平能源经济学人才的教育基地，应用现代方法研究我国能源领域重大问题的科研高地，为政府能源政策制定提供学理支持的智库中心"]}
+{"id": "q-0020", "category": "fact", "question": "中国人民大学应用经济学院是在哪一年组建的 人大的应用经济学科有什么优势 应用经济学院的能源经济专业的教育定位是什么 应用经济学院数字经济专业是在哪一年设立的？", "relevant_doc_ids": ["doc-0004", "doc-0004", "doc-0004", "doc-0004"], "answer_keywords": ["2022年"]}
+{"id": "q-0021", "category": "fact", "question": "中国人民大学应用经济学院是在哪一年组建的 人大的应用经济学科有什么优势 应用经济学院的能源经济专业的教育定位是什么 应用经济学院数字经济专业是在哪一年设立的？ 学院提供哪些双学士学位项目？", "relevant_doc_ids": ["doc-0004", "doc-0004", "doc-0004", "doc-0004", "doc-0004"], "answer_keywords": ["应用经济-数据科学双学士学位项目，应用经济-农村区域发展管理双学士学位复合型人才培养项目"]}
+{"id": "q-0022", "category": "fact", "question": "中国人民大学应用经济学院是在哪一年组建的 人大的应用经济学科有什么优势 应用经济学院的能源经济专业的教育定位是什么 应用经济学院数字经济专业是在哪一年设立的？ 学院提供哪些双学士学位项目？ 应用经济-数据科学双学士学位项目毕业后获得什么学位", "relevant_doc_ids": ["doc-0004", "doc-0004", "doc-0004", "doc-0004", "doc-0004", "doc-0004"], "answer_keywords": ["经济学，理学"]}
+{"id": "q-0023", "category": "fact", "question": "中国人民大学应用经济学院是在哪一年组建的 人大的应用经济学科有什么优势 应用经济学院的能源经济专业的教育定位是什么 应用经济学院数字经济专业是在哪一年设立的？ 学院提供哪些双学士学位项目？ 应用经济-数据科学双学士学位项目毕业后获得什么学位 应用经济-农村区域发展管理双学士学位复合型人才培养项目毕业后获得什么学位", "relevant_doc_ids": ["doc-0004", "doc-0004", "doc-0004", "doc-0004", "doc-0004", "doc-0004", "doc-0004"], "answer_keywords": ["经济学，管理学"]}
+{"id": "q-0024", "category": "fact", "question": "中国人民大学应用经济学院是在哪一年组建的 人大的应用经济学科有什么优势 应用经济学院的能源经济专业的教育定位是什么 应用经济学院数字经济专业是在哪一年设立的？ 学院提供哪些双学士学位项目？ 应用经济-数据科学双学士学位项目毕业后获得什么学位 应用经济-农村区域发展管理双学士学位复合型人才培养项目毕业后获得什么学位 学院毕业生在毕业市场上有什么优势", "relevant_doc_ids": ["doc-0004", "doc-0004", "doc-0004", "doc-0004", "doc-0004", "doc-0004", "doc-0004", "doc-0004"], "answer_keywords": ["专业基础扎实、实践能力突出、综合素质优异"]}
+{"id": "q-0025", "category": "fact", "question": "中国人民大学应用经济学院是在哪一年组建的 人大的应用经济学科有什么优势 应用经济学院的能源经济专业的教育定位是什么 应用经济学院数字经济专业是在哪一年设立的？ 学院提供哪些双学士学位项目？ 应用经济-数据科学双学士学位项目毕业后获得什么学位 应用经济-农村区域发展管理双学士学位复合型人才培养项目毕业后获得什么学位 学院毕业生在毕业市场上有什么优势 应用经济学院毕业生的就业单位都有哪些", "relevant_doc_ids": ["doc-0004", "doc-0004", "doc-0004", "doc-0004", "doc-0004", "doc-0004", "doc-0004", "doc-0004", "doc-0004"], "answer_keywords": ["中联部，国家发改委，财政部，商务部，四大国有商业银行，大型资产管理公司，投资银行，世界银行总部，国际货币基金组织"]}
+{"id": "q-0026", "category": "fact", "question": "中国人民大学哲学院有几个本科专业和研究生项目？ 哲学院有哪些本科专业", "relevant_doc_ids": ["doc-0005", "doc-0005"], "answer_keywords": ["哲学、伦理学、宗教学、PPE（政治学、经济学与哲学）"]}
+{"id": "q-0027", "category": "fact", "question": "中国人民大学哲学院有几个本科专业和研究生项目？ 哲学院有哪些本科专业 学院有多少位教师？", "relevant_doc_ids": ["doc-0005", "doc-0005", "doc-0005"], "answer_keywords": ["80人"]}
+{"id": "q-0028", "category": "fact", "question": "中国人民大学哲学院有几个本科专业和研究生项目？ 哲学院有哪些本科专业 学院有多少位教师？ 学院提供哪些专业并简述其特点", "relevant_doc_ids": ["doc-0005", "doc-0005", "doc-0005", "doc-0005"], "answer_keywords": ["哲学专业、伦理学专业、宗教学专业、政治学、经济学与哲学专业（PPE实验班）。哲学专业培养具敏锐思维、开阔视野、德才兼备的专业人才。伦理学专业关注基础理论和重大前沿的现实社会问题。宗教学专业培养学生成为跨学科人才，结合理论与实践。PPE实验班是新文科培养模式标杆，借鉴世界名校经验所开设的复合型专业。"]}
+{"id": "q-0029", "category": "fact", "question": "中国人民大学哲学院有几个本科专业和研究生项目？ 哲学院有哪些本科专业 学院有多少位教师？ 学院提供哪些专业并简述其特点 PPE专业培养哪三个学科的跨学科人才？", "relevant_doc_ids": ["doc-0005", "doc-0005", "doc-0005", "doc-0005", "doc-0005"], "answer_keywords": ["哲学，政治学，经济学"]}
+{"id": "q-0030", "category": "fact", "question": "中国人民大学哲学院有几个本科专业和研究生项目？ 哲学院有哪些本科专业 学院有多少位教师？ 学院提供哪些专业并简述其特点 PPE专业培养哪三个学科的跨学科人才？ PPE专业的主要课程有哪些？", "relevant_doc_ids": ["doc-0005", "doc-0005", "doc-0005", "doc-0005", "doc-0005", "doc-0005"], "answer_keywords": ["逻辑与批判性思维，中国哲学，西方哲学，伦理学，政治哲学，宏观经济学，微观经济学，计量经济学，政治经济学，政治学概论，英美政治制度，国际关系史，中国政府与政治，PPE跨学科对谈等"]}
+{"id": "q-0031", "category": "fact", "question": "中国人民大学哲学院有几个本科专业和研究生项目？ 哲学院有哪些本科专业 学院有多少位教师？ 学院提供哪些专业并简述其特点 PPE专业培养哪三个学科的跨学科人才？ PPE专业的主要课程有哪些？ 哲学院的国际交流情况", "relevant_doc_ids": ["doc-0005", "doc-0005", "doc-0005", "doc-0005", "doc-0005", "doc-0005", "doc-0005"], "answer_keywords": ["哲学院与英国牛津大学、比利时根特大学、德国柏林洪堡大学、德国慕尼黑大学、法国巴黎索邦大学、意大利帕多瓦大学、加拿大西安大略大学、美国夏威夷大学、日本立命馆大学等9所世界知名大学签订有学术合作、师生交换协议。"]}
+{"id": "q-0032", "category": "fact", "question": "中国人民大学哲学院有几个本科专业和研究生项目？ 哲学院有哪些本科专业 学院有多少位教师？ 学院提供哪些专业并简述其特点 PPE专业培养哪三个学科的跨学科人才？ PPE专业的主要课程有哪些？ 哲学院的国际交流情况 毕业生主要从事哪些领域的工作？", "relevant_doc_ids": ["doc-0005", "doc-0005", "doc-0005", "doc-0005", "doc-0005", "doc-0005", "doc-0005", "doc-0005"], "answer_keywords": ["高校和各类企事业单位"]}
+{"id": "q-0033", "category": "fact", "question": "中国人民大学社会与人口学院成立的时间是什么时候 学院下设哪些系?", "relevant_doc_ids": ["doc-0006", "doc-0006"], "answer_keywords": ["社会学系，人口学系，社会工作与社会政策系"]}
+{"id": "q-0034", "category": "fact", "question": "中国人民大学社会与人口学院成立的时间是什么时候 学院下设哪些系? 学院有哪些专业?", "relevant_doc_ids": ["doc-0006", "doc-0006", "doc-0006"], "answer_keywords": ["社会学专业，社会工作专业"]}
+{"id": "q-0035", "category": "fact", "question": "中国人民大学社会与人口学院成立的时间是什么时候 学院下设哪些系? 学院有哪些专业? 社会学专业和社会工作专业分别在哪一年被入选为国家级一流本科专业", "relevant_doc_ids": ["doc-0006", "doc-0006", "doc-0006", "doc-0006"], "answer_keywords": ["2019年和2020年"]}
+{"id": "q-0036", "category": "fact", "question": "中国人民大学社会与人口学院成立的时间是什么时候 学院下设哪些系? 学院有哪些专业? 社会学专业和社会工作专业分别在哪一年被入选为国家级一流本科专业 社会学专业有哪些研究方向？", "relevant_doc_ids": ["doc-0006", "doc-0006", "doc-0006", "doc-0006", "doc-0006"], "answer_keywords": ["社会发展，社会治理，社会政策，社会问题，社会变迁"]}
+{"id": "q-0037", "category": "fact", "question": "中国人民大学社会与人口学院成立的时间是什么时候 学院下设哪些系? 学院有哪些专业? 社会学专业和社会工作专业分别在哪一年被入选为国家级一流本科专业 社会学专业有哪些研究方向？ 社会与人口学院设立了哪些特色项目？", "relevant_doc_ids": ["doc-0006", "doc-0006", "doc-0006", "doc-0006", "doc-0006", "doc-0006"], "answer_keywords": ["数字社会与数据治理实验班，经济社会历史科学实验班（ESH），定量数据分析方法及其应用荣誉辅修学位项目"]}
+{"id": "q-0038", "category": "fact", "question": "中国人民大学社会与人口学院成立的时间是什么时候 学院下设哪些系? 学院有哪些专业? 社会学专业和社会工作专业分别在哪一年被入选为国家级一流本科专业 社会学专业有哪些研究方向？ 社会与人口学院设立了哪些特色项目？ “经济社会历史科学”实验班是与与哪些学院联合设立的？", "relevant_doc_ids": ["doc-0006", "doc-0006", "doc-0006", "doc-0006", "doc-0006", "doc-0006", "doc-0006"], "answer_keywords": ["经济学院，历史学院"]}
+{"id": "q-0039", "category": "fact", "question": "中国人民大学社会与人口学院成立的时间是什么时候 学院下设哪些系? 学院有哪些专业? 社会学专业和社会工作专业分别在哪一年被入选为国家级一流本科专业 社会学专业有哪些研究方向？ 社会与人口学院设立了哪些特色项目？ “经济社会历史科学”实验班是与与哪些学院联合设立的？ 学生毕业后留学深造主要就读于哪些国外大学", "relevant_doc_ids": ["doc-0006", "doc-0006", "doc-0006", "doc-0006", "doc-0006", "doc-0006", "doc-0006", "doc-0006"], "answer_keywords": ["牛津大学，芝加哥大学，哥伦比亚大学，爱丁堡大学，伦敦政治经济学院"]}
+{"id": "q-0040", "category": "fact", "question": "中国人民大学商学院在哪一年开始办学 商学院的工商管理专业旨在培养什么样的人才？", "relevant_doc_ids": ["doc-0007", "doc-0007"], "answer_keywords": ["具有全球视野和创新精神、理论基础扎实、实践能力突出的商业领袖人才"]}
+{"id": "q-0041", "category": "fact", "question": "中国人民大学商学院在哪一年开始办学 商学院的工商管理专业旨在培养什么样的人才？ 会计学专业旨在培养具有哪些技能的学生？", "relevant_doc_ids": ["doc-0007", "doc-0007", "doc-0007"], "answer_keywords": ["会计规则的制定与经济后果分析"]}
+{"id": "q-0042", "category": "fact", "question": "中国人民大学商学院在哪一年开始办学 商学院的工商管理专业旨在培养什么样的人才？ 会计学专业旨在培养具有哪些技能的学生？ 管理科学(商业数据分析方向)专业主要培养什么能力？", "relevant_doc_ids": ["doc-0007", "doc-0007", "doc-0007", "doc-0007"], "answer_keywords": ["综合使用理论、数据、模型从事产业分析、市场研究、管理运作、决策分析，扎实的管理科学与工程理论，熟练运用数据科学的方法与技术分析和处理复杂的管理问题等"]}
+{"id": "q-0043", "category": "fact", "question": "中国人民大学商学院在哪一年开始办学 商学院的工商管理专业旨在培养什么样的人才？ 会计学专业旨在培养具有哪些技能的学生？ 管理科学(商业数据分析方向)专业主要培养什么能力？ 学院与多少家海外院校建立了学生交换合作关系", "relevant_doc_ids": ["doc-0007", "doc-0007", "doc-0007", "doc-0007", "doc-0007"], "answer_keywords": ["80多家"]}
+{"id": "q-0044", "category": "fact", "question": "中国人民大学农业与农村发展学院成立于哪一年 学院拥有哪两个国家一流本科专业", "relevant_doc_ids": ["doc-0008", "doc-0008"], "answer_keywords": ["农林经济管理，农村区域发展"]}
+{"id": "q-0045", "category": "fact", "question": "中国人民大学农业与农村发展学院成立于哪一年 学院拥有哪两个国家一流本科专业 农村区域发展专业的学生毕业后都可以在哪些领域工作?", "relevant_doc_ids": ["doc-0008", "doc-0008", "doc-0008"], "answer_keywords": ["高等院校，科研机构，各级政府部门，事业单位，国内外企业，NGO组织"]}
+{"id": "q-0046", "category": "fact", "question": "中国人民大学农业与农村发展学院成立于哪一年 学院拥有哪两个国家一流本科专业 农村区域发展专业的学生毕业后都可以在哪些领域工作? 学院有哪些人才培养特色", "relevant_doc_ids": ["doc-0008", "doc-0008", "doc-0008", "doc-0008"], "answer_keywords": ["知行合一的培养理念，大类培养、宽口径、精英化、人民式的人才培养模式，应用经济-农村区域发展管理和大数据技术-农林经济管理两个双学士学位复合型人才培养项目"]}
+{"id": "q-0047", "category": "fact", "question": "中国人民大学农业与农村发展学院成立于哪一年 学院拥有哪两个国家一流本科专业 农村区域发展专业的学生毕业后都可以在哪些领域工作? 学院有哪些人才培养特色 提供哪些双学士学位复合型人才培养项目？", "relevant_doc_ids": ["doc-0008", "doc-0008", "doc-0008", "doc-0008", "doc-0008"], "answer_keywords": ["应用经济—农村区域发展管理双学士学位复合型人才培养项目，大数据技术—农林经济管理双学士学位复合型人才培养项目"]}
+{"id": "q-0048", "category": "fact", "question": "中国人民大学农业与农村发展学院成立于哪一年 学院拥有哪两个国家一流本科专业 农村区域发展专业的学生毕业后都可以在哪些领域工作? 学院有哪些人才培养特色 提供哪些双学士学位复合型人才培养项目？ 本科生毕业后主要选择什么样的发展方向", "relevant_doc_ids": ["doc-0008", "doc-0008", "doc-0008", "doc-0008", "doc-0008", "doc-0008"], "answer_keywords": ["国内读研，出国深造，就业"]}
+{"id": "q-0049", "category": "fact", "question": "中国人民大学农业与农村发展学院成立于哪一年 学院拥有哪两个国家一流本科专业 农村区域发展专业的学生毕业后都可以在哪些领域工作? 学院有哪些人才培养特色 提供哪些双学士学位复合型人才培养项目？ 本科生毕业后主要选择什么样的发展方向 近三年来本科生的升学比例分别是多少?", "relevant_doc_ids": ["doc-0008", "doc-0008", "doc-0008", "doc-0008", "doc-0008", "doc-0008", "doc-0008"], "answer_keywords": ["国内读研比例为51%，出国深造比例为14%"]}
+{"id": "q-0050", "category": "fact", "question": "中国人民大学中法学院用哪三个语言进行教学？", "relevant_doc_ids": ["doc-0009"], "answer_keywords": ["汉语"]}
+{"id": "q-0051", "category": "fact", "question": "中国人民大学2018年高水平艺术团招生计划甲类的降分政策是降多少？", "relevant_doc_ids": ["doc-0010"], "answer_keywords": ["降至一本线"]}
+{"id": "q-0052", "category": "fact", "question": "在教育部开展的五次全国一级学科评估中，中国人民大学新闻传播学科被评为什么等级？", "relevant_doc_ids": ["doc-0011"], "answer_keywords": ["A+"]}
+{"id": "q-0053", "category": "fact", "question": "人大文学院的“古典学实验班”创办于哪一年？", "relevant_doc_ids": ["doc-0012"], "answer_keywords": ["2010"]}
+{"id": "q-0054", "category": "fact", "question": "人大文学院建立了哪个国内第一个中心？", "relevant_doc_ids": ["doc-0012"], "answer_keywords": ["国际写作中心"]}
+{"id": "q-0055", "category": "fact", "question": "人大文学院举办的五届“世界汉学大会”开始时间是？", "relevant_doc_ids": ["doc-0012"], "answer_keywords": ["2007"]}
+{"id": "q-0056", "category": "fact", "question": "中国人民大学2016年“圆梦计划”招生计划招收多少人？", "relevant_doc_ids": ["doc-0013"], "answer_keywords": ["80"]}
+{"id": "q-0057", "category": "fact", "question": "国家专项计划招生的定向招收对象包括哪些地区的学生？", "relevant_doc_ids": ["doc-0014"], "answer_keywords": ["集中连片特殊困难县"]}
+{"id": "q-0058", "category": "fact", "question": "国家专项计划和“圆梦计划”录取的新生是否可以自行决定入学时是否迁转户口？", "relevant_doc_ids": ["doc-0014"], "answer_keywords": ["可以"]}
+{"id": "q-0059", "category": "fact", "question": "中国人民大学学生可以申请的助学项目有哪些？", "relevant_doc_ids": ["doc-0014"], "answer_keywords": ["国家助学贷款"]}
+{"id": "q-0060", "category": "fact", "question": "国家专项计划录取的学生是否可以转专业？", "relevant_doc_ids": ["doc-0014"], "answer_keywords": ["可以"]}
+{"id": "q-0061", "category": "fact", "question": "人大图书馆的人大文库藏有多少藏有人大学者和校友著作 、研究生论文？", "relevant_doc_ids": ["doc-0015"], "answer_keywords": ["8万余册"]}
+{"id": "q-0062", "category": "fact", "question": "中国人民大学获得北京市第十七届哲学社会科学优秀成果奖几项？", "relevant_doc_ids": ["doc-0016"], "answer_keywords": ["25"]}
+{"id": "q-0063", "category": "fact", "question": "中国人民大学新发展阶段中国社会学学科建设研讨会何时举行？", "relevant_doc_ids": ["doc-0016"], "answer_keywords": ["2023-11-04"]}
+{"id": "q-0064", "category": "fact", "question": "中国人民大学何时首次举办本科生招生录取现场开放日？", "relevant_doc_ids": ["doc-0017"], "answer_keywords": ["2014-07-17"]}
+{"id": "q-0065", "category": "fact", "question": "中国人民大学在哪一届中宣部出版局的评选中推荐了4篇文章并入选？", "relevant_doc_ids": ["doc-0018"], "answer_keywords": ["第七届"]}
+{"id": "q-0066", "category": "fact", "question": "中国自主的知识体系大学联盟成员单位有多少家？", "relevant_doc_ids": ["doc-0018"], "answer_keywords": ["60"]}
+{"id": "q-0067", "category": "fact", "question": "中国人民大学在2023年世界大学联盟发布的年度科研发展基金中获得几项立项？", "relevant_doc_ids": ["doc-0018"], "answer_keywords": ["2"]}
+{"id": "q-0068", "category": "fact", "question": "中法学院的办学理念是什么？", "relevant_doc_ids": ["doc-0019"], "answer_keywords": ["高水平"]}
+{"id": "q-0069", "category": "fact", "question": "中法学院的办学愿景是什么？", "relevant_doc_ids": ["doc-0019"], "answer_keywords": ["独树一帜的中外合作办学新高地"]}
+{"id": "q-0070", "category": "fact", "question": "中国人民大学2021年高水平运动队招生报名需要提供哪些材料？", "relevant_doc_ids": ["doc-0020"], "answer_keywords": ["个人简历"]}
+{"id": "q-0071", "category": "fact", "question": "中国人民大学金融工程专业的就业方向有哪些？", "relevant_doc_ids": ["doc-0021"], "answer_keywords": ["前台金融工程师"]}
+{"id": "q-0072", "category": "fact", "question": "哲学院有哪些专业？", "relevant_doc_ids": ["doc-0005"], "answer_keywords": ["伦理学"]}
+{"id": "q-0073", "category": "fact", "question": "哲学院的国际交流有哪些合作大学？", "relevant_doc_ids": ["doc-0005"], "answer_keywords": ["英国牛津大学"]}
+{"id": "q-0074", "category": "fact", "question": "历史学专业的新兴前沿与交叉方向有哪些？", "relevant_doc_ids": ["doc-0022"], "answer_keywords": ["生态史"]}
+{"id": "q-0075", "category": "fact", "question": "艺术学院的本科专业有哪些方向？", "relevant_doc_ids": ["doc-0023"], "answer_keywords": ["环境设计(景观建筑方向)"]}
+{"id": "q-0076", "category": "fact", "question": "信息学院是否实施双选认证制度？", "relevant_doc_ids": ["doc-0024"], "answer_keywords": ["是"]}
+{"id": "q-0077", "category": "fact", "question": "信息学院是否鼓励学生参加国际研学项目和活动？", "relevant_doc_ids": ["doc-0024"], "answer_keywords": ["是"]}
+{"id": "q-0078", "category": "fact", "question": "财政金融学院有多少门国家级精品课程？", "relevant_doc_ids": ["doc-0025"], "answer_keywords": ["5"]}
+{"id": "q-0079", "category": "fact", "question": "财政金融学院有哪两个专业大类？", "relevant_doc_ids": ["doc-0025"], "answer_keywords": ["财政"]}
+{"id": "q-0080", "category": "fact", "question": "2018年港澳台侨联招计划招收多少人？", "relevant_doc_ids": ["doc-0026"], "answer_keywords": ["10"]}
+{"id": "q-0081", "category": "fact", "question": "中国人民大学2018年招收的社会学类专业有哪些？", "relevant_doc_ids": ["doc-0026"], "answer_keywords": ["社会学"]}
+{"id": "q-0082", "category": "fact", "question": "中国人民大学2016年高水平艺术团招生报名截止日期是什么时候？", "relevant_doc_ids": ["doc-0027"], "answer_keywords": ["2月5日"]}
+{"id": "q-0083", "category": "fact", "question": "申请2014年“圆梦计划”的中学需满足什么条件？", "relevant_doc_ids": ["doc-0028"], "answer_keywords": ["原则上应为县（县级市）及以下中学"]}
+{"id": "q-0084", "category": "fact", "question": "中法学院2012级本科生在TEF/TCF法语水平测试中有几名同学达到A2级别？", "relevant_doc_ids": ["doc-0029"], "answer_keywords": ["1名"]}
+{"id": "q-0085", "category": "fact", "question": "中国人民大学化学系王亚培教授研究团队在哪个领域取得了重要技术突破？", "relevant_doc_ids": ["doc-0030"], "answer_keywords": ["可降解农药领域"]}
+{"id": "q-0086", "category": "fact", "question": "人大文学院的古典学实验班是从那些专业进行学生选拔的？", "relevant_doc_ids": ["doc-0031"], "answer_keywords": ["全校不同专业"]}
+{"id": "q-0087", "category": "fact", "question": "人大文学院的国际写作中心吸引了哪些创作新秀求学？", "relevant_doc_ids": ["doc-0031"], "answer_keywords": ["张楚"]}
+{"id": "q-0088", "category": "fact", "question": "人大文学院本科毕业生就业情况主要集中在哪些领域？", "relevant_doc_ids": ["doc-0031"], "answer_keywords": ["党政机关"]}
+{"id": "q-0089", "category": "fact", "question": "中国人民大学艺术学院成立于哪一年？", "relevant_doc_ids": ["doc-0032"], "answer_keywords": ["1999"]}
+{"id": "q-0090", "category": "fact", "question": "中国人民大学艺术类招生专业测试报名费是多少？", "relevant_doc_ids": ["doc-0032"], "answer_keywords": ["100元"]}
+{"id": "q-0091", "category": "fact", "question": "中国人民大学2023年艺术类（音乐表演）专业招生报名截止时间是？", "relevant_doc_ids": ["doc-0032"], "answer_keywords": ["2 月 22 日"]}
+{"id": "q-0092", "category": "fact", "question": "中国人民大学法学学科的哪位教授在中国法学会民法典编纂项目中担任了领导小组成员、秘书长？", "relevant_doc_ids": ["doc-0033"], "answer_keywords": ["王轶"]}
+{"id": "q-0093", "category": "fact", "question": "哪个学校的法学学科是法学院校中参与参与民法典编纂人数最多的 ？", "relevant_doc_ids": ["doc-0033"], "answer_keywords": ["中国人民大学"]}
+{"id": "q-0094", "category": "fact", "question": "在中国人民大学召开的第二届健康中国建设学术年会的主题是什么？", "relevant_doc_ids": ["doc-0034"], "answer_keywords": ["共筑健康中国优化健康管理"]}
+{"id": "q-0095", "category": "fact", "question": "在中国人民大学召开的第二届健康中国建设学术年会中，于学军提出要做好几个坚持？", "relevant_doc_ids": ["doc-0034"], "answer_keywords": ["三"]}
+{"id": "q-0096", "category": "fact", "question": "中国人民大学本科生招生网提供的职业测评服务包括哪些测评？", "relevant_doc_ids": ["doc-0035"], "answer_keywords": ["兴趣测评"]}
+{"id": "q-0097", "category": "fact", "question": "人民大学图书馆新馆于哪一年投入使用？", "relevant_doc_ids": ["doc-0015"], "answer_keywords": ["2011"]}
+{"id": "q-0098", "category": "fact", "question": "人民大学图书馆新馆采用了哪些智能化信息管理系统？", "relevant_doc_ids": ["doc-0015"], "answer_keywords": ["移动图书馆"]}
+{"id": "q-0099", "category": "fact", "question": "中国人民大学在北京市第十七届哲学社会科学优秀成果奖中排名第几？", "relevant_doc_ids": ["doc-0016"], "answer_keywords": ["首位"]}
+{"id": "q-0100", "category": "fact", "question": "中国人民大学在北京市第十七届哲学社会科学优秀成果奖中有多少项成果入选？", "relevant_doc_ids": ["doc-0018"], "answer_keywords": ["25"]}
+{"id": "q-0101", "category": "fact", "question": "中国人民大学在2024年的国家社科基金年度项目和青年项目立项总结中共有多少立项？", "relevant_doc_ids": ["doc-0018"], "answer_keywords": ["58"]}
+{"id": "q-0102", "category": "fact", "question": "中国人民大学在2023年度国家自然科学基金中获得多少项资助？", "relevant_doc_ids": ["doc-0018"], "answer_keywords": ["103"]}
+{"id": "q-0103", "category": "fact", "question": "中国人民大学在2023年度世界大学联盟科研发展基金中获得多少项研究申请立项？", "relevant_doc_ids": ["doc-0018"], "answer_keywords": ["2"]}
+{"id": "q-0104", "category": "fact", "question": "人大国学馆占地面积多少平方米？", "relevant_doc_ids": ["doc-0036"], "answer_keywords": ["11500"]}
+{"id": "q-0105", "category": "fact", "question": "2013年全国高考平均录取率是多少？", "relevant_doc_ids": ["doc-0037"], "answer_keywords": ["76%"]}
+{"id": "q-0106", "category": "fact", "question": "乌云毕力格教授的现任职务是什么？", "relevant_doc_ids": ["doc-0038"], "answer_keywords": ["中国人民大学国学院西域历史语言研究所副所长"]}
+{"id": "q-0107", "category": "fact", "question": "中国人民大学哪些学科在2017年被评为A+？", "relevant_doc_ids": ["doc-0039"], "answer_keywords": ["理论经济学"]}
+{"id": "q-0108", "category": "fact", "question": "中国人民大学与多少个国家的高校建立了伙伴关系？", "relevant_doc_ids": ["doc-0039"], "answer_keywords": ["61"]}
+{"id": "q-0109", "category": "fact", "question": "人民大学国学院最活跃的兴趣小组叫什么？", "relevant_doc_ids": ["doc-0040"], "answer_keywords": ["新风雅诗社"]}
+{"id": "q-0110", "category": "fact", "question": "人民大学国学院副院长杨庆中认为国学的意义在于什么？", "relevant_doc_ids": ["doc-0040"], "answer_keywords": ["回归"]}
+{"id": "q-0111", "category": "fact", "question": "国学院特聘教授薛天纬开设的古诗文写作课主要讲授哪些诗体？", "relevant_doc_ids": ["doc-0040"], "answer_keywords": ["导言"]}
+{"id": "q-0112", "category": "fact", "question": "中国人民大学数学学院于何年成立？", "relevant_doc_ids": ["doc-0041"], "answer_keywords": ["2018"]}
+{"id": "q-0113", "category": "fact", "question": "中国人民大学数学与应用数学专业目前设有几个方向？", "relevant_doc_ids": ["doc-0041"], "answer_keywords": ["三个"]}
+{"id": "q-0114", "category": "fact", "question": "中国人民大学西班牙语专业只招收高考科目为哪些语种的考生？", "relevant_doc_ids": ["doc-0042"], "answer_keywords": ["英语语种"]}
+{"id": "q-0115", "category": "fact", "question": "中法学院所在的中国人民大学苏州校区位于哪里？", "relevant_doc_ids": ["doc-0043"], "answer_keywords": ["苏州市独墅湖科教创新区"]}
+{"id": "q-0116", "category": "fact", "question": "汪建熙是哪个系的毕业生？", "relevant_doc_ids": ["doc-0044"], "answer_keywords": ["财政系"]}
+{"id": "q-0117", "category": "fact", "question": "王永昌是哪个专业的研究生？", "relevant_doc_ids": ["doc-0044"], "answer_keywords": ["马克思主义哲学"]}
+{"id": "q-0118", "category": "fact", "question": "中国人民大学的知名校友王永昌是哪年加入中国共产党的？", "relevant_doc_ids": ["doc-0044"], "answer_keywords": ["1974"]}
+{"id": "q-0119", "category": "fact", "question": "现任北京市海淀区人民法院党组成员、副院长是中国人民大学的哪位知名校友？", "relevant_doc_ids": ["doc-0044"], "answer_keywords": ["宋鱼水"]}
+{"id": "q-0120", "category": "fact", "question": "政治学与行政学本科毕业生有多少比例的学生选择就业？", "relevant_doc_ids": ["doc-0045"], "answer_keywords": ["20-25%"]}
+{"id": "q-0121", "category": "fact", "question": "人大文学院的全职教师包括哪位80后青年作家？", "relevant_doc_ids": ["doc-0012"], "answer_keywords": ["张悦然"]}
+{"id": "q-0122", "category": "fact", "question": "人大文学院的“古代文本文化国际研究中心”由哪位教授领衔？", "relevant_doc_ids": ["doc-0012"], "answer_keywords": ["柯马丁"]}
+{"id": "q-0123", "category": "fact", "question": "中国人民大学马克思主义学院是全国最早开设马克思主义理论本科专业的学院吗？", "relevant_doc_ids": ["doc-0046"], "answer_keywords": ["是"]}
+{"id": "q-0124", "category": "fact", "question": "中国人民大学中法学院是由哪些大学共建的中外合作办学机构？", "relevant_doc_ids": ["doc-0047"], "answer_keywords": ["法国索邦大学"]}
+{"id": "q-0125", "category": "fact", "question": "中国人民大学2022年澳门保送生招生的人文社会科学专业排名中，A+学科的数量是多少？", "relevant_doc_ids": ["doc-0048"], "answer_keywords": ["8"]}
+{"id": "q-0126", "category": "fact", "question": "中国人民大学校长李文海在1991年6月获得了什么称号？", "relevant_doc_ids": ["doc-0049"], "answer_keywords": ["全国普通高等学校优秀思想政治工作者"]}
+{"id": "q-0127", "category": "fact", "question": "中国人民大学校友邬沧萍中学毕业后上的是哪个大学？", "relevant_doc_ids": ["doc-0050"], "answer_keywords": ["岭南大学"]}
+{"id": "q-0128", "category": "fact", "question": "中国人民大学2018年有多少个入选“双一流”建设学科？", "relevant_doc_ids": ["doc-0051"], "answer_keywords": ["14"]}
+{"id": "q-0129", "category": "fact", "question": "中国人民大学外语类专业2022年学年的学费是多少？", "relevant_doc_ids": ["doc-0047"], "answer_keywords": ["6000"]}
+{"id": "q-0130", "category": "fact", "question": "谁是中国人民大学历史上的新中国新型高等教育的开拓者？", "relevant_doc_ids": ["doc-0052"], "answer_keywords": ["吴玉章"]}
+{"id": "q-0131", "category": "fact", "question": "2022年中国人民大学获评A+的学科有多少个？", "relevant_doc_ids": ["doc-0039"], "answer_keywords": ["9个"]}
+{"id": "q-0132", "category": "fact", "question": "2019年中国人民大学英语保送生招生计划人数是多少？", "relevant_doc_ids": ["doc-0053"], "answer_keywords": ["20"]}
+{"id": "q-0133", "category": "fact", "question": "2023年中国人民大学获评A的学科有多少个？", "relevant_doc_ids": ["doc-0054"], "answer_keywords": ["14"]}
+{"id": "q-0134", "category": "fact", "question": "2023年中国人民大学获评A+的学科有多少个？", "relevant_doc_ids": ["doc-0054"], "answer_keywords": ["9个"]}
+{"id": "q-0135", "category": "fact", "question": "2014年中国人民大学中法学院的院长是谁？", "relevant_doc_ids": ["doc-0009"], "answer_keywords": ["杨伟国"]}
+{"id": "q-0136", "category": "fact", "question": "2023年中国人民大学国际关系学院党委书记是谁？", "relevant_doc_ids": ["doc-0055"], "answer_keywords": ["幸明军"]}
+{"id": "q-0137", "category": "fact", "question": "2022年人大有多少个校际交换项目？", "relevant_doc_ids": ["doc-0056"], "answer_keywords": ["68"]}
+{"id": "q-0138", "category": "fact", "question": "2021年中国人民大学中法学院TFS4的测试平均分是多少？", "relevant_doc_ids": ["doc-0057"], "answer_keywords": ["75.34"]}
+{"id": "q-0139", "category": "fact", "question": "2024年中国人民大学社会与人口学院的院长是谁？", "relevant_doc_ids": ["doc-0058"], "answer_keywords": ["冯仕政"]}
+{"id": "q-0140", "category": "fact", "question": "中国人民大学2022年外语类保送生报名截止时间是什么时候？", "relevant_doc_ids": ["doc-0059"], "answer_keywords": ["2021年12月20日11:00"]}
+{"id": "q-0141", "category": "fact", "question": "中国人民大学2016年“圆梦计划”招生计划招收多少人？", "relevant_doc_ids": ["doc-0013"], "answer_keywords": ["80人"]}
+{"id": "q-0142", "category": "fact", "question": "中国人民大学2016年针对武警技术干部招收的国防生专业是什么？", "relevant_doc_ids": ["doc-0060"], "answer_keywords": ["新闻学"]}
+{"id": "q-0143", "category": "fact", "question": "中国人民大学外国语言文学类招收的考生的外语科目要求是什么？", "relevant_doc_ids": ["doc-0061"], "answer_keywords": ["英语"]}
+{"id": "q-0144", "category": "fact", "question": "中国人民大学的农林经济管理学科在“双一流”评估中的排名是如何？", "relevant_doc_ids": ["doc-0062"], "answer_keywords": ["位列第一档"]}
+{"id": "q-0145", "category": "fact", "question": "赴法国合作高校学习并获得国家本科文凭需要在哪一学年完成？", "relevant_doc_ids": ["doc-0063"], "answer_keywords": ["第三学年"]}
+{"id": "q-0146", "category": "fact", "question": "2022年“圆梦计划”的合格生中，富平中学有几名学生上榜？", "relevant_doc_ids": ["doc-0064"], "answer_keywords": ["2"]}
+{"id": "q-0147", "category": "fact", "question": "2014年艺术类(音乐表演)专业招生简章中提琴部分要求演奏多少个八度的音阶？", "relevant_doc_ids": ["doc-0065"], "answer_keywords": ["三个八度"]}
+{"id": "q-0148", "category": "fact", "question": "2014年艺术类(音乐表演)专业招生简章中提琴部分要求演奏多少个八度的音阶？", "relevant_doc_ids": ["doc-0065"], "answer_keywords": ["三个八度"]}
+{"id": "q-0149", "category": "fact", "question": "如何联系2022年中国人民大学中法学院内蒙古地区的招生咨询？", "relevant_doc_ids": ["doc-0066"], "answer_keywords": ["赵老师 15995751934"]}
+{"id": "q-0150", "category": "fact", "question": "如何联系2022年中国人民大学中法学院内蒙古地区的招生咨询？", "relevant_doc_ids": ["doc-0066"], "answer_keywords": ["赵老师 15995751934"]}
+{"id": "q-0151", "category": "fact", "question": "中国人民大学对参加2023年香港中学文凭考试招收的学生人数是多少？", "relevant_doc_ids": ["doc-0067"], "answer_keywords": ["10"]}
+{"id": "q-0152", "category": "fact", "question": "中国人民大学对参加2023年香港中学文凭考试招收的学生人数是多少？", "relevant_doc_ids": ["doc-0067"], "answer_keywords": ["10"]}
+{"id": "q-0153", "category": "fact", "question": "2015年中国人民大学在多少个省份招收国防生？", "relevant_doc_ids": ["doc-0068"], "answer_keywords": ["15个省份"]}
+{"id": "q-0154", "category": "fact", "question": "2015年中国人民大学在多少个省份招收国防生？", "relevant_doc_ids": ["doc-0068"], "answer_keywords": ["15个省份"]}
+{"id": "q-0155", "category": "fact", "question": "中国人民大学中法学院金融学专业包括哪些核心课程？", "relevant_doc_ids": ["doc-0069"], "answer_keywords": ["微观经济学"]}
+{"id": "q-0156", "category": "fact", "question": "中国人民大学中法学院金融学专业包括哪些核心课程？", "relevant_doc_ids": ["doc-0069"], "answer_keywords": ["微观经济学"]}
+{"id": "q-0157", "category": "fact", "question": "中国人民大学在教育部第四轮学科评估结果中获评A+学科数量有多少个？", "relevant_doc_ids": ["doc-0070"], "answer_keywords": ["9"]}
+{"id": "q-0158", "category": "fact", "question": "中国人民大学在教育部第四轮学科评估结果中获评A+学科数量有多少个？", "relevant_doc_ids": ["doc-0070"], "answer_keywords": ["9"]}
+{"id": "q-0159", "category": "fact", "question": "中国人民大学中法学院2019级学生在2021年全国高校法语专业四级考试中的通过率有多少？", "relevant_doc_ids": ["doc-0071"], "answer_keywords": ["93%"]}
+{"id": "q-0160", "category": "fact", "question": "中国人民大学中法学院2019级学生在2021年全国高校法语专业四级考试中的通过率有多少？", "relevant_doc_ids": ["doc-0071"], "answer_keywords": ["93%"]}
+{"id": "q-0161", "category": "fact", "question": "我校录取考生的最低高考成绩要求是什么？", "relevant_doc_ids": ["doc-0072"], "answer_keywords": ["不得低于所在省（区、市）第一批本科录取控制分数线"]}
+{"id": "q-0162", "category": "fact", "question": "在中国人民大学2023年强基计划中，高考成绩占综合成绩的多少比例？", "relevant_doc_ids": ["doc-0073"], "answer_keywords": ["85%"]}
+{"id": "q-0163", "category": "fact", "question": "在中国人民大学2023年强基计划中，高考成绩占综合成绩的多少比例？", "relevant_doc_ids": ["doc-0073"], "answer_keywords": ["85%"]}
+{"id": "q-0164", "category": "fact", "question": "中国人民大学高水平运动员新生入校后多长时间内将进行专业复查？", "relevant_doc_ids": ["doc-0074"], "answer_keywords": ["三个月内"]}
+{"id": "q-0165", "category": "fact", "question": "中国人民大学高水平运动员新生入校后多长时间内将进行专业复查？", "relevant_doc_ids": ["doc-0074"], "answer_keywords": ["三个月内"]}
+{"id": "q-0166", "category": "fact", "question": "中国人民大学联合招收澳门保送生的招生计划是多少人？", "relevant_doc_ids": ["doc-0075"], "answer_keywords": ["20人"]}
+{"id": "q-0167", "category": "fact", "question": "中国人民大学联合招收澳门保送生的招生计划是多少人？", "relevant_doc_ids": ["doc-0075"], "answer_keywords": ["20人"]}
+{"id": "q-0168", "category": "fact", "question": "中国人民大学理工科学院有哪些？", "relevant_doc_ids": ["doc-0061"], "answer_keywords": ["统计学院"]}
+{"id": "q-0169", "category": "fact", "question": "中国人民大学理工科学院有哪些？", "relevant_doc_ids": ["doc-0061"], "answer_keywords": ["统计学院"]}
+{"id": "q-0170", "category": "fact", "question": "2014年‘校长直通车计划’计划招生多少人？", "relevant_doc_ids": ["doc-0076"], "answer_keywords": ["150人"]}
+{"id": "q-0171", "category": "fact", "question": "2014年‘校长直通车计划’计划招生多少人？", "relevant_doc_ids": ["doc-0076"], "answer_keywords": ["150人"]}
+{"id": "q-0172", "category": "fact", "question": "2022年人大在投档分数的计算中最多认可多少分的政策性加分？", "relevant_doc_ids": ["doc-0077"], "answer_keywords": ["20分"]}
+{"id": "q-0173", "category": "fact", "question": "2022年人大在投档分数的计算中最多认可多少分的政策性加分？", "relevant_doc_ids": ["doc-0077"], "answer_keywords": ["20分"]}
+{"id": "q-0174", "category": "fact", "question": "中国人民大学共有多少个国家级一流本科专业建设点？", "relevant_doc_ids": ["doc-0078"], "answer_keywords": ["59个"]}
+{"id": "q-0175", "category": "fact", "question": "中国人民大学共有多少个国家级一流本科专业建设点？", "relevant_doc_ids": ["doc-0078"], "answer_keywords": ["59个"]}
+{"id": "q-0176", "category": "fact", "question": "中国人民大学高水平艺术团2022年校考合格生提交网上报名的截止时间是哪一天？", "relevant_doc_ids": ["doc-0079"], "answer_keywords": ["2021年12月30日"]}
+{"id": "q-0177", "category": "fact", "question": "中国人民大学高水平艺术团2022年校考合格生提交网上报名的截止时间是哪一天？", "relevant_doc_ids": ["doc-0079"], "answer_keywords": ["2021年12月30日"]}
+{"id": "q-0178", "category": "fact", "question": "武警部队与哪些学校签订了依托培养协议？", "relevant_doc_ids": ["doc-0068"], "answer_keywords": ["中国人民大学"]}
+{"id": "q-0179", "category": "fact", "question": "武警部队与哪些学校签订了依托培养协议？", "relevant_doc_ids": ["doc-0068"], "answer_keywords": ["中国人民大学"]}
+{"id": "q-0180", "category": "fact", "question": "中国人民大学2015年艺术类（美术）专业的校考优先录取前多少名？", "relevant_doc_ids": ["doc-0080"], "answer_keywords": ["前5名"]}
+{"id": "q-0181", "category": "fact", "question": "人大哪些学院实行无时点专业选择？", "relevant_doc_ids": ["doc-0081"], "answer_keywords": ["新闻学院"]}
+{"id": "q-0182", "category": "fact", "question": "人大哪些学院实行无时点专业选择？", "relevant_doc_ids": ["doc-0081"], "answer_keywords": ["新闻学院"]}
+{"id": "q-0183", "category": "fact", "question": "国际政治专业的特色课程有哪些？", "relevant_doc_ids": ["doc-0082"], "answer_keywords": ["《世界政治概论》"]}
+{"id": "q-0184", "category": "fact", "question": "国际政治专业的特色课程有哪些？", "relevant_doc_ids": ["doc-0082"], "answer_keywords": ["《世界政治概论》"]}
+{"id": "q-0185", "category": "fact", "question": "林蕾在国学院辩论队获得了哪年人大“二十院”辩论赛的亚军？", "relevant_doc_ids": ["doc-0083"], "answer_keywords": ["2008年"]}
+{"id": "q-0186", "category": "fact", "question": "林蕾在国学院辩论队获得了哪年人大“二十院”辩论赛的亚军？", "relevant_doc_ids": ["doc-0083"], "answer_keywords": ["2008年"]}
+{"id": "q-0187", "category": "fact", "question": "中国人大的图书馆和藏书馆共有多少册藏书量？", "relevant_doc_ids": ["doc-0084"], "answer_keywords": ["412万册"]}
+{"id": "q-0188", "category": "fact", "question": "中国人大的图书馆和藏书馆共有多少册藏书量？", "relevant_doc_ids": ["doc-0084"], "answer_keywords": ["412万册"]}
+{"id": "q-0189", "category": "fact", "question": "数学与应用数学专业与数据计算及应用专业在人才培养的共同目标和独特特点是什么？", "relevant_doc_ids": ["doc-0085", "doc-0086"], "answer_keywords": ["数学与应用数学专业和数据计算及应用专业共同的人才培养目标都是培养具有国际视野和创新意识的人才。在独特性方面，数学与应用数学专业强调数学专业化训练、理解数学理论基础，并培养具有独立分析和深入研究能力的人才；而数据计算及应用专业突出强调数据科学与人文社会科学的深度交叉融合，以及面向国家创新驱动发展战略需求的复合型人才培养。"]}
+{"id": "q-0190", "category": "fact", "question": "计算机科学与技术专业和软件工程专业在培养学生方面有哪些相似之处?", "relevant_doc_ids": ["doc-0087", "doc-0088"], "answer_keywords": ["计算机科学与技术专业和软件工程专业都致力于培养能够对信息系统设计、研发、应用、管理等相关工作的高端专业人才，并且学生毕业后多会进入国内外高等院校、科研院所继续深造或在国内外知名企事业单位从事相关领域的理论研究、系统研发等工作。"]}
+{"id": "q-0191", "category": "fact", "question": "计算机科学与技术专业与数据科学与大数据技术专业的共同点和不同点是什么？", "relevant_doc_ids": ["doc-0087", "doc-0089"], "answer_keywords": ["共同点在于两个专业都培养具有扎实数学基础和人文素养的高端专业人才，并且侧重数据为中心的特色专业体系；两者毕业生都可以进入国内外高校、科研院所继续深造或在企事业单位从事相关理论研究、系统开发、数据分析等。不同之处在于计算机科学与技术专业培养人才可以在多个领域例如IT、金融、教育行业，胜任核心算法设计等岗位，而数据科学与大数据技术专业更侧重在数据管理和分析领域的探索。"]}
+{"id": "q-0192", "category": "fact", "question": "人工智能专业与数据科学与大数据技术专业在培养模式和目标上有哪些相似之处和不同之处？", "relevant_doc_ids": ["doc-0090", "doc-0090", "doc-0090", "doc-0090", "doc-0089"], "answer_keywords": ["人工智能专业和数据科学与大数据技术专业在培养模式和目标上的相似之处在于两者都致力于培养高层次的专业人才，并注重全员拔尖培养、具有实践能力强的复合型人才。人工智能专业在培养特色上侧重于本硕博贯通长周期培养和与国际接轨的课程建设，注重人工智能的数学基础，编程课程，以及前沿领域的科研和实践训练。此外，它还强调人工智能与人文社科的结合，寻求人工智能领域的拔尖人才培养。而数据科学与大数据技术专业则聚焦于数据科学和大数据技术的专业基础，以及理工科与人文社科的交叉融合，培养能够架构系统、分析数据、理解领域业务的复合型人才。"]}
+{"id": "q-0193", "category": "fact", "question": "人工智能专业和计算机科学与技术专业在人才培养方面有何共同点和不同点？", "relevant_doc_ids": ["doc-0090", "doc-0090", "doc-0087"], "answer_keywords": ["人工智能专业和计算机科学与技术专业共同点在于都致力于培养高端专业人才，具备科学精神与人文素养，注重学生的创新精神，同时两个专业的学生毕业后有机会进入一流高校、科研院所继续深造或者去国内外企事业单位工作。不同点在于人工智能专业特别强调学生人文关怀与社会素养、伦理与职业道德教育，以及在人工智能领域的专业能力（如信息检索、自然语言处理等）；而计算机科学与技术专业则强调在计算机与信息系统设计、研发、应用、管理等方面的能力，更多侧重计算机科学与技术领域的理论研究及实践，如基础软硬件系统研发、大数据分析等。"]}
+{"id": "q-0194", "category": "fact", "question": "信息管理与信息系统专业和信息安全专业毕业生在就业方向上有哪些相似之处？", "relevant_doc_ids": ["doc-0091", "doc-0092"], "answer_keywords": ["信息管理与信息系统专业和信息安全专业的毕业生都可以在国内外高等院校、科研院所继续深造，或在国内外知名企事业单位从事信息系统领域相关的理论研究、数据分析等多方面的工作。"]}
+{"id": "q-0195", "category": "fact", "question": "政治学与行政学专业与外交学专业在研究重点和教育培养方面有哪些区别？", "relevant_doc_ids": ["doc-0045", "doc-0093"], "answer_keywords": ["政治学与行政学专业聚焦在国家理论、治理理论、民主理论、战争与和平、世界秩序等重大问题，强调政治与历史的连接，教学和研究并重，特色课程包括中国政府与政治、中国政治思想史等。外交学专业则以中国外交研究为基础，突出习近平外交思想研究和“一带一路”建设研究，培养模式注重“高层次、深拓展、懂世界”，力求培养复合型、国际化人才，特色课程包括中国对外关系史、对外政策分析等。"]}
+{"id": "q-0196", "category": "fact", "question": "中国人民大学政治学与行政学专业和外交学专业在满足国家战略需求方面各专注于哪些领域？", "relevant_doc_ids": ["doc-0045", "doc-0093"], "answer_keywords": ["中国人民大学政治学与行政学专业专注于国家理论、治理理论、民主理论、战争与和平、世界秩序等政治学中的重大问题，通过系统化的理论探索来响应当今中国与世界政治中的重要现实关切和战略需求。外交学专业则专注于中国外交理论与实践，特别是习近平外交思想、中国特色大国外交理论的研究，以及“一带一路”建设和周边外交战略研究，更好服务于中国特色大国外交、推动构建人类命运共同体。"]}
+{"id": "q-0197", "category": "fact", "question": "中国人民大学的外交学专业和国际政治学专业在人才培养方面有哪些共同点和不同点?", "relevant_doc_ids": ["doc-0093", "doc-0082"], "answer_keywords": ["共同点在于两个专业都旨在培养具有国际视野和实践能力的人才，并且毕业生中有很大一部分选择继续深造。外交学专业特别强调专业特色鲜明、外语优势突出以及“一带一路”建设和周边外交战略研究，国际政治专业则培养学生具备前沿性的国际政治视野和国际沟通交流能力，同时强调国际战略家和国际政治思想大家的学术底蕴。"]}
+{"id": "q-0198", "category": "fact", "question": "金融学和金融工程专业在人才培养的方法和理念上有哪些共同点和差异？", "relevant_doc_ids": ["doc-0094", "doc-0021"], "answer_keywords": ["金融学和金融工程专业在人才培养方面都强调数理分析能力和宏微观结合的视角。金融学专业注重扎实的马克思主义经济学和现代西方经济学、金融学理论基础，同时要掌握分析方法和工具，熟悉中国金融学理论和实践，并有宽阔的国际视野。而金融工程专业则更侧重于通过创新型的金融产品设计来解决市场上的非常规金融服务需求，具备创造性的系统思维，以及数学建模、数值计算、仿真模拟等技术。金融工程强调实践能力，包括产品定价、策略设计、风险管理等课程。"]}
+{"id": "q-0199", "category": "fact", "question": "经济统计学和应用统计学专业的本科教育中都有哪些共通之处？", "relevant_doc_ids": ["doc-0095", "doc-0096"], "answer_keywords": ["经济统计学和应用统计学专业在本科教育中都是国家级一流本科专业建设点，学制均为4年。两者都重视本科生在国际化方面的培养，聘请海外一流大学师资授课，提供全球优质教学资源，并通过学校和学院的国际合作资源，推出多项国际高校交流交换及硕博学位推荐项目。此外，大约70%的本科毕业生在境内外知名高校继续深造。特色课程中《概率论》、《数理统计》和《回归分析》为共有课程。"]}
+{"id": "q-0200", "category": "fact", "question": "比较中国人民大学商学院在工商管理专业和财务管理专业上的办学特色和重点?", "relevant_doc_ids": ["doc-0097", "doc-0097", "doc-0097", "doc-0097", "doc-0097", "doc-0097", "doc-0097", "doc-0097", "doc-0097", "doc-0097", "doc-0097", "doc-0097", "doc-0097", "doc-0098", "doc-0098", "doc-0098", "doc-0098"], "answer_keywords": ["工商管理专业侧重于为工商企业培养管理人才，注重实践导向和国际视野的教育，开设了多种实验班和双学位项目以及国际交流和合作，加强学生国际竞争能力。同时，商学院还设有管理案例与教学创新研究中心以及计算机与实验中心以支持教学，培养学生解决企业管理问题的能力。而财务管理专业侧重于培养具备广泛工商管理基础知识并能理解并运用财务管理学和金融学来解决实践问题的复合型人才，强调理论与实践并重的教学模式，并致力于提升学生应用能力。"]}
+{"id": "q-0201", "category": "fact", "question": "劳动与社会保障学与劳动关系学两门学科的研究内容有什么不同？", "relevant_doc_ids": ["doc-0099", "doc-0100", "doc-0099", "doc-0100"], "answer_keywords": ["社会保障学是以社会成员对福利的需求与政府主导下各种社会保障措施为研究对象的新兴学科领域，主要研究包括宏观的收入分配与社会福利议题、政府的劳动与社会保障政策、企业的薪酬福利等，而劳动关系学则专注于研究劳动力买者和卖者在工作场所形成的用工关系，包括微观的企业用工管理、员工发展及宏观的劳动关系治理等内容。"]}
+{"id": "q-0202", "category": "fact", "question": "经济学和经济统计学在学术发展和实际应用中各自扮演什么角色？", "relevant_doc_ids": ["doc-0101", "doc-0101", "doc-0101", "doc-0101", "doc-0101", "doc-0101", "doc-0101", "doc-0101", "doc-0095", "doc-0095"], "answer_keywords": ["经济学是一门解释经济现象、发现经济规律的学问，教授人们如何观察经济现象、分析经济问题、进行个人选择和决策，以及制定经济政策。经济学的发展与经济的发展密切相关，其学术阵地从18世纪的英国过渡到20世纪的美国，预计将来中国将成为经济学发展的主阵地。经济统计学则专注于培养能够熟练运用经济统计方法分析经济社会问题的专门人才，具备计算机和统计软件应用能力，并且这些知识可应用于经济建设、金融改革和市场建设，为不同部门输送专业和管理人才。"]}
+{"id": "q-0203", "category": "fact", "question": "中国人民大学新闻传播学科在教育部全国一级学科评估中的成绩如何，新闻学院在国际新闻与传播专业开设了哪两个跨校合作项目？", "relevant_doc_ids": ["doc-0102", "doc-0103"], "answer_keywords": ["中国人民大学新闻传播学科在教育部开展的五次全国一级学科评估中蝉联第一或被评为“A+”，并在2017年进入国家“双一流”学科建设序列。它在国际新闻与传播专业中与中国人民大学国际关系学院和北京外国语大学西班牙语专业合作，分别开设了“新闻学-国际政治实验班”和“国际新闻与传播-西班牙语”跨校本科项目。"]}
+{"id": "q-0204", "category": "fact", "question": "国际新闻与传播专业与新闻学专业有哪些共同点和不同点？", "relevant_doc_ids": ["doc-0103", "doc-0103", "doc-0103", "doc-0104", "doc-0104"], "answer_keywords": ["共同点：国际新闻与传播专业和新闻学专业都依托于中国人民大学新闻传播学科，在教育部开展的五次全国一级学科评估中，中国人民大学新闻传播学科蝉联第一或被评为“Ａ＋”，并且进入国家“双一流”学科建设序列。两个专业都注重培养高端的国际新闻传播人才和新闻舆论人才，并且都涉及马克思主义新闻观的教育。不同点：国际新闻与传播专业着重于国际新闻传播人才的培养、国际传播多层次的培养体系、国际传播的实践教学和体验，为学生提供定期的海外实习等机会。而新闻学专业则更加侧重于新闻学的深厚历史和文化传统、与法学专业的联合培养方案、以及师资在全国新闻院校中的领先地位。"]}
+{"id": "q-0205", "category": "fact", "question": "国际新闻与传播专业的毕业生去向与新闻学专业的毕业生去向有何异同？", "relevant_doc_ids": ["doc-0103", "doc-0104"], "answer_keywords": ["两个专业的毕业生都倾向于在中央主流媒体如人民日报社、新华社等担任新闻采编和管理工作，但国际新闻与传播专业的毕业生还可能在国际组织和央企驻外分公司的公共传播部门工作，以及80%以上的毕业生选择继续深造成为国际传播硕士研究生，并可能出国读博士深造。相比之下，新闻学专业的毕业生除了主流媒体机构的工作，还可能在各级党政机关、事业单位、央企国企从事宣传、文案方面的工作。"]}
+{"id": "q-0206", "category": "fact", "question": "国际新闻与传播专业和新闻学专业在培养人才方面有哪些区别？", "relevant_doc_ids": ["doc-0103", "doc-0104"], "answer_keywords": ["国际新闻与传播专业在人才培养方面，强调面向主流媒体、主流机构和国际组织培养高端复合型国际传播领英人才，重视国际视野、专业技能和跨文化传播素养，同时着重于国际新闻与传播实践教学和海外实习。另一方面，新闻学专业更加注重马克思主义新闻观、强烈社会责任感、职业道德、深厚文化素养以及新闻业务基本功，培养学生成为新时代新闻舆论事业的复兴栋梁和强国先锋。"]}
+{"id": "q-0207", "category": "fact", "question": "广播电视学专业与传播学专业在中国人民大学中的排名情况分别是如何？", "relevant_doc_ids": ["doc-0011", "doc-0102"], "answer_keywords": ["在中国人民大学，广播电视学专业始终在全国广播电视学专业排名中居于第一的位置，而传播学专业所依托的新闻传播学科在教育部开展的五次全国一级学科评估中蝉联第一或被评为“A+”。"]}
+{"id": "q-0208", "category": "fact", "question": "社会工作与社会学专业在人才培养方案与未来职业发展方向上有哪些相似之处？", "relevant_doc_ids": ["doc-0105", "doc-0105", "doc-0106", "doc-0106"], "answer_keywords": ["社会工作与社会学专业都致力于培养具有国际视野和国情意识且能积极投身社会实践活动的专业人才。在未来职业发展方向上，毕业生主要可以从事于政府机关、社会组织、科研单位等领域的专业服务与管理工作。"]}
+{"id": "q-0209", "category": "fact", "question": "中国人民大学信息资源管理学院和档案学专业的一流学科建设名录分别入选了教育部的哪些轮次？", "relevant_doc_ids": ["doc-0107", "doc-0108"], "answer_keywords": ["信息资源管理专业和档案学专业均入选了教育部的首轮和第二轮一流学科建设名录。"]}
+{"id": "q-0210", "category": "fact", "question": "劳动关系学和劳动经济学在国内的发展情况有什么相似性和差异性？", "relevant_doc_ids": ["doc-0100", "doc-0109"], "answer_keywords": ["劳动关系学和劳动经济学都在国内得到了重视，并且是相对新兴的专业。两者的学习对象均涉及劳动力市场和工作场所的各种社会关系，包括就业、收入分配、工作条件等。不同之处在于，劳动关系学更侧重于用工关系、劳资冲突和劳资关系治理等微观和宏观层面的研究，而劳动经济学则专注于劳动力市场中的供求关系、工资、人力资本投资、失业和收入分配等经济学视角的分析。"]}
+{"id": "q-0211", "category": "fact", "question": "中国人民大学历史学专业与考古学专业都有哪些国内外学术影响力较强的研究团队或中心？", "relevant_doc_ids": ["doc-0022", "doc-0022", "doc-0110", "doc-0110"], "answer_keywords": ["历史学专业有秦汉史团队、唐宋史团队、民国史团队和清史方向研究团队"]}
+{"id": "q-0212", "category": "fact", "question": "劳动关系学与劳动经济学各自的核心课程有哪些？", "relevant_doc_ids": ["doc-0100", "doc-0109"], "answer_keywords": ["劳动关系学的本科核心课程有：专业学科基础课程包括社会学、法学、西方经济学；专业学科必修课包括劳动关系学、劳动经济学、组织行为学、劳动法学、企业劳动关系管理、劳动争议处理、国际比较劳动关系、劳动关系的经济学分析等"]}
+{"id": "q-0213", "category": "fact", "question": "相比于中外合作办学的人力资源管理专业, 劳动人事学院的人力资源管理专业强调了哪些教学理念?", "relevant_doc_ids": ["doc-0111", "doc-0112"], "answer_keywords": ["人与人、人与组织的互动过程"]}
+{"id": "q-0214", "category": "fact", "question": "基础数学与应用数学的学科特色与亮点之间有何不同?", "relevant_doc_ids": ["doc-0085", "doc-0086"], "answer_keywords": ["基础数学强调的是基础课程和基础理论，包括代数与数论、几何与拓扑以及分析三大部分，重视基础课程，强调数学与计算机、统计、经济学、金融学的交叉融合，创建个性化选修模块，培养学生全面学习需求，有利于学生将来在服务国家战略的各个行业; 而数据计算与应用强调的是数据科学与人文社会科学的深度交叉融合，面向国家创新驱动发展、'中国制造2025'、'互联网+'等重大战略需求，培养具有深厚数理基础及计算机应用能力、面向未来科技发展视野的创新复合型人才。"]}
+{"id": "q-0215", "category": "fact", "question": "计算机科学与技术专业与软件工程专业在培养学生方面有哪些共同点？", "relevant_doc_ids": ["doc-0087", "doc-0088"], "answer_keywords": ["都培养能够从事计算机与信息系统设计、研发、应用、管理等工作的专业人才"]}
+{"id": "q-0216", "category": "fact", "question": "计算机科学与技术专业以及数据科学与大数据技术专业的培养模式都包含哪些方面？", "relevant_doc_ids": ["doc-0087", "doc-0089"], "answer_keywords": ["培养具有扎实的数学和计算机科学与技术基础"]}
+{"id": "q-0217", "category": "fact", "question": "高瓴人工智能学院和中国人民大学信息学院在人工智能和数据科学领域分别致力于培养哪类型的人才？", "relevant_doc_ids": ["doc-0090", "doc-0089"], "answer_keywords": ["高瓴人工智能学院致力于培养一流人工智能科学家、一流人工智能工程师、具有创新精神的人工智能创业者以及人文社科领域的人工智能开拓者"]}
+{"id": "q-0218", "category": "fact", "question": "高瓴人工智能学院提供的课程建设是如何与国际接轨的，并且在计算机科学与技术专业的哪些方向上形成了特色和优势？", "relevant_doc_ids": ["doc-0090", "doc-0087"], "answer_keywords": ["高瓴人工智能学院参照斯坦福大学、卡内基梅隆大学等国际顶尖学府的课程设置，精心设计学生培养方案，同时计算机科学与技术专业在数据库与大数据等方向上形成了鲜明特色和独特优势。"]}
+{"id": "q-0219", "category": "fact", "question": "中国人民大学中，政治学与行政学专业和国际政治专业在研究领域上有哪些重合之处？", "relevant_doc_ids": ["doc-0045", "doc-0082", "doc-0082"], "answer_keywords": ["都强调政治与历史的连接"]}
+{"id": "q-0220", "category": "fact", "question": "数学与应用数学专业与数据计算及应用专业之间有哪些主要的差异及共同之处？", "relevant_doc_ids": ["doc-0085", "doc-0086"], "answer_keywords": ["两个专业都强调数学领域的基础知识和应用能力，数学与应用数学专业侧重于基础数学研究以及数学模型在自然科学等领域的应用，数据计算及应用专业侧重在人文社科的交叉融合以及数据挖掘和分析能力。"]}
+{"id": "q-0221", "category": "fact", "question": "计算机科学与技术专业与软件工程专业培养的学生在毕业后的职业发展方向有何异同?", "relevant_doc_ids": ["doc-0087", "doc-0088"], "answer_keywords": ["计算机科学与技术专业的学生毕业后可以进入一流高校、科研院所继续深造，或在国内外知名企事业单位从事计算机科学与技术领域的理论研究、系统研发、数据分析等工作，成为IT、金融、教育等行业的业务骨干，胜任核心算法设计、基础软硬件系统研发、信息系统开发、大数据分析或大型数据中心管理等岗位。"]}
+{"id": "q-0222", "category": "fact", "question": "计算机科学与技术专业与数据科学与大数据技术专业在毕业生就业方向上有何区别？", "relevant_doc_ids": ["doc-0087", "doc-0089"], "answer_keywords": ["计算机科学与技术专业的学生可在IT、金融、教育等行业成为业务骨干，胜任核心算法设计、基础软硬件系统研发、信息系统开发等工作"]}
+{"id": "q-0223", "category": "fact", "question": "在人工智能和数据科学与大数据技术两个专业中，哪个专业注重于人文关怀和社会素养的教育，并开展有关AI的前沿交叉研究项目？", "relevant_doc_ids": ["doc-0090", "doc-0089"], "answer_keywords": ["人工智能"]}
+{"id": "q-0224", "category": "fact", "question": "中国人民大学的政治学与行政学专业和外交学专业在各自的领域中有哪些独特的研究方向或重点?", "relevant_doc_ids": ["doc-0045", "doc-0093"], "answer_keywords": ["政治学与行政学专业的独特研究方向包括国家理论、治理理论、民主理论、战争与和平、世界秩序等，特别强调政治与历史的连接及国内外政治经济的互动。"]}
+{"id": "q-0225", "category": "fact", "question": "政治学与行政学专业与外交学专业在人才培养规划及特点方面有哪些异同?", "relevant_doc_ids": ["doc-0045", "doc-0093"], "answer_keywords": ["政治学与行政学专业强调历史、哲学与社会科学研究方法的训练，重视理论批判和创新能力，旨在培养具有国内外政治经济互动分析能力的学术与实务人才。"]}
+{"id": "q-0226", "category": "fact", "question": "政治学与行政学专业和外交学专业在课程设置方面有哪些不同?", "relevant_doc_ids": ["doc-0045", "doc-0093"], "answer_keywords": ["政治学与行政学专业的特色课程包括《中国政府与政治》、《中国政治思想史》等，注重政治理论与国内政治实证研究。"]}
+{"id": "q-0227", "category": "fact", "question": "中国人民大学的外交学专业和国际政治专业有哪些共同点和不同点？", "relevant_doc_ids": ["doc-0093", "doc-0082"], "answer_keywords": ["共同点：两者都是中国人民大学的国家级一流本科专业建设点，两者均注重培养具有国际视野、交流能力强及对于专业领域有深入了解的人才。不同点：外交学专业更注重外交外事技能培养，区域国别研究以及习近平外交思想研究，国际政治专业则在国际政治经济学和国际安全与战略研究方面有特色和突出成果，培养方向偏重于国际政治经济学历史的研究。"]}
+{"id": "q-0228", "category": "fact", "question": "经济统计学和应用统计学专业分别授予什么学位", "relevant_doc_ids": ["doc-0095", "doc-0096"], "answer_keywords": ["经济统计学授予经济学学士学位，应用统计学授予理学学士学位"]}
+{"id": "q-0229", "category": "fact", "question": "在中国人民大学，会计学和市场营销分别提供哪些独特的专业项目，它们有哪些共同点？", "relevant_doc_ids": ["doc-0113", "doc-0114"], "answer_keywords": ["会计系提供会计专业教育，培养学生成为具备国际视野的高级会计专业人才。市场营销专业提供‘营销管理-数据科学双学位’项目，旨在培养掌握营销和数据科学知识的跨界复合型高级营销管理人才。"]}
+{"id": "q-0230", "category": "fact", "question": "赫克曼教授和加里·贝克尔教授在劳动经济学领域的贡献有哪些不同？", "relevant_doc_ids": ["doc-0099", "doc-0109"], "answer_keywords": ["赫克曼教授的贡献在于发现早期教育和发展对个人的长期成功至关重要，并提出了著名的赫克曼方程强调早期投资的重要性。"]}
+{"id": "q-0231", "category": "fact", "question": "经济学和数字经济学这两门学科的理论基础和研究目的有什么不同之处?", "relevant_doc_ids": ["doc-0101", "doc-0115", "doc-0115"], "answer_keywords": ["传统经济学是解释和分析经济现象及其背后规律的学问，而数字经济学不仅包括经济学理论基础，还包含计量经济学、大数据和机器学习等新技术在内的应用能力，目的是为理论研究和实践提供智力支持。"]}
+{"id": "q-0232", "category": "fact", "question": "经济学和国际经济与贸易专业在学科发展和课程设计方面有哪些区别？", "relevant_doc_ids": ["doc-0101", "doc-0116"], "answer_keywords": ["经济学是一门解释经济现象、发现经济规律的学问，关注于人们如何观察经济现象、分析经济问题、做出个人选择和决策等，通常使用数学分析工具和统计分析软件；而国际经济与贸易专业则更注重国际贸易、国际金融、国际结算和国际投资等实务性课程，以及实务操作能力的培养。"]}
+{"id": "q-0233", "category": "fact", "question": "中国人民大学的国际经济与贸易专业和数字经济专业的毕业生主要去向有何不同？", "relevant_doc_ids": ["doc-0116", "doc-0115"], "answer_keywords": ["国际经济与贸易专业毕业生的主要去向包括政府涉外贸易部门、外资企业和商业银行国际业务部、投资银行、基金公司等，而数字经济专业毕业生的主要去向则为互联网企业、传统行业数字化部门、国家政府机构、国际组织、高校与科研院所、金融机构、咨询公司等。"]}
+{"id": "q-0234", "category": "fact", "question": "中国人民大学的哪个专业从1958年开始且后来合作培养了全英文的国际新闻与传播项目，该专业的人才培养定位是什么？", "relevant_doc_ids": ["doc-0103", "doc-0103"], "answer_keywords": ["国际新闻与传播专业。该专业在人才培养定位上，培养面向主流媒体、主流机构、国际组织培养具有精良新闻传播专业技能、良好外语沟通能力与卓越跨文化传播素养的高端复合型国际传播领英人才。"]}
+{"id": "q-0235", "category": "fact", "question": "社会工作专业与社会学专业在未来毕业生去向方面的共同点和不同点分别是什么？", "relevant_doc_ids": ["doc-0105", "doc-0106"], "answer_keywords": ["共同点：毕业生都可以从事政府机关和社会服务相关的工作。"]}
+{"id": "q-0236", "category": "fact", "question": "信息资源管理和档案学专业在中国人民大学信息资源管理学院的设置时间分别是什么时候？", "relevant_doc_ids": ["doc-0107", "doc-0108"], "answer_keywords": ["信息资源管理专业于2013年设置，而档案学专业源于1952年建立的档案班，1978年成立档案学系。"]}
+{"id": "q-0237", "category": "fact", "question": "请问在2021年，甘肃省的文史专业中，工商管理类专业的高考录取最低分数线是多少？", "relevant_doc_ids": ["doc-0117"], "answer_keywords": ["632"]}
+{"id": "q-0238", "category": "fact", "question": "2022年河北省高考中，历史类专业里法学专业的录取最低分数线是什么？", "relevant_doc_ids": ["doc-0118"], "answer_keywords": ["652"]}
+{"id": "q-0239", "category": "fact", "question": "我想知道2022年甘肃省的理工专业中，金融学类的录取分数线最低是多少分？", "relevant_doc_ids": ["doc-0119"], "answer_keywords": ["605"]}
+{"id": "q-0240", "category": "fact", "question": "宁夏回族自治区在2020年的物理类专业中，经济学类专业的高考最低录取分是多少？", "relevant_doc_ids": ["doc-0120"], "answer_keywords": ["658"]}
+{"id": "q-0241", "category": "fact", "question": "在2022年陕西省的理工/物理类专业中，金融学类的高考最低录取分数线能告诉我吗？", "relevant_doc_ids": ["doc-0121"], "answer_keywords": ["673"]}
+{"id": "q-0242", "category": "fact", "question": "山西省2022年的文史专业中法学这个专业的录取最低分数线是多少？", "relevant_doc_ids": ["doc-0122"], "answer_keywords": ["612"]}
+{"id": "q-0243", "category": "fact", "question": "请提供2021年西藏自治区文史/历史类专业中金融学类专业的高考最低录取分数线。", "relevant_doc_ids": ["doc-0123"], "answer_keywords": ["627"]}
+{"id": "q-0244", "category": "fact", "question": "2020年在重庆市，历史类专业中法学专业的录取最低分数线是多少分？", "relevant_doc_ids": ["doc-0124"], "answer_keywords": ["657"]}
+{"id": "q-0245", "category": "fact", "question": "辽宁省2022年的理工专业中，法学专业的高考最低录取分数线能告诉我吗？", "relevant_doc_ids": ["doc-0125"], "answer_keywords": ["652"]}
+{"id": "q-0246", "category": "fact", "question": "云南省2020年的高考中，法学这个专业的录取分数线是多少？", "relevant_doc_ids": ["doc-0126"], "answer_keywords": ["674"]}
+{"id": "q-0247", "category": "fact", "question": "2021年山西省高考中，法学专业在文史专业的录取最低分数线是多少？", "relevant_doc_ids": ["doc-0127"], "answer_keywords": ["647"]}
+{"id": "q-0248", "category": "fact", "question": "请问，在2021年四川省的历史类专业中，法学专业的录取最低分是多少分？", "relevant_doc_ids": ["doc-0128"], "answer_keywords": ["639"]}
+{"id": "q-0249", "category": "fact", "question": "我想了解2021年甘肃省的文史/历史类专业中，社会科学试验班（管理学科类）的高考最低录取分数线是？", "relevant_doc_ids": ["doc-0117"], "answer_keywords": ["632"]}
+{"id": "q-0250", "category": "fact", "question": "在2022年河北省的文史专业中，财政学类专业的最低录取分数线是多少？", "relevant_doc_ids": ["doc-0118"], "answer_keywords": ["649"]}
+{"id": "q-0251", "category": "fact", "question": "2022年甘肃省的理工专业中，工商管理类专业的高考最低分数线能告诉我吗？", "relevant_doc_ids": ["doc-0119"], "answer_keywords": ["610"]}
+{"id": "q-0252", "category": "fact", "question": "请问2020年宁夏回族自治区的理工/物理类专业中，法学专业的最低录取分数线是多少？", "relevant_doc_ids": ["doc-0120"], "answer_keywords": ["650"]}
+{"id": "q-0253", "category": "fact", "question": "陕西省2022年的物理类专业中，金融学类专业的最低录取分数线是什么？", "relevant_doc_ids": ["doc-0121"], "answer_keywords": ["673"]}
+{"id": "q-0254", "category": "fact", "question": "2022年山西省理工专业中，工商管理类专业的最低录取分数线是多少？", "relevant_doc_ids": ["doc-0122"], "answer_keywords": ["635"]}
+{"id": "q-0255", "category": "fact", "question": "西藏自治区在2021年的历史类专业中，金融学类的录取最低分数线是多少分？", "relevant_doc_ids": ["doc-0123"], "answer_keywords": ["627"]}
+{"id": "q-0256", "category": "fact", "question": "重庆市2020年文史专业的高考录取中，财政学类专业的最高分数是多少分？", "relevant_doc_ids": ["doc-0124"], "answer_keywords": ["654"]}
+{"id": "q-0257", "category": "fact", "question": "2022年辽宁省的理工专业中，金融学类专业的高考最低录取分数线是多少分？", "relevant_doc_ids": ["doc-0125"], "answer_keywords": ["675"]}
+{"id": "q-0258", "category": "fact", "question": "请问，在2020年云南省的物理类专业中，工商管理类专业的录取分数线最低是多少？", "relevant_doc_ids": ["doc-0126"], "answer_keywords": ["688"]}
+{"id": "q-0259", "category": "fact", "question": "山西省2021年的高考中，理工/物理类专业里金融学类专业的最高录取分数是？", "relevant_doc_ids": ["doc-0127"], "answer_keywords": ["666"]}
+{"id": "q-0260", "category": "fact", "question": "2021年四川省理工专业中，法学专业的高考最低录取分数线能告诉我吗？", "relevant_doc_ids": ["doc-0128"], "answer_keywords": ["682"]}
+{"id": "q-0261", "category": "fact", "question": "在2020年安徽省，理工专业中新闻传播学类的最低录取分数线是多少分？", "relevant_doc_ids": ["doc-0129"], "answer_keywords": ["674"]}
+{"id": "q-0262", "category": "fact", "question": "吉林省2020年高考中，物理类专业里法学专业的最低录取分数线是多少分？", "relevant_doc_ids": ["doc-0130"], "answer_keywords": ["686"]}
+{"id": "q-0263", "category": "fact", "question": "请问2020年青海省理工/物理类专业中，理科试验班专业的录取最低分数线是？", "relevant_doc_ids": ["doc-0131"], "answer_keywords": ["624"]}
+{"id": "q-0264", "category": "fact", "question": "湖北省在2022年的历史类专业中，国际政治专业的最低录取分数线是多少分？", "relevant_doc_ids": ["doc-0132"], "answer_keywords": ["633"]}
+{"id": "q-0265", "category": "fact", "question": "2020年浙江省的高考中，法学专业的最低录取分数线是多少？", "relevant_doc_ids": ["doc-0133"], "answer_keywords": ["693"]}
+{"id": "q-0266", "category": "fact", "question": "海南省在2020年的高考中，理科试验班专业的最低分数线是？", "relevant_doc_ids": ["doc-0134"], "answer_keywords": ["794"]}
+{"id": "q-0267", "category": "fact", "question": "请问2021年浙江省的高考中，工商管理类专业的最低录取分数线是多少分？", "relevant_doc_ids": ["doc-0135"], "answer_keywords": ["683"]}
+{"id": "q-0268", "category": "fact", "question": "在2021年西藏自治区理工专业中，社会科学试验班（管理学科类，区内）专业的最低录取分数线是？", "relevant_doc_ids": ["doc-0136"], "answer_keywords": ["528"]}
+{"id": "q-0269", "category": "fact", "question": "2020年山西省的物理类专业中，工商管理类专业的高考最低录取分数线能告诉我吗？", "relevant_doc_ids": ["doc-0137"], "answer_keywords": ["671"]}
+{"id": "q-0270", "category": "fact", "question": "宁夏回族自治区2020年文史专业中国际政治专业的最低录取分数线是多少？", "relevant_doc_ids": ["doc-0138"], "answer_keywords": ["659"]}
+{"id": "q-0271", "category": "fact", "question": "江苏省在2021年的历史类专业中，新闻传播学类专业的最低录取分数线是？", "relevant_doc_ids": ["doc-0139"], "answer_keywords": ["631"]}
+{"id": "q-0272", "category": "fact", "question": "2021年海南省的高考中，金融学类专业的最低录取分数线是多少分？", "relevant_doc_ids": ["doc-0140"], "answer_keywords": ["800"]}
+{"id": "q-0273", "category": "fact", "question": "在2022年内蒙古自治区的理工/物理类专业中，新闻传播学类的最低录取分数线是多少？", "relevant_doc_ids": ["doc-0141"], "answer_keywords": ["647"]}
+{"id": "q-0274", "category": "fact", "question": "2020年内蒙古自治区的高考中，经济学类专业在理工专业的最低录取分数线是多少分？", "relevant_doc_ids": ["doc-0142"], "answer_keywords": ["667"]}
+{"id": "q-0275", "category": "fact", "question": "青海省2022年的文史/历史类专业中，社会科学试验班(管理学科类)专业的最低录取分数线是？", "relevant_doc_ids": ["doc-0143"], "answer_keywords": ["587"]}
+{"id": "q-0276", "category": "fact", "question": "天津市2022年的高考中，国民经济管理(中外合作办学)专业的最低录取分数线是多少分？", "relevant_doc_ids": ["doc-0144"], "answer_keywords": ["682"]}
+{"id": "q-0277", "category": "fact", "question": "请告诉我，2020年天津市的工商管理类专业高考最低录取分数线是多少分？", "relevant_doc_ids": ["doc-0145"], "answer_keywords": ["699"]}
+{"id": "q-0278", "category": "fact", "question": "在2020年黑龙江省的理工专业中，金融学类专业的高考最低录取分数线是多少？", "relevant_doc_ids": ["doc-0146"], "answer_keywords": ["691"]}
+{"id": "q-0279", "category": "fact", "question": "贵州省2022年的历史类专业中，工商管理类专业的最低录取分数线是多少分？", "relevant_doc_ids": ["doc-0147"], "answer_keywords": ["660"]}
+{"id": "q-0280", "category": "fact", "question": "湖南省2021年的理工/物理类专业中，经济学类专业的最低录取分数线能告诉我吗？", "relevant_doc_ids": ["doc-0148"], "answer_keywords": ["665"]}
+{"id": "q-0281", "category": "fact", "question": "2020年福建省文史专业中，金融学类专业的高考最高录取分数是多少？", "relevant_doc_ids": ["doc-0149"], "answer_keywords": ["645"]}
+{"id": "q-0282", "category": "fact", "question": "广西壮族自治区在2022年文史/历史类专业中，法学专业的最低录取分数线是多少分？", "relevant_doc_ids": ["doc-0150"], "answer_keywords": ["660"]}
+{"id": "q-0283", "category": "fact", "question": "云南省2021年的历史类专业中，新闻传播学类专业的最低录取分数线是多少分？", "relevant_doc_ids": ["doc-0151"], "answer_keywords": ["675"]}
+{"id": "q-0284", "category": "fact", "question": "在2021年福建省的物理类专业中，金融学类专业的最低录取分数线是多少？", "relevant_doc_ids": ["doc-0152"], "answer_keywords": ["671"]}
+{"id": "q-0285", "category": "fact", "question": "请问2022年广东省的文史专业中，经济学类专业的最低录取分数线是多少分？", "relevant_doc_ids": ["doc-0153"], "answer_keywords": ["640"]}
+{"id": "q-0286", "category": "fact", "question": "浙江省2022年高考中，法学专业的最低录取分数线是多少？", "relevant_doc_ids": ["doc-0154"], "answer_keywords": ["689"]}
+{"id": "q-0287", "category": "fact", "question": "请问2020年江西省的理工专业中，法学专业的高考最低录取分数线是多少分？", "relevant_doc_ids": ["doc-0155"], "answer_keywords": ["674"]}
+{"id": "q-0288", "category": "fact", "question": "2022年安徽省的历史类专业中，经济学类专业的最低录取分数线是多少？", "relevant_doc_ids": ["doc-0156"], "answer_keywords": ["627"]}
+{"id": "q-0289", "category": "fact", "question": "青海省2021年文史专业中，金融学类专业的最低录取分数线能告诉我吗？", "relevant_doc_ids": ["doc-0157"], "answer_keywords": ["616"]}
+{"id": "q-0290", "category": "fact", "question": "在2021年河北省的文史/历史类专业中，法学专业的最低录取分数线是多少分？", "relevant_doc_ids": ["doc-0158"], "answer_keywords": ["657"]}
+{"id": "q-0291", "category": "fact", "question": "辽宁省2022年的文史专业中，外国语言文学类专业的最高分是多少？", "relevant_doc_ids": ["doc-0159"], "answer_keywords": ["641"]}
+{"id": "q-0292", "category": "fact", "question": "重庆市在2021年的理工专业中，金融学类专业的最低录取分数线是多少分？", "relevant_doc_ids": ["doc-0160"], "answer_keywords": ["687"]}
+{"id": "q-0293", "category": "fact", "question": "2021年安徽省的高考中，金融学类专业在各个类别的最低录取分数线是多少？", "relevant_doc_ids": ["doc-0161"], "answer_keywords": ["664"]}
+{"id": "q-0294", "category": "fact", "question": "广东省2021年的文史专业中，经济学类专业的最低录取分数线能告诉我吗？", "relevant_doc_ids": ["doc-0162"], "answer_keywords": ["650"]}
+{"id": "q-0295", "category": "fact", "question": "请问2022年安徽省的物理类专业中，经济学类专业的最低录取分数线是多少分？", "relevant_doc_ids": ["doc-0163"], "answer_keywords": ["665"]}
+{"id": "q-0296", "category": "fact", "question": "2020年云南省文史专业中，经济学类专业的最低录取分数线是什么？", "relevant_doc_ids": ["doc-0164"], "answer_keywords": ["678"]}
+{"id": "q-0297", "category": "fact", "question": "2020年江苏省的物理类专业中，金融学类专业的最低录取分数线是多少？", "relevant_doc_ids": ["doc-0165"], "answer_keywords": ["418"]}
+{"id": "q-0298", "category": "fact", "question": "山西省2022年文史专业中，经济学类专业的最高录取分能告诉我吗？", "relevant_doc_ids": ["doc-0166"], "answer_keywords": ["617"]}
+{"id": "q-0299", "category": "fact", "question": "河南省在2020年的历史类专业中，工商管理类专业的最低录取分数线是多少分？", "relevant_doc_ids": ["doc-0167"], "answer_keywords": ["655"]}
+{"id": "q-0300", "category": "fact", "question": "四川省2020年理工专业中，金融学类专业的最低录取分数线是什么？", "relevant_doc_ids": ["doc-0168"], "answer_keywords": ["685"]}
+{"id": "q-0301", "category": "fact", "question": "重庆市2022年的理工/物理类专业中，经济学类专业的最低录取分数线是多少分？", "relevant_doc_ids": ["doc-0169"], "answer_keywords": ["656"]}
+{"id": "q-0302", "category": "fact", "question": "请问2022年四川省的理工专业中，法学专业的最低录取分数线是多少？", "relevant_doc_ids": ["doc-0170"], "answer_keywords": ["686"]}
+{"id": "q-0303", "category": "fact", "question": "2020年北京市的中法学院一批录取线中，文科最低分数线是多少分？", "relevant_doc_ids": ["doc-0171"], "answer_keywords": ["639"]}
+{"id": "q-0304", "category": "fact", "question": "在2022年上海市，金融学类专业的高考最低录取分数线是多少？", "relevant_doc_ids": ["doc-0172"], "answer_keywords": ["587"]}
+{"id": "q-0305", "category": "fact", "question": "新疆维吾尔自治区2020年的理工专业中，经济学类专业的最低录取分数线是多少分？", "relevant_doc_ids": ["doc-0173"], "answer_keywords": ["666"]}
+{"id": "q-0306", "category": "fact", "question": "在2014年的“圆梦计划”中，广西推荐资格中学的名单包括哪些学校？", "relevant_doc_ids": ["doc-0174"], "answer_keywords": ["柳州高级中学"]}
+{"id": "q-0307", "category": "fact", "question": "根据2014年艺术类(音乐表演)专业招生简章，声乐（美声）专业方向的学制是几年？", "relevant_doc_ids": ["doc-0175"], "answer_keywords": ["5"]}
+{"id": "q-0308", "category": "fact", "question": "在2014年湖南的'圆梦计划'中，列为第三名的推荐资格中学是哪所？", "relevant_doc_ids": ["doc-0176"], "answer_keywords": ["冷水江市第一中学"]}
+{"id": "q-0309", "category": "fact", "question": "在中国人民大学2023年强基计划招生试点中，'哲学'专业的「非高考改革省份科类」是什么？", "relevant_doc_ids": ["doc-0177"], "answer_keywords": ["文史类"]}
+{"id": "q-0310", "category": "fact", "question": "在2014年的四川'圆梦计划'中，第二所推荐资格中学是哪所？", "relevant_doc_ids": ["doc-0178"], "answer_keywords": ["绵阳市东辰国际学校"]}
+{"id": "q-0311", "category": "fact", "question": "2014年'圆梦计划'中，青海省的推荐资格中学名单中包括哪所中学？", "relevant_doc_ids": ["doc-0179"], "answer_keywords": ["湟川中学"]}
+{"id": "q-0312", "category": "fact", "question": "根据2014年“圆梦计划”推荐资格的名单，第一所获得推荐资格的中学是哪一所？", "relevant_doc_ids": ["doc-0180"], "answer_keywords": ["北京师范大学第二附属中学"]}
+{"id": "q-0313", "category": "fact", "question": "2014年辽宁省'圆梦计划'有哪些推荐资格中学被列出？", "relevant_doc_ids": ["doc-0181"], "answer_keywords": ["本溪市高级中学"]}
+{"id": "q-0314", "category": "fact", "question": "中国人民大学在2016年国防生招生计划中，计划招收多少名新闻学专业的学生？", "relevant_doc_ids": ["doc-0182"], "answer_keywords": ["30"]}
+{"id": "q-0315", "category": "fact", "question": "武警部队在校国防生需要准备多少顶'07A武警校尉常服大檐帽'？", "relevant_doc_ids": ["doc-0183"], "answer_keywords": ["1"]}
+{"id": "q-0316", "category": "fact", "question": "中国人民大学2014年招收的高水平运动员田径项目的签约参考人数是多少？", "relevant_doc_ids": ["doc-0184"], "answer_keywords": ["8"]}
+{"id": "q-0317", "category": "fact", "question": "在2014年甘肃的'圆梦计划'中，提到的第一所中学是哪所？", "relevant_doc_ids": ["doc-0185"], "answer_keywords": ["宁县第一中学"]}
+{"id": "q-0318", "category": "fact", "question": "劳动人事学院在2022年招收了哪些专业？", "relevant_doc_ids": ["doc-0186"], "answer_keywords": ["人力资源管理"]}
+{"id": "q-0319", "category": "fact", "question": "2014年'圆梦计划'推荐资格中学名单中，福建省的第一个中学名称是什么?", "relevant_doc_ids": ["doc-0187"], "answer_keywords": ["福鼎市第六中学"]}
+{"id": "q-0320", "category": "fact", "question": "2014年“圆梦计划”中，山东省第一个推荐资格的中学是哪所？", "relevant_doc_ids": ["doc-0188"], "answer_keywords": ["冠县武训高级中学"]}
+{"id": "q-0321", "category": "fact", "question": "2014年'圆梦计划'推荐资格的山西中学中，排在第二位的是哪所中学？", "relevant_doc_ids": ["doc-0189"], "answer_keywords": ["金河中学"]}
+{"id": "q-0322", "category": "fact", "question": "每位武警部队在校国防生所需的'07武警作战靴'的数量是多少？", "relevant_doc_ids": ["doc-0190"], "answer_keywords": ["1"]}
+{"id": "q-0323", "category": "fact", "question": "2014年“圆梦计划”中，福建省拥有推荐资格的中学是哪些？", "relevant_doc_ids": ["doc-0187"], "answer_keywords": ["福鼎市第六中学"]}
+{"id": "q-0324", "category": "fact", "question": "在中国人民大学2021年澳门保送生招生简章中，'理科试验班'招生专业包括哪些教学环节专业？", "relevant_doc_ids": ["doc-0191"], "answer_keywords": ["经济统计学"]}
+{"id": "q-0325", "category": "fact", "question": "中国人民大学2023年强基计划上海市综合改革的入围校考分数线是多少？", "relevant_doc_ids": ["doc-0192"], "answer_keywords": ["572"]}
+{"id": "q-0326", "category": "fact", "question": "在2014年'圆梦计划'中，提供推荐资格的第一所中学是哪所学校？", "relevant_doc_ids": ["doc-0193"], "answer_keywords": ["安庆市第一中学"]}
+{"id": "q-0327", "category": "fact", "question": "中国人民大学2014年艺术类（美术）专业招生中，绘画（中国画方向）的全国招生计划是多少？", "relevant_doc_ids": ["doc-0194"], "answer_keywords": ["14"]}
+{"id": "q-0328", "category": "fact", "question": "2023年中国人民大学艺术类（音乐表演）专业双簧管方向的招生计划是多少人？", "relevant_doc_ids": ["doc-0071"], "answer_keywords": ["2"]}
+{"id": "q-0329", "category": "fact", "question": "2024年中国人民大学澳门保送生外国语言文学类专业的学费是每学年多少元人民币？", "relevant_doc_ids": ["doc-0195"], "answer_keywords": ["6000"]}
+{"id": "q-0330", "category": "fact", "question": "在中国人民大学2023年强基计划录取结果中，广东省历史类的拟录取名单综合成绩分数线是多少？", "relevant_doc_ids": ["doc-0196"], "answer_keywords": ["631.53"]}
+{"id": "q-0331", "category": "fact", "question": "2023年 中国人民大学的校长是谁？", "relevant_doc_ids": ["doc-0197"], "answer_keywords": ["林尚立"]}
+{"id": "q-0332", "category": "fact", "question": "1994年 中国人民大学校长是谁？", "relevant_doc_ids": ["doc-0049"], "answer_keywords": ["李文海"]}
+{"id": "q-0333", "category": "fact", "question": "2014年 中国人民大学的校长是谁？", "relevant_doc_ids": ["doc-0198"], "answer_keywords": ["陈雨露"]}
+{"id": "q-0334", "category": "fact", "question": "2023年 中国人民大学的校长是谁？", "relevant_doc_ids": ["doc-0058"], "answer_keywords": ["林尚立"]}
+{"id": "q-0335", "category": "fact", "question": "2020年 中国人民大学“圆梦计划”的招生人数是多少？", "relevant_doc_ids": ["doc-0014"], "answer_keywords": ["80人左右"]}
+{"id": "q-0336", "category": "fact", "question": "2018年 中国人民大学音乐表演专业计划招生人数是多少？", "relevant_doc_ids": ["doc-0199"], "answer_keywords": ["29人"]}
+{"id": "q-0337", "category": "fact", "question": "2016年 中国人民大学音乐表演专业计划招生人数是多少？", "relevant_doc_ids": ["doc-0200"], "answer_keywords": ["30人"]}
+{"id": "q-0338", "category": "fact", "question": "2017年 中国人民大学音乐表演专业计划招生人数是多少？", "relevant_doc_ids": ["doc-0201"], "answer_keywords": ["29人"]}
+{"id": "q-0339", "category": "fact", "question": "2015年 中国人民大学音乐表演专业计划招生人数是多少？", "relevant_doc_ids": ["doc-0202"], "answer_keywords": ["30人"]}
+{"id": "q-0340", "category": "fact", "question": "2023年 中国人民大学外语类保送生网上报名的时间到几月几号？", "relevant_doc_ids": ["doc-0203"], "answer_keywords": ["12 月 20 日 "]}
+{"id": "q-0341", "category": "fact", "question": "2020年 中国人民大学外语类保送生网上报名的时间到几月几号？", "relevant_doc_ids": ["doc-0204"], "answer_keywords": ["12 月 21 日"]}
+{"id": "q-0342", "category": "fact", "question": "2013年 中国人民大学外语类保送生网上报名的时间到几月几号？", "relevant_doc_ids": ["doc-0205"], "answer_keywords": ["11 月 30 日"]}
+{"id": "q-0343", "category": "fact", "question": "2018年 中国人民大学外语类保送生网上报名的时间到几月几号？", "relevant_doc_ids": ["doc-0206"], "answer_keywords": ["12 月 19 日"]}
+{"id": "q-0344", "category": "fact", "question": "2023年 中国人民大学的哪些语言类专业只招收全国统一高考科目中外语为英语的考生？", "relevant_doc_ids": ["doc-0042"], "answer_keywords": ["英语"]}
+{"id": "q-0345", "category": "fact", "question": "2022年 中国人民大学的哪些语言类专业只招收全国统一高考科目中外语为英语的考生？", "relevant_doc_ids": ["doc-0047"], "answer_keywords": ["英语"]}
+{"id": "q-0346", "category": "fact", "question": "2017年 中国人民大学的哪些语言类专业只招收全国统一高考科目中外语为英语的考生？", "relevant_doc_ids": ["doc-0207"], "answer_keywords": ["英语"]}
+{"id": "q-0347", "category": "fact", "question": "2016年 中国人民大学的哪些语言类专业只招收全国统一高考科目中外语为英语的考生？", "relevant_doc_ids": ["doc-0208"], "answer_keywords": ["英语"]}
+{"id": "q-0348", "category": "fact", "question": "2018年 中国人民大学的哪些语言类专业只招收全国统一高考科目中外语为英语的考生？", "relevant_doc_ids": ["doc-0209"], "answer_keywords": ["英语"]}
+{"id": "q-0349", "category": "fact", "question": "2019年 中国人民大学的哪些语言类专业只招收全国统一高考科目中外语为英语的考生？", "relevant_doc_ids": ["doc-0210"], "answer_keywords": ["英语"]}
+{"id": "q-0350", "category": "fact", "question": "2020年 中国人民大学的哪些语言类专业只招收全国统一高考科目中外语为英语的考生？", "relevant_doc_ids": ["doc-0211"], "answer_keywords": ["英语"]}
+{"id": "q-0351", "category": "fact", "question": "2017年 中国人民大学英语保送生招生计划人数是多少？", "relevant_doc_ids": ["doc-0212"], "answer_keywords": ["20"]}
+{"id": "q-0352", "category": "fact", "question": "2020年 中国人民大学英语保送生招生计划人数是多少？", "relevant_doc_ids": ["doc-0213"], "answer_keywords": ["20"]}
+{"id": "q-0353", "category": "fact", "question": "2021年 中国人民大学英语保送生招生计划人数是多少？", "relevant_doc_ids": ["doc-0204"], "answer_keywords": ["20"]}
+{"id": "q-0354", "category": "fact", "question": "2015年 中国人民大学英语保送生招生计划人数是多少？", "relevant_doc_ids": ["doc-0214"], "answer_keywords": ["18"]}
+{"id": "q-0355", "category": "fact", "question": "2022年 中国人民大学英语保送生招生计划人数是多少？", "relevant_doc_ids": ["doc-0059"], "answer_keywords": ["20"]}
+{"id": "q-0356", "category": "fact", "question": "2023年 中国人民大学英语保送生招生计划人数是多少？", "relevant_doc_ids": ["doc-0215"], "answer_keywords": ["20"]}
+{"id": "q-0357", "category": "fact", "question": "2016年 中国人民大学英语保送生招生计划人数是多少？", "relevant_doc_ids": ["doc-0216"], "answer_keywords": ["20"]}
+{"id": "q-0358", "category": "fact", "question": "2019年 中国人民大学英语保送生招生计划人数是多少？", "relevant_doc_ids": ["doc-0053"], "answer_keywords": ["20"]}
+{"id": "q-0359", "category": "fact", "question": "2020年 中国人民大学高水平运动员的文化课考试时间是几月几日？", "relevant_doc_ids": ["doc-0217"], "answer_keywords": ["4月18日"]}
+{"id": "q-0360", "category": "fact", "question": "2014年 中国人民大学高水平运动员的文化课考试时间是几月几日？", "relevant_doc_ids": ["doc-0074"], "answer_keywords": ["1月10日"]}
+{"id": "q-0361", "category": "fact", "question": "2015年 中国人民大学高水平运动员的文化课考试时间是几月几日？", "relevant_doc_ids": ["doc-0218"], "answer_keywords": ["3月6日"]}
+{"id": "q-0362", "category": "fact", "question": "2014年 中国人民大学中法学院有多少学生参加四六级考试？", "relevant_doc_ids": ["doc-0219"], "answer_keywords": ["160"]}
+{"id": "q-0363", "category": "fact", "question": "2017年 中国人民大学中法学院有多少学生参加四六级考试？", "relevant_doc_ids": ["doc-0220"], "answer_keywords": ["359"]}
+{"id": "q-0364", "category": "fact", "question": "2021年 中国人民大学中法学院TFS4的测试通过率是多少？", "relevant_doc_ids": ["doc-0057"], "answer_keywords": ["93%"]}
+{"id": "q-0365", "category": "fact", "question": "2019年 中国人民大学中法学院TFS4的测试通过率是多少？", "relevant_doc_ids": ["doc-0221"], "answer_keywords": ["96%"]}
+{"id": "q-0366", "category": "fact", "question": "2021年 中国人民大学中法学院TFS4的测试平均分是多少？", "relevant_doc_ids": ["doc-0057"], "answer_keywords": ["75.34"]}
+{"id": "q-0367", "category": "fact", "question": "2019年 中国人民大学中法学院TFS4的测试平均分是多少？", "relevant_doc_ids": ["doc-0221"], "answer_keywords": ["74.84"]}
+{"id": "q-0368", "category": "fact", "question": "2021年 中国人民大学中法学院TFS4的测试优秀率是多少？", "relevant_doc_ids": ["doc-0057"], "answer_keywords": ["59%"]}
+{"id": "q-0369", "category": "fact", "question": "2019年 中国人民大学中法学院TFS4的测试优秀率是多少？", "relevant_doc_ids": ["doc-0221"], "answer_keywords": ["48%"]}
+{"id": "q-0370", "category": "fact", "question": "2023年 中国人民大学经济学院党委书记是谁？", "relevant_doc_ids": ["doc-0197"], "answer_keywords": ["刘守英"]}
+{"id": "q-0371", "category": "fact", "question": "2023年 中国人民大学公共管理学院党委书记是谁？", "relevant_doc_ids": ["doc-0034"], "answer_keywords": ["孙柏瑛"]}
+{"id": "q-0372", "category": "fact", "question": "2014年 中国人民大学苏州校区党委书记是谁？", "relevant_doc_ids": ["doc-0222"], "answer_keywords": ["杨伟国"]}
+{"id": "q-0373", "category": "fact", "question": "2023年 中国人民大学党委书记是谁？", "relevant_doc_ids": ["doc-0223"], "answer_keywords": ["张东刚"]}
+{"id": "q-0374", "category": "fact", "question": "2023年 中国人民大学国际关系学院党委书记是谁？", "relevant_doc_ids": ["doc-0055"], "answer_keywords": ["幸明军"]}
+{"id": "q-0375", "category": "fact", "question": "2023年 中国人民大学艺术学院党委书记是谁？", "relevant_doc_ids": ["doc-0224"], "answer_keywords": ["付春梅"]}
+{"id": "q-0376", "category": "fact", "question": "2023年 中国人民大学社会与人口学院党委书记是谁？", "relevant_doc_ids": ["doc-0058"], "answer_keywords": ["孙权"]}
+{"id": "q-0377", "category": "fact", "question": "2023年 中国人民大学法学院党委书记是谁？", "relevant_doc_ids": ["doc-0225"], "answer_keywords": ["林嘉"]}
+{"id": "q-0378", "category": "fact", "question": "2023年 中国人民大学经济学院的院长是谁？", "relevant_doc_ids": ["doc-0197"], "answer_keywords": ["刘守英"]}
+{"id": "q-0379", "category": "fact", "question": "2014年 中国人民大学中法学院的院长是谁？", "relevant_doc_ids": ["doc-0009"], "answer_keywords": ["杨伟国"]}
+{"id": "q-0380", "category": "fact", "question": "2014年 中国人民大学法学院的院长是谁？", "relevant_doc_ids": ["doc-0225"], "answer_keywords": ["韩大元"]}
+{"id": "q-0381", "category": "fact", "question": "2023年 中国人民大学劳动人事学院的院长是谁？", "relevant_doc_ids": ["doc-0226"], "answer_keywords": ["赵忠"]}
+{"id": "q-0382", "category": "fact", "question": "2020年 中国人民大学信息学院的院长是谁？", "relevant_doc_ids": ["doc-0227"], "answer_keywords": ["文继荣"]}
+{"id": "q-0383", "category": "fact", "question": "2013年 中国人民大学经济学院的院长是谁？", "relevant_doc_ids": ["doc-0228"], "answer_keywords": ["杨瑞龙"]}
+{"id": "q-0384", "category": "fact", "question": "2013年 中国人民大学财政金融学院的院长是谁？", "relevant_doc_ids": ["doc-0228"], "answer_keywords": ["郭庆旺"]}
+{"id": "q-0385", "category": "fact", "question": "2024年 中国人民大学国际关系学院的院长是谁？", "relevant_doc_ids": ["doc-0055"], "answer_keywords": ["杨光斌"]}
+{"id": "q-0386", "category": "fact", "question": "2024年 中国人民大学统计与大数据研究院的院长是谁？", "relevant_doc_ids": ["doc-0055"], "answer_keywords": ["朱利平"]}
+{"id": "q-0387", "category": "fact", "question": "2024年 中国人民大学社会与人口学院的院长是谁？", "relevant_doc_ids": ["doc-0058"], "answer_keywords": ["冯仕政"]}
+{"id": "q-0388", "category": "fact", "question": "2024年 中国人民大学文学院的院长是谁？", "relevant_doc_ids": ["doc-0229"], "answer_keywords": ["孙郁"]}
+{"id": "q-0389", "category": "fact", "question": "2014年 中国人民大学统计学院的院长是谁？", "relevant_doc_ids": ["doc-0230"], "answer_keywords": ["赵彦云"]}
+{"id": "q-0390", "category": "fact", "question": "2022年 人大有多少个校际交换项目？", "relevant_doc_ids": ["doc-0056"], "answer_keywords": ["68"]}
+{"id": "q-0391", "category": "fact", "question": "2022年 人大有多少类国家公派项目？", "relevant_doc_ids": ["doc-0056"], "answer_keywords": ["11"]}
+{"id": "q-0392", "category": "fact", "question": "2022年 人大有多少个院际学生交换项目？", "relevant_doc_ids": ["doc-0056"], "answer_keywords": ["300"]}
+{"id": "q-0393", "category": "fact", "question": "2023年 中国人民大学艺术类招生专业测试报名费是多少？", "relevant_doc_ids": ["doc-0032"], "answer_keywords": ["100元"]}
+{"id": "q-0394", "category": "fact", "question": "2023年 在中国人民大学召开的健康中国建设学术年会的主题是什么？", "relevant_doc_ids": ["doc-0034"], "answer_keywords": ["共筑健康中国优化健康管理"]}
+{"id": "q-0395", "category": "fact", "question": "2022年 中国人民大学外语类专业一学年的学费是多少？", "relevant_doc_ids": ["doc-0047"], "answer_keywords": ["6000"]}
+{"id": "q-0396", "category": "fact", "question": "中国人民大学中法学院用哪三个语言进行教学？", "relevant_doc_ids": ["doc-0009"], "answer_keywords": ["汉语"]}
+{"id": "q-0397", "category": "fact", "question": "中国人民大学2018年高水平艺术团招生计划甲类的降分政策是降多少？", "relevant_doc_ids": ["doc-0010"], "answer_keywords": ["降至一本线"]}
+{"id": "q-0398", "category": "fact", "question": "在教育部开展的五次全国一级学科评估中，中国人民大学新闻传播学科被评为什么等级？", "relevant_doc_ids": ["doc-0011"], "answer_keywords": ["A+"]}
+{"id": "q-0399", "category": "fact", "question": "人大文学院的“古典学实验班”创办于哪一年？", "relevant_doc_ids": ["doc-0012"], "answer_keywords": ["2010"]}
+{"id": "q-0400", "category": "fact", "question": "人大文学院建立了哪个国内第一个中心？", "relevant_doc_ids": ["doc-0012"], "answer_keywords": ["国际写作中心"]}
+{"id": "q-0401", "category": "fact", "question": "人大文学院举办的五届“世界汉学大会”开始时间是？", "relevant_doc_ids": ["doc-0012"], "answer_keywords": ["2007"]}
+{"id": "q-0402", "category": "fact", "question": "中国人民大学2016年“圆梦计划”招生计划招收多少人？", "relevant_doc_ids": ["doc-0013"], "answer_keywords": ["80"]}
+{"id": "q-0403", "category": "fact", "question": "国家专项计划招生的定向招收对象包括哪些地区的学生？", "relevant_doc_ids": ["doc-0014"], "answer_keywords": ["集中连片特殊困难县"]}
+{"id": "q-0404", "category": "fact", "question": "国家专项计划和“圆梦计划”录取的新生是否可以自行决定入学时是否迁转户口？", "relevant_doc_ids": ["doc-0014"], "answer_keywords": ["可以"]}
+{"id": "q-0405", "category": "fact", "question": "中国人民大学学生可以申请的助学项目有哪些？", "relevant_doc_ids": ["doc-0014"], "answer_keywords": ["国家助学贷款"]}
+{"id": "q-0406", "category": "fact", "question": "国家专项计划录取的学生是否可以转专业？", "relevant_doc_ids": ["doc-0014"], "answer_keywords": ["可以"]}
+{"id": "q-0407", "category": "fact", "question": "人大图书馆的人大文库藏有多少藏有人大学者和校友著作 、研究生论文？", "relevant_doc_ids": ["doc-0015"], "answer_keywords": ["8万余册"]}
+{"id": "q-0408", "category": "fact", "question": "中国人民大学获得北京市第十七届哲学社会科学优秀成果奖几项？", "relevant_doc_ids": ["doc-0016"], "answer_keywords": ["25"]}
+{"id": "q-0409", "category": "fact", "question": "中国人民大学新发展阶段中国社会学学科建设研讨会何时举行？", "relevant_doc_ids": ["doc-0016"], "answer_keywords": ["2023-11-04"]}
+{"id": "q-0410", "category": "fact", "question": "中国人民大学何时首次举办本科生招生录取现场开放日？", "relevant_doc_ids": ["doc-0017"], "answer_keywords": ["2014-07-17"]}
+{"id": "q-0411", "category": "fact", "question": "中国人民大学在哪一届中宣部出版局的评选中推荐了4篇文章并入选？", "relevant_doc_ids": ["doc-0018"], "answer_keywords": ["第七届"]}
+{"id": "q-0412", "category": "fact", "question": "中国自主的知识体系大学联盟成员单位有多少家？", "relevant_doc_ids": ["doc-0018"], "answer_keywords": ["60"]}
+{"id": "q-0413", "category": "fact", "question": "中国人民大学在2023年世界大学联盟发布的年度科研发展基金中获得几项立项？", "relevant_doc_ids": ["doc-0018"], "answer_keywords": ["2"]}
+{"id": "q-0414", "category": "fact", "question": "中法学院的办学理念是什么？", "relevant_doc_ids": ["doc-0019"], "answer_keywords": ["高水平"]}
+{"id": "q-0415", "category": "fact", "question": "中法学院的办学愿景是什么？", "relevant_doc_ids": ["doc-0019"], "answer_keywords": ["独树一帜的中外合作办学新高地"]}
+{"id": "q-0416", "category": "fact", "question": "中国人民大学2021年高水平运动队招生报名需要提供哪些材料？", "relevant_doc_ids": ["doc-0020"], "answer_keywords": ["个人简历"]}
+{"id": "q-0417", "category": "fact", "question": "中国人民大学金融工程专业的就业方向有哪些？", "relevant_doc_ids": ["doc-0021"], "answer_keywords": ["前台金融工程师"]}
+{"id": "q-0418", "category": "fact", "question": "哲学院有哪些专业？", "relevant_doc_ids": ["doc-0005"], "answer_keywords": ["伦理学"]}
+{"id": "q-0419", "category": "fact", "question": "哲学院的国际交流有哪些合作大学？", "relevant_doc_ids": ["doc-0005"], "answer_keywords": ["英国牛津大学"]}
+{"id": "q-0420", "category": "fact", "question": "历史学专业的新兴前沿与交叉方向有哪些？", "relevant_doc_ids": ["doc-0022"], "answer_keywords": ["生态史"]}
+{"id": "q-0421", "category": "fact", "question": "艺术学院的本科专业有哪些方向？", "relevant_doc_ids": ["doc-0023"], "answer_keywords": ["环境设计(景观建筑方向)"]}
+{"id": "q-0422", "category": "fact", "question": "信息学院是否实施双选认证制度？", "relevant_doc_ids": ["doc-0024"], "answer_keywords": ["是"]}
+{"id": "q-0423", "category": "fact", "question": "信息学院是否鼓励学生参加国际研学项目和活动？", "relevant_doc_ids": ["doc-0024"], "answer_keywords": ["是"]}
+{"id": "q-0424", "category": "fact", "question": "财政金融学院有多少门国家级精品课程？", "relevant_doc_ids": ["doc-0025"], "answer_keywords": ["5"]}
+{"id": "q-0425", "category": "fact", "question": "财政金融学院有哪两个专业大类？", "relevant_doc_ids": ["doc-0025"], "answer_keywords": ["财政"]}
+{"id": "q-0426", "category": "fact", "question": "2018年港澳台侨联招计划招收多少人？", "relevant_doc_ids": ["doc-0026"], "answer_keywords": ["10"]}
+{"id": "q-0427", "category": "fact", "question": "中国人民大学2018年招收的社会学类专业有哪些？", "relevant_doc_ids": ["doc-0026"], "answer_keywords": ["社会学"]}
+{"id": "q-0428", "category": "fact", "question": "中国人民大学2016年高水平艺术团招生报名截止日期是什么时候？", "relevant_doc_ids": ["doc-0027"], "answer_keywords": ["2月5日"]}
+{"id": "q-0429", "category": "fact", "question": "申请2014年“圆梦计划”的中学需满足什么条件？", "relevant_doc_ids": ["doc-0028"], "answer_keywords": ["原则上应为县（县级市）及以下中学"]}
+{"id": "q-0430", "category": "fact", "question": "中法学院2012级本科生在TEF/TCF法语水平测试中有几名同学达到A2级别？", "relevant_doc_ids": ["doc-0029"], "answer_keywords": ["1名"]}
+{"id": "q-0431", "category": "fact", "question": "中国人民大学化学系王亚培教授研究团队在哪个领域取得了重要技术突破？", "relevant_doc_ids": ["doc-0030"], "answer_keywords": ["可降解农药领域"]}
+{"id": "q-0432", "category": "fact", "question": "人大文学院的古典学实验班是从那些专业进行学生选拔的？", "relevant_doc_ids": ["doc-0031"], "answer_keywords": ["全校不同专业"]}
+{"id": "q-0433", "category": "fact", "question": "人大文学院的国际写作中心吸引了哪些创作新秀求学？", "relevant_doc_ids": ["doc-0031"], "answer_keywords": ["张楚"]}
+{"id": "q-0434", "category": "fact", "question": "人大文学院本科毕业生就业情况主要集中在哪些领域？", "relevant_doc_ids": ["doc-0031"], "answer_keywords": ["党政机关"]}
+{"id": "q-0435", "category": "fact", "question": "中国人民大学艺术学院成立于哪一年？", "relevant_doc_ids": ["doc-0032"], "answer_keywords": ["1999"]}
+{"id": "q-0436", "category": "fact", "question": "中国人民大学艺术类招生专业测试报名费是多少？", "relevant_doc_ids": ["doc-0032"], "answer_keywords": ["100元"]}
+{"id": "q-0437", "category": "fact", "question": "中国人民大学2023年艺术类（音乐表演）专业招生报名截止时间是？", "relevant_doc_ids": ["doc-0032"], "answer_keywords": ["2 月 22 日"]}
+{"id": "q-0438", "category": "fact", "question": "中国人民大学法学学科的哪位教授在中国法学会民法典编纂项目中担任了领导小组成员、秘书长？", "relevant_doc_ids": ["doc-0033"], "answer_keywords": ["王轶"]}
+{"id": "q-0439", "category": "fact", "question": "哪个学校的法学学科是法学院校中参与参与民法典编纂人数最多的 ？", "relevant_doc_ids": ["doc-0033"], "answer_keywords": ["中国人民大学"]}
+{"id": "q-0440", "category": "fact", "question": "在中国人民大学召开的第二届健康中国建设学术年会的主题是什么？", "relevant_doc_ids": ["doc-0034"], "answer_keywords": ["共筑健康中国优化健康管理"]}
+{"id": "q-0441", "category": "fact", "question": "在中国人民大学召开的第二届健康中国建设学术年会中，于学军提出要做好几个坚持？", "relevant_doc_ids": ["doc-0034"], "answer_keywords": ["三"]}
+{"id": "q-0442", "category": "fact", "question": "中国人民大学本科生招生网提供的职业测评服务包括哪些测评？", "relevant_doc_ids": ["doc-0035"], "answer_keywords": ["兴趣测评"]}
+{"id": "q-0443", "category": "fact", "question": "人民大学图书馆新馆于哪一年投入使用？", "relevant_doc_ids": ["doc-0015"], "answer_keywords": ["2011"]}
+{"id": "q-0444", "category": "fact", "question": "人民大学图书馆新馆采用了哪些智能化信息管理系统？", "relevant_doc_ids": ["doc-0015"], "answer_keywords": ["移动图书馆"]}
+{"id": "q-0445", "category": "fact", "question": "中国人民大学在北京市第十七届哲学社会科学优秀成果奖中排名第几？", "relevant_doc_ids": ["doc-0016"], "answer_keywords": ["首位"]}
+{"id": "q-0446", "category": "fact", "question": "中国人民大学在北京市第十七届哲学社会科学优秀成果奖中有多少项成果入选？", "relevant_doc_ids": ["doc-0018"], "answer_keywords": ["25"]}
+{"id": "q-0447", "category": "fact", "question": "中国人民大学在2024年的国家社科基金年度项目和青年项目立项总结中共有多少立项？", "relevant_doc_ids": ["doc-0018"], "answer_keywords": ["58"]}
+{"id": "q-0448", "category": "fact", "question": "中国人民大学在2023年度国家自然科学基金中获得多少项资助？", "relevant_doc_ids": ["doc-0018"], "answer_keywords": ["103"]}
+{"id": "q-0449", "category": "fact", "question": "中国人民大学在2023年度世界大学联盟科研发展基金中获得多少项研究申请立项？", "relevant_doc_ids": ["doc-0018"], "answer_keywords": ["2"]}
+{"id": "q-0450", "category": "fact", "question": "人大国学馆占地面积多少平方米？", "relevant_doc_ids": ["doc-0036"], "answer_keywords": ["11500"]}
+{"id": "q-0451", "category": "fact", "question": "2013年全国高考平均录取率是多少？", "relevant_doc_ids": ["doc-0037"], "answer_keywords": ["76%"]}
+{"id": "q-0452", "category": "fact", "question": "乌云毕力格教授的现任职务是什么？", "relevant_doc_ids": ["doc-0038"], "answer_keywords": ["中国人民大学国学院西域历史语言研究所副所长"]}
+{"id": "q-0453", "category": "fact", "question": "中国人民大学哪些学科在2017年被评为A+？", "relevant_doc_ids": ["doc-0039"], "answer_keywords": ["理论经济学"]}
+{"id": "q-0454", "category": "fact", "question": "中国人民大学与多少个国家的高校建立了伙伴关系？", "relevant_doc_ids": ["doc-0039"], "answer_keywords": ["61"]}
+{"id": "q-0455", "category": "fact", "question": "人民大学国学院最活跃的兴趣小组叫什么？", "relevant_doc_ids": ["doc-0040"], "answer_keywords": ["新风雅诗社"]}
+{"id": "q-0456", "category": "fact", "question": "人民大学国学院副院长杨庆中认为国学的意义在于什么？", "relevant_doc_ids": ["doc-0040"], "answer_keywords": ["回归"]}
+{"id": "q-0457", "category": "fact", "question": "国学院特聘教授薛天纬开设的古诗文写作课主要讲授哪些诗体？", "relevant_doc_ids": ["doc-0040"], "answer_keywords": ["导言"]}
+{"id": "q-0458", "category": "fact", "question": "中国人民大学数学学院于何年成立？", "relevant_doc_ids": ["doc-0041"], "answer_keywords": ["2018"]}
+{"id": "q-0459", "category": "fact", "question": "中国人民大学数学与应用数学专业目前设有几个方向？", "relevant_doc_ids": ["doc-0041"], "answer_keywords": ["三个"]}
+{"id": "q-0460", "category": "fact", "question": "中国人民大学西班牙语专业只招收高考科目为哪些语种的考生？", "relevant_doc_ids": ["doc-0042"], "answer_keywords": ["英语语种"]}
+{"id": "q-0461", "category": "fact", "question": "中法学院所在的中国人民大学苏州校区位于哪里？", "relevant_doc_ids": ["doc-0043"], "answer_keywords": ["苏州市独墅湖科教创新区"]}
+{"id": "q-0462", "category": "fact", "question": "汪建熙是哪个系的毕业生？", "relevant_doc_ids": ["doc-0044"], "answer_keywords": ["财政系"]}
+{"id": "q-0463", "category": "fact", "question": "王永昌是哪个专业的研究生？", "relevant_doc_ids": ["doc-0044"], "answer_keywords": ["马克思主义哲学"]}
+{"id": "q-0464", "category": "fact", "question": "中国人民大学的知名校友王永昌是哪年加入中国共产党的？", "relevant_doc_ids": ["doc-0044"], "answer_keywords": ["1974"]}
+{"id": "q-0465", "category": "fact", "question": "现任北京市海淀区人民法院党组成员、副院长是中国人民大学的哪位知名校友？", "relevant_doc_ids": ["doc-0044"], "answer_keywords": ["宋鱼水"]}
+{"id": "q-0466", "category": "fact", "question": "政治学与行政学本科毕业生有多少比例的学生选择就业？", "relevant_doc_ids": ["doc-0045"], "answer_keywords": ["20-25%"]}
+{"id": "q-0467", "category": "fact", "question": "人大文学院的全职教师包括哪位80后青年作家？", "relevant_doc_ids": ["doc-0012"], "answer_keywords": ["张悦然"]}
+{"id": "q-0468", "category": "fact", "question": "人大文学院的“古代文本文化国际研究中心”由哪位教授领衔？", "relevant_doc_ids": ["doc-0012"], "answer_keywords": ["柯马丁"]}
+{"id": "q-0469", "category": "fact", "question": "中国人民大学马克思主义学院是全国最早开设马克思主义理论本科专业的学院吗？", "relevant_doc_ids": ["doc-0046"], "answer_keywords": ["是"]}
+{"id": "q-0470", "category": "fact", "question": "中国人民大学中法学院是由哪些大学共建的中外合作办学机构？", "relevant_doc_ids": ["doc-0047"], "answer_keywords": ["法国索邦大学"]}
+{"id": "q-0471", "category": "fact", "question": "中国人民大学2022年澳门保送生招生的人文社会科学专业排名中，A+学科的数量是多少？", "relevant_doc_ids": ["doc-0048"], "answer_keywords": ["8"]}
+{"id": "q-0472", "category": "fact", "question": "中国人民大学校长李文海在1991年6月获得了什么称号？", "relevant_doc_ids": ["doc-0049"], "answer_keywords": ["全国普通高等学校优秀思想政治工作者"]}
+{"id": "q-0473", "category": "fact", "question": "中国人民大学校友邬沧萍中学毕业后上的是哪个大学？", "relevant_doc_ids": ["doc-0050"], "answer_keywords": ["岭南大学"]}
+{"id": "q-0474", "category": "fact", "question": "中国人民大学2018年有多少个入选“双一流”建设学科？", "relevant_doc_ids": ["doc-0051"], "answer_keywords": ["14"]}
+{"id": "q-0475", "category": "fact", "question": "中国人民大学外语类专业2022年学年的学费是多少？", "relevant_doc_ids": ["doc-0047"], "answer_keywords": ["6000"]}
+{"id": "q-0476", "category": "fact", "question": "谁是中国人民大学历史上的新中国新型高等教育的开拓者？", "relevant_doc_ids": ["doc-0052"], "answer_keywords": ["吴玉章"]}
+{"id": "q-0477", "category": "fact", "question": "2022年中国人民大学获评A+的学科有多少个？", "relevant_doc_ids": ["doc-0039"], "answer_keywords": ["9个"]}
+{"id": "q-0478", "category": "fact", "question": "2019年中国人民大学英语保送生招生计划人数是多少？", "relevant_doc_ids": ["doc-0053"], "answer_keywords": ["20"]}
+{"id": "q-0479", "category": "fact", "question": "2023年中国人民大学获评A的学科有多少个？", "relevant_doc_ids": ["doc-0054"], "answer_keywords": ["14"]}
+{"id": "q-0480", "category": "fact", "question": "2023年中国人民大学获评A+的学科有多少个？", "relevant_doc_ids": ["doc-0054"], "answer_keywords": ["9个"]}
+{"id": "q-0481", "category": "fact", "question": "2014年中国人民大学中法学院的院长是谁？", "relevant_doc_ids": ["doc-0009"], "answer_keywords": ["杨伟国"]}
+{"id": "q-0482", "category": "fact", "question": "2023年中国人民大学国际关系学院党委书记是谁？", "relevant_doc_ids": ["doc-0055"], "answer_keywords": ["幸明军"]}
+{"id": "q-0483", "category": "fact", "question": "2022年人大有多少个校际交换项目？", "relevant_doc_ids": ["doc-0056"], "answer_keywords": ["68"]}
+{"id": "q-0484", "category": "fact", "question": "2021年中国人民大学中法学院TFS4的测试平均分是多少？", "relevant_doc_ids": ["doc-0057"], "answer_keywords": ["75.34"]}
+{"id": "q-0485", "category": "fact", "question": "2024年中国人民大学社会与人口学院的院长是谁？", "relevant_doc_ids": ["doc-0058"], "answer_keywords": ["冯仕政"]}

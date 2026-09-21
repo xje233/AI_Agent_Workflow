@@ -1,5 +1,6 @@
 """聊天服务：持久化消息、重建上下文并将 Agent 事件转换为 SSE。"""
 import asyncio
+import hashlib
 import json
 import time
 import uuid
@@ -11,7 +12,7 @@ from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
 from app.agent.base import SYSTEM_PROMPT, create_agent, get_llm
 from app.agent.guard import guard
 from app.agent.memory import RedisConversationMemory
-from app.agent.tools import ALL_TOOLS, select_tools
+from app.agent.tools import TOOL_SPECS, select_tools
 from app.config import get_settings
 from app.database import get_sessionmaker
 from app.models.conversation import Conversation
@@ -105,6 +106,11 @@ class ChatService:
         metrics[name] = time.perf_counter()
 
     @staticmethod
+    def _args_fingerprint(args: object) -> str:
+        payload = json.dumps(args or {}, ensure_ascii=False, sort_keys=True, default=str)
+        return hashlib.sha256(payload.encode("utf-8")).hexdigest()[:16]
+
+    @staticmethod
     def count_tokens(value: str) -> int:
         try:
             import tiktoken
@@ -148,7 +154,19 @@ class ChatService:
             "history_token_count": metrics.get("history_token_count", 0),
             "system_prompt_token_count": metrics.get("system_prompt_token_count", 0),
             "tool_count": metrics.get("tool_count", 0),
+            "tool_names": metrics.get("tool_names", []),
+            "tool_categories": metrics.get("tool_categories", []),
+            "tool_risks": metrics.get("tool_risks", []),
             "tool_definition_token_count": metrics.get("tool_definition_token_count", 0),
+            "tool_call_trace": [
+                {
+                    "name": call.get("name", "unknown"),
+                    "status": call.get("status", "error"),
+                    "duration_ms": call.get("duration_ms"),
+                    "args_fingerprint": call.get("args_fingerprint", ""),
+                }
+                for call in metrics.get("tool_call_trace", [])
+            ],
             "model_call_count": metrics.get("model_call_count", 0),
             "tool_call_count": metrics.get("tool_call_count", 0),
             "first_tool_call_at_ms": metrics.get("first_tool_call_at_ms"),
@@ -218,10 +236,15 @@ class ChatService:
         )
 
         tools = select_tools(question)
-        simple_chat = get_settings().simple_chat_enabled and tools is ALL_TOOLS
+        # 空列表表示没有工具意图；ALL_TOOLS 表示明确要求调用全部工具，必须走 Agent。
+        simple_chat = get_settings().simple_chat_enabled and not tools
         if simple_chat:
             tools = []
         metrics["tool_count"] = len(tools)
+        metrics["tool_names"] = [getattr(tool, "name", "unknown") for tool in tools]
+        selected_specs = [spec for spec in TOOL_SPECS if spec.tool in tools]
+        metrics["tool_categories"] = sorted({spec.category for spec in selected_specs})
+        metrics["tool_risks"] = sorted({spec.risk for spec in selected_specs})
         metrics["tool_definition_token_count"] = self.tool_token_count(tools)
         metrics["system_prompt_token_count"] = self.count_tokens(SYSTEM_PROMPT)
         metrics["history_token_count"] = self.count_tokens(
@@ -241,6 +264,8 @@ class ChatService:
 
         full_response = ""
         stream_error = False
+        tool_call_indexes: dict[str, int] = {}
+        metrics["tool_call_trace"] = []
 
         try:
             self.mark(metrics, "model_request_started")
@@ -273,9 +298,41 @@ class ChatService:
                         metrics["model_call_count"] = metrics.get("model_call_count", 0) + 1
                     elif kind == "on_tool_start":
                         metrics["tool_call_count"] = metrics.get("tool_call_count", 0) + 1
+                        event_data = event.get("data", {})
+                        call = {
+                            "name": event.get("name", "unknown"),
+                            "status": "running",
+                            "started_at": time.perf_counter(),
+                            "args_fingerprint": self._args_fingerprint(event_data.get("input", {})),
+                        }
+                        tool_call_indexes[event.get("run_id", str(id(call)))] = len(metrics["tool_call_trace"])
+                        metrics["tool_call_trace"].append(call)
                         if "first_tool_call_at_ms" not in metrics:
                             metrics["first_tool_call_at_ms"] = round(
                                 (time.perf_counter() - metrics["request_received"]) * 1000,
+                                2,
+                            )
+                    elif kind == "on_tool_end":
+                        index = tool_call_indexes.get(event.get("run_id"))
+                        if index is not None:
+                            call = metrics["tool_call_trace"][index]
+                            call["status"] = "success"
+                            call["duration_ms"] = round(
+                                (time.perf_counter() - call["started_at"]) * 1000,
+                                2,
+                            )
+                    elif kind == "on_tool_error":
+                        index = tool_call_indexes.get(event.get("run_id"))
+                        error = event.get("data", {}).get("error", "tool error")
+                        is_parameter_error = any(
+                            marker in str(error).lower()
+                            for marker in ("validation", "invalid argument", "parameter")
+                        )
+                        if index is not None:
+                            call = metrics["tool_call_trace"][index]
+                            call["status"] = "parameter_error" if is_parameter_error else "error"
+                            call["duration_ms"] = round(
+                                (time.perf_counter() - call["started_at"]) * 1000,
                                 2,
                             )
                     if kind == "on_chat_model_stream":
@@ -289,7 +346,7 @@ class ChatService:
                                 self.mark(metrics, "first_sse_enqueued")
                             yield f"data: {json.dumps({'content': token, 'done': False})}\n\n"
                             await asyncio.sleep(0)
-                    elif kind == "on_tool_error":
+                    if kind == "on_tool_error":
                         err = event.get("data", {}).get("error", "tool error")
                         error_token = f"\n> Tool error: {str(err)[:200]}\n"
                         full_response += error_token

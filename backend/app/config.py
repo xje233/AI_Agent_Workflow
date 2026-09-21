@@ -12,6 +12,7 @@ class Settings(BaseSettings):
     openai_base_url: str = "https://api.openai.com/v1"
     model_name: str = "gpt-4o-mini"
     simple_chat_enabled: bool = True
+    agent_max_exposed_tools: int = 3
 
     # Embedding（可独立配置，支持硅基流动等不同服务商）
     embedding_api_key: str = ""
@@ -21,6 +22,7 @@ class Settings(BaseSettings):
     # Database
     database_url: str = "postgresql+asyncpg://agent:agent123@localhost:5432/agent_workflow"
     database_url_sync: str = "postgresql://agent:agent123@localhost:5432/agent_workflow"
+    database_query_timeout_seconds: float = 5.0
 
     # Redis
     redis_url: str = "redis://localhost:6379/0"
@@ -29,6 +31,8 @@ class Settings(BaseSettings):
     chroma_host: str = "localhost"
     chroma_port: int = 8001
     chroma_persist_dir: str = "./chroma_db"
+    rag_relevance_threshold: float = 0.35
+    rag_default_k: int = 4
 
     # App
     app_host: str = "0.0.0.0"

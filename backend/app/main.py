@@ -1,7 +1,9 @@
 """FastAPI 应用入口：初始化基础设施并注册各业务路由。"""
 from contextlib import asynccontextmanager
+from pathlib import Path
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
 from app.database import init_db
 from app.api import chat, knowledge, conversation, workflow
 from app.agent.llm_client import shutdown as shutdown_llm_client
@@ -44,3 +46,24 @@ app.include_router(workflow.router)
 @app.get("/api/health")
 async def health():
     return {"status": "ok", "version": "1.0.0"}
+
+
+# ── 生产模式：前端静态文件服务 ──────────────────────────────
+_frontend_dist = Path(__file__).resolve().parent.parent.parent / "frontend" / "dist"
+if _frontend_dist.exists():
+    import logging
+    logger = logging.getLogger("uvicorn")
+
+    @app.get("/{full_path:path}", include_in_schema=False)
+    async def serve_frontend(full_path: str):
+        """为 SPA 提供静态文件服务，API 路由优先于本回退规则。"""
+        file_path = _frontend_dist / full_path
+        if file_path.is_file():
+            return FileResponse(str(file_path))
+        return FileResponse(str(_frontend_dist / "index.html"))
+
+    logger.info("前端静态文件服务已启用: %s", _frontend_dist)
+else:
+    import logging
+    logger = logging.getLogger("uvicorn")
+    logger.info("未发现前端构建产物 %s，仅提供 API 服务", _frontend_dist)

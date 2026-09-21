@@ -1,0 +1,1371 @@
+{
+  "overall": {
+    "samples": 485,
+    "recall@3": 0.7876,
+    "mrr": 0.6787
+  },
+  "by_category": {
+    "fact": {
+      "samples": 485,
+      "recall@3": 0.7876,
+      "mrr": 0.6787
+    }
+  },
+  "failures": [
+    {
+      "id": "q-0009",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0082",
+        "doc-0045",
+        "doc-0093"
+      ],
+      "expected": [
+        "doc-0002",
+        "doc-0002"
+      ]
+    },
+    {
+      "id": "q-0010",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0082",
+        "doc-0045",
+        "doc-0069"
+      ],
+      "expected": [
+        "doc-0002",
+        "doc-0002",
+        "doc-0002"
+      ]
+    },
+    {
+      "id": "q-0011",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0082",
+        "doc-0045",
+        "doc-0069"
+      ],
+      "expected": [
+        "doc-0002",
+        "doc-0002",
+        "doc-0002",
+        "doc-0002"
+      ]
+    },
+    {
+      "id": "q-0036",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0106",
+        "doc-0070",
+        "doc-0105"
+      ],
+      "expected": [
+        "doc-0006",
+        "doc-0006",
+        "doc-0006",
+        "doc-0006",
+        "doc-0006"
+      ]
+    },
+    {
+      "id": "q-0050",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0071",
+        "doc-0222",
+        "doc-0219"
+      ],
+      "expected": [
+        "doc-0009"
+      ]
+    },
+    {
+      "id": "q-0059",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0195",
+        "doc-0191",
+        "doc-0075"
+      ],
+      "expected": [
+        "doc-0014"
+      ]
+    },
+    {
+      "id": "q-0063",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0058",
+        "doc-0106",
+        "doc-0223"
+      ],
+      "expected": [
+        "doc-0016"
+      ]
+    },
+    {
+      "id": "q-0064",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0047",
+        "doc-0204",
+        "doc-0039"
+      ],
+      "expected": [
+        "doc-0017"
+      ]
+    },
+    {
+      "id": "q-0065",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0054",
+        "doc-0016",
+        "doc-0039"
+      ],
+      "expected": [
+        "doc-0018"
+      ]
+    },
+    {
+      "id": "q-0066",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0054",
+        "doc-0025",
+        "doc-0047"
+      ],
+      "expected": [
+        "doc-0018"
+      ]
+    },
+    {
+      "id": "q-0077",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0056",
+        "doc-0082",
+        "doc-0107"
+      ],
+      "expected": [
+        "doc-0024"
+      ]
+    },
+    {
+      "id": "q-0079",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0069",
+        "doc-0098",
+        "doc-0071"
+      ],
+      "expected": [
+        "doc-0025"
+      ]
+    },
+    {
+      "id": "q-0081",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0070",
+        "doc-0078",
+        "doc-0191"
+      ],
+      "expected": [
+        "doc-0026"
+      ]
+    },
+    {
+      "id": "q-0082",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0200",
+        "doc-0201",
+        "doc-0202"
+      ],
+      "expected": [
+        "doc-0027"
+      ]
+    },
+    {
+      "id": "q-0088",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0078",
+        "doc-0012",
+        "doc-0001"
+      ],
+      "expected": [
+        "doc-0031"
+      ]
+    },
+    {
+      "id": "q-0089",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0202",
+        "doc-0199",
+        "doc-0201"
+      ],
+      "expected": [
+        "doc-0032"
+      ]
+    },
+    {
+      "id": "q-0090",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0194",
+        "doc-0200",
+        "doc-0175"
+      ],
+      "expected": [
+        "doc-0032"
+      ]
+    },
+    {
+      "id": "q-0102",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0196",
+        "doc-0016",
+        "doc-0192"
+      ],
+      "expected": [
+        "doc-0018"
+      ]
+    },
+    {
+      "id": "q-0103",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0016",
+        "doc-0196",
+        "doc-0192"
+      ],
+      "expected": [
+        "doc-0018"
+      ]
+    },
+    {
+      "id": "q-0108",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0056",
+        "doc-0047",
+        "doc-0054"
+      ],
+      "expected": [
+        "doc-0039"
+      ]
+    },
+    {
+      "id": "q-0117",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0045",
+        "doc-0082",
+        "doc-0107"
+      ],
+      "expected": [
+        "doc-0044"
+      ]
+    },
+    {
+      "id": "q-0124",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0019",
+        "doc-0043",
+        "doc-0063"
+      ],
+      "expected": [
+        "doc-0047"
+      ]
+    },
+    {
+      "id": "q-0127",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0054",
+        "doc-0044",
+        "doc-0195"
+      ],
+      "expected": [
+        "doc-0050"
+      ]
+    },
+    {
+      "id": "q-0129",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0213",
+        "doc-0214",
+        "doc-0215"
+      ],
+      "expected": [
+        "doc-0047"
+      ]
+    },
+    {
+      "id": "q-0134",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0070",
+        "doc-0192",
+        "doc-0196"
+      ],
+      "expected": [
+        "doc-0054"
+      ]
+    },
+    {
+      "id": "q-0135",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0219",
+        "doc-0043",
+        "doc-0223"
+      ],
+      "expected": [
+        "doc-0009"
+      ]
+    },
+    {
+      "id": "q-0136",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0223",
+        "doc-0215",
+        "doc-0177"
+      ],
+      "expected": [
+        "doc-0055"
+      ]
+    },
+    {
+      "id": "q-0139",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0016",
+        "doc-0197",
+        "doc-0195"
+      ],
+      "expected": [
+        "doc-0058"
+      ]
+    },
+    {
+      "id": "q-0140",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0213",
+        "doc-0215",
+        "doc-0214"
+      ],
+      "expected": [
+        "doc-0059"
+      ]
+    },
+    {
+      "id": "q-0143",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0212",
+        "doc-0214",
+        "doc-0213"
+      ],
+      "expected": [
+        "doc-0061"
+      ]
+    },
+    {
+      "id": "q-0147",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0202",
+        "doc-0199",
+        "doc-0175"
+      ],
+      "expected": [
+        "doc-0065"
+      ]
+    },
+    {
+      "id": "q-0148",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0202",
+        "doc-0199",
+        "doc-0175"
+      ],
+      "expected": [
+        "doc-0065"
+      ]
+    },
+    {
+      "id": "q-0149",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0141",
+        "doc-0047",
+        "doc-0142"
+      ],
+      "expected": [
+        "doc-0066"
+      ]
+    },
+    {
+      "id": "q-0150",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0141",
+        "doc-0047",
+        "doc-0142"
+      ],
+      "expected": [
+        "doc-0066"
+      ]
+    },
+    {
+      "id": "q-0161",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0209",
+        "doc-0210",
+        "doc-0208"
+      ],
+      "expected": [
+        "doc-0072"
+      ]
+    },
+    {
+      "id": "q-0166",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0191",
+        "doc-0051",
+        "doc-0195"
+      ],
+      "expected": [
+        "doc-0075"
+      ]
+    },
+    {
+      "id": "q-0167",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0191",
+        "doc-0051",
+        "doc-0195"
+      ],
+      "expected": [
+        "doc-0075"
+      ]
+    },
+    {
+      "id": "q-0168",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0078",
+        "doc-0070",
+        "doc-0054"
+      ],
+      "expected": [
+        "doc-0061"
+      ]
+    },
+    {
+      "id": "q-0169",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0078",
+        "doc-0070",
+        "doc-0054"
+      ],
+      "expected": [
+        "doc-0061"
+      ]
+    },
+    {
+      "id": "q-0178",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0060",
+        "doc-0190",
+        "doc-0183"
+      ],
+      "expected": [
+        "doc-0068"
+      ]
+    },
+    {
+      "id": "q-0179",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0060",
+        "doc-0190",
+        "doc-0183"
+      ],
+      "expected": [
+        "doc-0068"
+      ]
+    },
+    {
+      "id": "q-0180",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0194",
+        "doc-0202",
+        "doc-0199"
+      ],
+      "expected": [
+        "doc-0080"
+      ]
+    },
+    {
+      "id": "q-0214",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0041",
+        "doc-0009",
+        "doc-0094"
+      ],
+      "expected": [
+        "doc-0085",
+        "doc-0086"
+      ]
+    },
+    {
+      "id": "q-0328",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0032",
+        "doc-0199",
+        "doc-0200"
+      ],
+      "expected": [
+        "doc-0071"
+      ]
+    },
+    {
+      "id": "q-0331",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0196",
+        "doc-0215",
+        "doc-0177"
+      ],
+      "expected": [
+        "doc-0197"
+      ]
+    },
+    {
+      "id": "q-0332",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0195",
+        "doc-0039",
+        "doc-0223"
+      ],
+      "expected": [
+        "doc-0049"
+      ]
+    },
+    {
+      "id": "q-0333",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0223",
+        "doc-0028",
+        "doc-0195"
+      ],
+      "expected": [
+        "doc-0198"
+      ]
+    },
+    {
+      "id": "q-0334",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0196",
+        "doc-0215",
+        "doc-0177"
+      ],
+      "expected": [
+        "doc-0058"
+      ]
+    },
+    {
+      "id": "q-0335",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0013",
+        "doc-0076",
+        "doc-0213"
+      ],
+      "expected": [
+        "doc-0014"
+      ]
+    },
+    {
+      "id": "q-0340",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0215",
+        "doc-0213",
+        "doc-0204"
+      ],
+      "expected": [
+        "doc-0203"
+      ]
+    },
+    {
+      "id": "q-0341",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0213",
+        "doc-0215",
+        "doc-0053"
+      ],
+      "expected": [
+        "doc-0204"
+      ]
+    },
+    {
+      "id": "q-0343",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0212",
+        "doc-0213",
+        "doc-0214"
+      ],
+      "expected": [
+        "doc-0206"
+      ]
+    },
+    {
+      "id": "q-0345",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0042",
+        "doc-0213",
+        "doc-0215"
+      ],
+      "expected": [
+        "doc-0047"
+      ]
+    },
+    {
+      "id": "q-0346",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0212",
+        "doc-0061",
+        "doc-0042"
+      ],
+      "expected": [
+        "doc-0207"
+      ]
+    },
+    {
+      "id": "q-0347",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0061",
+        "doc-0042",
+        "doc-0214"
+      ],
+      "expected": [
+        "doc-0208"
+      ]
+    },
+    {
+      "id": "q-0348",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0061",
+        "doc-0042",
+        "doc-0214"
+      ],
+      "expected": [
+        "doc-0209"
+      ]
+    },
+    {
+      "id": "q-0349",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0213",
+        "doc-0053",
+        "doc-0042"
+      ],
+      "expected": [
+        "doc-0210"
+      ]
+    },
+    {
+      "id": "q-0350",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0213",
+        "doc-0042",
+        "doc-0215"
+      ],
+      "expected": [
+        "doc-0211"
+      ]
+    },
+    {
+      "id": "q-0353",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0215",
+        "doc-0213",
+        "doc-0214"
+      ],
+      "expected": [
+        "doc-0204"
+      ]
+    },
+    {
+      "id": "q-0355",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0215",
+        "doc-0213",
+        "doc-0214"
+      ],
+      "expected": [
+        "doc-0059"
+      ]
+    },
+    {
+      "id": "q-0360",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0184",
+        "doc-0218",
+        "doc-0217"
+      ],
+      "expected": [
+        "doc-0074"
+      ]
+    },
+    {
+      "id": "q-0365",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0219",
+        "doc-0071",
+        "doc-0057"
+      ],
+      "expected": [
+        "doc-0221"
+      ]
+    },
+    {
+      "id": "q-0367",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0219",
+        "doc-0071",
+        "doc-0057"
+      ],
+      "expected": [
+        "doc-0221"
+      ]
+    },
+    {
+      "id": "q-0369",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0219",
+        "doc-0071",
+        "doc-0057"
+      ],
+      "expected": [
+        "doc-0221"
+      ]
+    },
+    {
+      "id": "q-0371",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0223",
+        "doc-0215",
+        "doc-0177"
+      ],
+      "expected": [
+        "doc-0034"
+      ]
+    },
+    {
+      "id": "q-0372",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0043",
+        "doc-0044",
+        "doc-0223"
+      ],
+      "expected": [
+        "doc-0222"
+      ]
+    },
+    {
+      "id": "q-0373",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0177",
+        "doc-0196",
+        "doc-0016"
+      ],
+      "expected": [
+        "doc-0223"
+      ]
+    },
+    {
+      "id": "q-0374",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0223",
+        "doc-0215",
+        "doc-0177"
+      ],
+      "expected": [
+        "doc-0055"
+      ]
+    },
+    {
+      "id": "q-0376",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0016",
+        "doc-0223",
+        "doc-0215"
+      ],
+      "expected": [
+        "doc-0058"
+      ]
+    },
+    {
+      "id": "q-0377",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0223",
+        "doc-0047",
+        "doc-0177"
+      ],
+      "expected": [
+        "doc-0225"
+      ]
+    },
+    {
+      "id": "q-0379",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0219",
+        "doc-0223",
+        "doc-0043"
+      ],
+      "expected": [
+        "doc-0009"
+      ]
+    },
+    {
+      "id": "q-0380",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0223",
+        "doc-0219",
+        "doc-0047"
+      ],
+      "expected": [
+        "doc-0225"
+      ]
+    },
+    {
+      "id": "q-0385",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0223",
+        "doc-0195",
+        "doc-0016"
+      ],
+      "expected": [
+        "doc-0055"
+      ]
+    },
+    {
+      "id": "q-0386",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0197",
+        "doc-0016",
+        "doc-0223"
+      ],
+      "expected": [
+        "doc-0055"
+      ]
+    },
+    {
+      "id": "q-0387",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0016",
+        "doc-0197",
+        "doc-0195"
+      ],
+      "expected": [
+        "doc-0058"
+      ]
+    },
+    {
+      "id": "q-0388",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0001",
+        "doc-0223",
+        "doc-0016"
+      ],
+      "expected": [
+        "doc-0229"
+      ]
+    },
+    {
+      "id": "q-0389",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0197",
+        "doc-0223",
+        "doc-0114"
+      ],
+      "expected": [
+        "doc-0230"
+      ]
+    },
+    {
+      "id": "q-0391",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0215",
+        "doc-0177",
+        "doc-0191"
+      ],
+      "expected": [
+        "doc-0056"
+      ]
+    },
+    {
+      "id": "q-0395",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0213",
+        "doc-0214",
+        "doc-0215"
+      ],
+      "expected": [
+        "doc-0047"
+      ]
+    },
+    {
+      "id": "q-0396",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0071",
+        "doc-0222",
+        "doc-0219"
+      ],
+      "expected": [
+        "doc-0009"
+      ]
+    },
+    {
+      "id": "q-0405",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0195",
+        "doc-0191",
+        "doc-0075"
+      ],
+      "expected": [
+        "doc-0014"
+      ]
+    },
+    {
+      "id": "q-0409",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0058",
+        "doc-0106",
+        "doc-0223"
+      ],
+      "expected": [
+        "doc-0016"
+      ]
+    },
+    {
+      "id": "q-0410",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0047",
+        "doc-0204",
+        "doc-0039"
+      ],
+      "expected": [
+        "doc-0017"
+      ]
+    },
+    {
+      "id": "q-0411",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0054",
+        "doc-0016",
+        "doc-0039"
+      ],
+      "expected": [
+        "doc-0018"
+      ]
+    },
+    {
+      "id": "q-0412",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0054",
+        "doc-0025",
+        "doc-0047"
+      ],
+      "expected": [
+        "doc-0018"
+      ]
+    },
+    {
+      "id": "q-0423",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0056",
+        "doc-0082",
+        "doc-0107"
+      ],
+      "expected": [
+        "doc-0024"
+      ]
+    },
+    {
+      "id": "q-0425",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0069",
+        "doc-0098",
+        "doc-0071"
+      ],
+      "expected": [
+        "doc-0025"
+      ]
+    },
+    {
+      "id": "q-0427",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0070",
+        "doc-0078",
+        "doc-0191"
+      ],
+      "expected": [
+        "doc-0026"
+      ]
+    },
+    {
+      "id": "q-0428",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0200",
+        "doc-0201",
+        "doc-0202"
+      ],
+      "expected": [
+        "doc-0027"
+      ]
+    },
+    {
+      "id": "q-0434",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0078",
+        "doc-0012",
+        "doc-0001"
+      ],
+      "expected": [
+        "doc-0031"
+      ]
+    },
+    {
+      "id": "q-0435",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0202",
+        "doc-0199",
+        "doc-0201"
+      ],
+      "expected": [
+        "doc-0032"
+      ]
+    },
+    {
+      "id": "q-0436",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0194",
+        "doc-0200",
+        "doc-0175"
+      ],
+      "expected": [
+        "doc-0032"
+      ]
+    },
+    {
+      "id": "q-0448",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0196",
+        "doc-0016",
+        "doc-0192"
+      ],
+      "expected": [
+        "doc-0018"
+      ]
+    },
+    {
+      "id": "q-0449",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0016",
+        "doc-0196",
+        "doc-0192"
+      ],
+      "expected": [
+        "doc-0018"
+      ]
+    },
+    {
+      "id": "q-0454",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0056",
+        "doc-0047",
+        "doc-0054"
+      ],
+      "expected": [
+        "doc-0039"
+      ]
+    },
+    {
+      "id": "q-0463",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0045",
+        "doc-0082",
+        "doc-0107"
+      ],
+      "expected": [
+        "doc-0044"
+      ]
+    },
+    {
+      "id": "q-0470",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0019",
+        "doc-0043",
+        "doc-0063"
+      ],
+      "expected": [
+        "doc-0047"
+      ]
+    },
+    {
+      "id": "q-0473",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0054",
+        "doc-0044",
+        "doc-0195"
+      ],
+      "expected": [
+        "doc-0050"
+      ]
+    },
+    {
+      "id": "q-0475",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0213",
+        "doc-0214",
+        "doc-0215"
+      ],
+      "expected": [
+        "doc-0047"
+      ]
+    },
+    {
+      "id": "q-0480",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0070",
+        "doc-0192",
+        "doc-0196"
+      ],
+      "expected": [
+        "doc-0054"
+      ]
+    },
+    {
+      "id": "q-0481",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0219",
+        "doc-0043",
+        "doc-0223"
+      ],
+      "expected": [
+        "doc-0009"
+      ]
+    },
+    {
+      "id": "q-0482",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0223",
+        "doc-0215",
+        "doc-0177"
+      ],
+      "expected": [
+        "doc-0055"
+      ]
+    },
+    {
+      "id": "q-0485",
+      "category": "fact",
+      "reason": "relevant_document_not_retrieved",
+      "retrieved": [
+        "doc-0016",
+        "doc-0197",
+        "doc-0195"
+      ],
+      "expected": [
+        "doc-0058"
+      ]
+    }
+  ],
+  "answer_evaluation": {
+    "judged_samples": 0,
+    "accuracy": null,
+    "note": "Pass --answers to score generated answers."
+  }
+}

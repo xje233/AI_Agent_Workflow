@@ -107,8 +107,8 @@ def get_llm(temperature: float = 0.3):  # Reuse the HTTP client across requests.
 
 
 def create_agent(memory: RedisConversationMemory, temperature: float = 0.3, verbose: bool = False, tools=None):
-    # 调用方可传入裁剪后的工具集，避免不相关的工具描述消耗上下文。
-    tools = tools or ALL_TOOLS
+    # None 表示使用默认工具；空列表表示调用方明确要求无工具。
+    tools = ALL_TOOLS if tools is None else tools
     llm = get_llm(temperature)
     agent = create_tool_calling_agent(llm=llm, tools=tools, prompt=PROMPT)
     return AgentExecutor(
