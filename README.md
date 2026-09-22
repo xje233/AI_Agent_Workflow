@@ -32,7 +32,9 @@
 
 > 日常闲聊走轻量直连，命中工具意图才切到工具调用 Agent，不把成本花在无意义的编排上。
 
-- **意图路由选工具** — `select_tools` 按关键词匹配工具类别，普通问题最多暴露 `AGENT_MAX_EXPOSED_TOOLS`（默认 3）个工具；只有显式说「所有工具」才放开全部工具。
+- **分层 Tool Routing** — `route_tools` 先按权限、环境与可用状态做确定性过滤，再用规则粗分业务域，最后用「词法 + 向量」混合检索出 Top-K（`AGENT_MAX_EXPOSED_TOOLS`，默认 3）候选，只把候选工具的完整 Schema 绑定给模型。向量层不可用时自动降级为纯词法。
+- **高风险确认门** — `send_email` 等 `requires_confirmation` 工具默认不进入候选，只有用户在本轮消息中明确确认（如「确认发送」）才放开；执行期再校验工具名是否落在候选集内，越权调用记为 `unauthorized`。
+- **显式逃生舱** — 只有用户明说「所有工具」才放开全部已授权工具，且仍受确认门约束。
 - **简单聊天快路径** — 未命中任何工具意图且 `SIMPLE_CHAT_ENABLED=true` 时，直接 `astream` 生成回复，跳过 Agent 编排与工具 schema 的 token 开销。
 - **历史截断** — 上下文按「最多 20 条消息 / 12000 字符」从最新消息向前截取，两个维度共同约束单轮成本。
 - **共享连接池** — 模型请求复用应用级 `httpx.AsyncClient`（keep-alive 10 条、上限 50 条、120s 超时），避免每轮重建连接。
@@ -63,7 +65,7 @@
 
 > 五类工具都带风险标注，边界与失败路径由代码兜底，而不是指望模型自觉。
 
-- **工具元数据** — `TOOL_SPECS` 为每个工具标注 category、risk（low / medium / high）、read_only、requires_confirmation 与匹配关键词，供路由和后续权限系统复用。
+- **工具注册表卡片** — `TOOL_CARDS` 为每个工具标注 namespace、category、risk（low / medium / high）、read_only、requires_confirmation、required_scope、environments、tags、keywords 与「何时用 / 何时不用」边界；两个边界会追加进工具描述，帮助模型区分相似工具。
 - **受限 SQL** — `query_db` 仅允许 `conversations`、`messages`、`documents` 白名单表与其列，禁止注释、`SELECT *`、JOIN / UNION 等关键字，自动补 `LIMIT 100`，超时由 `DATABASE_QUERY_TIMEOUT_SECONDS`（默认 5s）截断。
 - **审计留痕** — 每次 `query_db` 以 SQL 哈希（前 12 位）记录表名、状态、行数与耗时，日志里不出现原始查询内容。
 - **受限执行** — `run_python` 采用关键字拒绝 + 安全内建函数白名单双层限制，代码上限 5000 字符，无法访问网络与文件系统。
@@ -97,7 +99,7 @@ sequenceDiagram
     Web->>API: POST /api/chat/send
     API->>Svc: 落库用户消息并加载历史
     Svc->>Store: 会话历史（DB）+ 热缓存（Redis）
-    Svc->>Svc: trim_history + select_tools
+    Svc->>Svc: trim_history + route_tools
 
     alt 未命中工具意图
         Svc->>API: 直连模型流式输出
@@ -265,7 +267,16 @@ python scripts/collect_agent_tool_traces.py
 python scripts/evaluate_agent_tools.py --traces evaluation/agent_tools/traces.jsonl
 ```
 
-`collect_agent_tool_traces.py` 用 24 条任务集真实运行 Agent（每条任务独立会话），采集 `tool_call_trace` 后由评测脚本计算指标。当前基线：工具选择准确率 `0.625`（15/24）、调用总数 83、参数错误率 `0`、重复调用率 `0.0361`、工具错误率 `0`、耗时 P50 `1.78 ms` / P95 `215.05 ms` / max `9231 ms`。9 条失败全部发生在模型决策层（`analyze_doc`、`run_python`、`send_email` 未被调用），而路由层暴露的候选工具均符合预期，归因见 `evaluation/agent_tools/baseline-report.md`。
+`collect_agent_tool_traces.py` 逐条真实运行 Agent（每条任务独立会话），采集 `tool_call_trace` 后由评测脚本计算指标。下列基线是在早先 24 条任务集上测得的：工具选择准确率 `0.625`（15/24）、调用总数 83、参数错误率 `0`、重复调用率 `0.0361`、工具错误率 `0`、耗时 P50 `1.78 ms` / P95 `215.05 ms` / max `9231 ms`。9 条失败全部发生在模型决策层（`analyze_doc`、`run_python`、`send_email` 未被调用），而路由层暴露的候选工具均符合预期，归因见 `evaluation/agent_tools/baseline-report.md`。任务集在路由层改造中扩到 28 条（新增 hard negative 与未确认的高风险用例），端到端轨迹需重跑采集才能刷新该基线。
+
+### Tool Routing 路由层
+
+```powershell
+python scripts/evaluate_tool_routing.py --lexical-only   # 确定性、离线、不调用 Embedding
+python scripts/evaluate_tool_routing.py                  # 含向量层的完整路由
+```
+
+`evaluate_tool_routing.py` 用同一份任务集只跑路由层、不调用模型，报告候选召回与越权暴露：`recall_at_k`、`exact_match_at_k`、`precision_at_k`、`no_tool_rejection_accuracy`、`unauthorized_exposure_rate`、`side_effect_interception_rate`、`avg_candidate_count`、`layer_distribution`、`route_latency_ms`。报告写入 `evaluation/agent_tools/latest-routing-report.json`。
 
 ### 单元测试
 
@@ -274,7 +285,7 @@ cd backend
 ..\.venv\Scripts\python.exe -m pytest tests
 ```
 
-覆盖工具路由与 SQL 校验、RAG 四层策略与评测指标、Agent 工具评测打分、以及聊天时延埋点。
+覆盖分层工具路由与 SQL 校验、RAG 四层策略与评测指标、Agent 工具评测与路由层指标打分、以及聊天时延埋点。
 
 ## API
 

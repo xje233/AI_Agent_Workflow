@@ -9,7 +9,7 @@ from pathlib import Path
 BACKEND_DIR = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(BACKEND_DIR))
 
-from app.agent.tools import TOOL_SPECS
+from app.agent.tool_router import TOOL_CARDS
 from app.evaluation.agent_tools import (
     load_cases,
     load_traces,
@@ -36,7 +36,7 @@ def main() -> int:
     args = parser.parse_args()
 
     cases = load_cases(DATA_DIR / "cases.jsonl")
-    validate_dataset(cases, {spec.name for spec in TOOL_SPECS})
+    validate_dataset(cases, {card.name for card in TOOL_CARDS})
     if args.validate_only:
         print(
             json.dumps(

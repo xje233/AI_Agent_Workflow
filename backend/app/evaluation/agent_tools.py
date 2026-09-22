@@ -4,12 +4,13 @@ from __future__ import annotations
 import hashlib
 import json
 import math
-from collections import defaultdict
+from collections import Counter, defaultdict
+from collections.abc import Collection
 from dataclasses import dataclass
 from pathlib import Path
 
 
-SUPPORTED_STATUSES = {"success", "parameter_error", "error", "timeout"}
+SUPPORTED_STATUSES = {"success", "parameter_error", "error", "timeout", "unauthorized"}
 
 
 @dataclass(frozen=True)
@@ -179,7 +180,7 @@ def score_tool_traces(
             if call.status == "parameter_error":
                 parameter_errors += 1
                 case_parameter_errors += 1
-            elif call.status in {"error", "timeout"}:
+            elif call.status in {"error", "timeout", "unauthorized"}:
                 execution_errors += 1
                 case_execution_errors += 1
 
@@ -219,5 +220,134 @@ def score_tool_traces(
         "execution_error_rate": round(execution_errors / total_calls, 4) if total_calls else None,
         "latency_ms": _summarize_latency(all_durations),
         "by_category": {category: samples for category, samples in sorted(by_category.items())},
+        "failures": failures,
+    }
+
+
+def _rate(samples: list[bool]) -> float | None:
+    return round(sum(samples) / len(samples), 4) if samples else None
+
+
+def score_routing(
+    cases: list[ToolEvalCase],
+    routes: dict[str, list[str]],
+    k: int = 3,
+    diagnostics: dict[str, dict] | None = None,
+    confirmation_tools: Collection[str] = (),
+) -> dict:
+    """计算候选召回、越权暴露与无工具拒选等路由层指标。
+
+    `routes[case_id]` 是路由器按分数降序给出的候选工具名；期望工具必须全部落在
+    Top-K 才算召回。越权暴露按全部样本统计，无工具拒选只统计 `expected_tools` 为空的样本。
+    """
+    diagnostics = diagnostics or {}
+    confirmation = set(confirmation_tools)
+    recall_samples: list[bool] = []
+    exact_samples: list[bool] = []
+    precision_samples: list[float] = []
+    rejection_samples: list[bool] = []
+    side_effect_samples: list[bool] = []
+    candidate_counts: list[int] = []
+    layer_counts: Counter = Counter()
+    latencies: list[float] = []
+    missing_routes: list[str] = []
+    exposures = 0
+    failures: list[dict] = []
+    by_category: dict[str, list[dict]] = defaultdict(list)
+
+    for case in cases:
+        if case.id not in routes:
+            missing_routes.append(case.id)
+            continue
+        candidates = list(routes[case.id])[:k]
+        expected = set(case.expected_tools)
+        forbidden = set(case.forbidden_tools)
+        candidate_set = set(candidates)
+        candidate_counts.append(len(candidates))
+
+        exposed = sorted(forbidden & candidate_set)
+        if exposed:
+            exposures += 1
+            failures.append(
+                {
+                    "id": case.id,
+                    "category": case.category,
+                    "reason": "forbidden_tool_exposed",
+                    "candidates": candidates,
+                    "expected": sorted(forbidden),
+                }
+            )
+
+        recalled = expected <= candidate_set
+        if expected:
+            recall_samples.append(recalled)
+            exact_samples.append(candidate_set == expected)
+            precision_samples.append(
+                len(expected & candidate_set) / len(candidates) if candidates else 0.0
+            )
+            if not recalled:
+                failures.append(
+                    {
+                        "id": case.id,
+                        "category": case.category,
+                        "reason": "expected_tool_not_recalled",
+                        "candidates": candidates,
+                        "expected": sorted(expected),
+                    }
+                )
+        else:
+            rejection_samples.append(not candidates)
+            if candidates:
+                failures.append(
+                    {
+                        "id": case.id,
+                        "category": case.category,
+                        "reason": "unexpected_candidates",
+                        "candidates": candidates,
+                        "expected": [],
+                    }
+                )
+
+        gated = forbidden & confirmation
+        if gated:
+            side_effect_samples.append(not (gated & candidate_set))
+
+        info = diagnostics.get(case.id) or {}
+        if info.get("layer"):
+            layer_counts[str(info["layer"])] += 1
+        latency = info.get("latency_ms")
+        if isinstance(latency, (int, float)) and not isinstance(latency, bool):
+            latencies.append(float(latency))
+
+        by_category[case.category].append(
+            {"recall": recalled, "unauthorized_exposure": bool(exposed)}
+        )
+
+    evaluated = len(candidate_counts)
+    return {
+        "evaluated_samples": evaluated,
+        "top_k": k,
+        "missing_routes": missing_routes,
+        "recall_at_k": _rate(recall_samples),
+        "exact_match_at_k": _rate(exact_samples),
+        "precision_at_k": round(sum(precision_samples) / len(precision_samples), 4)
+        if precision_samples
+        else None,
+        "no_tool_rejection_accuracy": _rate(rejection_samples),
+        "unauthorized_exposure_rate": round(exposures / evaluated, 4) if evaluated else None,
+        "side_effect_interception_rate": _rate(side_effect_samples),
+        "avg_candidate_count": round(sum(candidate_counts) / evaluated, 4) if evaluated else None,
+        "layer_distribution": dict(sorted(layer_counts.items())),
+        "route_latency_ms": _summarize_latency(latencies),
+        "by_category": {
+            category: {
+                "samples": len(samples),
+                "recall": round(sum(sample["recall"] for sample in samples) / len(samples), 4),
+                "unauthorized_exposure": round(
+                    sum(sample["unauthorized_exposure"] for sample in samples) / len(samples), 4
+                ),
+            }
+            for category, samples in sorted(by_category.items())
+        },
         "failures": failures,
     }

@@ -1,0 +1,76 @@
+{
+  "evaluated_samples": 28,
+  "top_k": 3,
+  "missing_routes": [],
+  "recall_at_k": 1.0,
+  "exact_match_at_k": 1.0,
+  "precision_at_k": 1.0,
+  "no_tool_rejection_accuracy": 1.0,
+  "unauthorized_exposure_rate": 0.0,
+  "side_effect_interception_rate": 1.0,
+  "avg_candidate_count": 0.9643,
+  "layer_distribution": {
+    "hybrid": 23,
+    "no_intent": 5
+  },
+  "route_latency_ms": {
+    "samples": 28,
+    "avg": 174.11,
+    "p50": 116.07,
+    "p95": 468.84,
+    "max": 1296.05
+  },
+  "by_category": {
+    "boundary": {
+      "samples": 1,
+      "recall": 1.0,
+      "unauthorized_exposure": 0.0
+    },
+    "chat": {
+      "samples": 3,
+      "recall": 1.0,
+      "unauthorized_exposure": 0.0
+    },
+    "compute": {
+      "samples": 3,
+      "recall": 1.0,
+      "unauthorized_exposure": 0.0
+    },
+    "data": {
+      "samples": 4,
+      "recall": 1.0,
+      "unauthorized_exposure": 0.0
+    },
+    "document": {
+      "samples": 3,
+      "recall": 1.0,
+      "unauthorized_exposure": 0.0
+    },
+    "hard_negative": {
+      "samples": 3,
+      "recall": 1.0,
+      "unauthorized_exposure": 0.0
+    },
+    "knowledge": {
+      "samples": 4,
+      "recall": 1.0,
+      "unauthorized_exposure": 0.0
+    },
+    "multi_intent": {
+      "samples": 4,
+      "recall": 1.0,
+      "unauthorized_exposure": 0.0
+    },
+    "notification": {
+      "samples": 2,
+      "recall": 1.0,
+      "unauthorized_exposure": 0.0
+    },
+    "unauthorized": {
+      "samples": 1,
+      "recall": 1.0,
+      "unauthorized_exposure": 0.0
+    }
+  },
+  "failures": []
+}

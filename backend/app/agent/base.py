@@ -6,7 +6,6 @@ from langchain.agents import AgentExecutor, create_tool_calling_agent
 from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder
 from app.config import get_settings
 from app.agent.tools import ALL_TOOLS
-from app.agent.tools import select_tools
 from app.agent.memory import RedisConversationMemory
 from app.agent.llm_client import get_client
 
@@ -57,6 +56,7 @@ SYSTEM_PROMPT = """你是一个企业级 AI Agent 工作流助手，服务于企
 - 知识检索不到时，不要反复尝试，直接告知用户
 - 一次工具调用能解决的问题，不要分多次
 - 工具返回错误时，向用户说明具体原因并建议替代方案
+- 发送邮件等有副作用的操作需要用户在消息中明确确认（例如「确认发送」）后才能外发；未确认时不要声称已发送，先说明需要用户确认
 
 ## 回复模板
 

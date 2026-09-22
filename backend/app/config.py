@@ -13,6 +13,9 @@ class Settings(BaseSettings):
     model_name: str = "gpt-4o-mini"
     simple_chat_enabled: bool = True
     agent_max_exposed_tools: int = 3
+    tool_route_embedding_weight: float = 0.5
+    tool_route_embedding_timeout_seconds: float = 6.0
+    tool_route_min_confidence: float = 0.0
 
     # Embedding（可独立配置，支持硅基流动等不同服务商）
     embedding_api_key: str = ""

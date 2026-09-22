@@ -2,6 +2,7 @@
 import asyncio
 import hashlib
 import json
+import logging
 import time
 import uuid
 from typing import AsyncGenerator
@@ -12,11 +13,13 @@ from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
 from app.agent.base import SYSTEM_PROMPT, create_agent, get_llm
 from app.agent.guard import guard
 from app.agent.memory import RedisConversationMemory
-from app.agent.tools import TOOL_SPECS, select_tools
+from app.agent.tool_router import check_tool_authorized, route_tools
 from app.config import get_settings
 from app.database import get_sessionmaker
 from app.models.conversation import Conversation
 from app.models.message import Message
+
+logger = logging.getLogger(__name__)
 
 
 class ChatService:
@@ -143,7 +146,9 @@ class ChatService:
         durations = {
             name: round((value - start) * 1000, 2)
             for name, value in metrics.items()
-            if name != "request_received" and isinstance(value, float)
+            if name != "request_received"
+            and not name.startswith("route_")
+            and isinstance(value, float)
         }
         return {
             "request_id": metrics["request_id"],
@@ -158,6 +163,13 @@ class ChatService:
             "tool_categories": metrics.get("tool_categories", []),
             "tool_risks": metrics.get("tool_risks", []),
             "tool_definition_token_count": metrics.get("tool_definition_token_count", 0),
+            "route_layer": metrics.get("route_layer"),
+            "route_reason": metrics.get("route_reason"),
+            "route_domains": metrics.get("route_domains", []),
+            "route_confidence": metrics.get("route_confidence", 0.0),
+            "route_candidates": metrics.get("route_candidates", []),
+            "route_dropped": metrics.get("route_dropped", []),
+            "route_latency_ms": metrics.get("route_latency_ms"),
             "tool_call_trace": [
                 {
                     "name": call.get("name", "unknown"),
@@ -235,16 +247,32 @@ class ChatService:
             len(message["content"]) for message in history_messages
         )
 
-        tools = select_tools(question)
-        # 空列表表示没有工具意图；ALL_TOOLS 表示明确要求调用全部工具，必须走 Agent。
+        decision = await route_tools(question)
+        tools = decision.tools
+        # 空列表表示没有工具意图；显式「所有工具」逃生舱会返回全部允许工具，必须走 Agent。
         simple_chat = get_settings().simple_chat_enabled and not tools
         if simple_chat:
             tools = []
         metrics["tool_count"] = len(tools)
         metrics["tool_names"] = [getattr(tool, "name", "unknown") for tool in tools]
-        selected_specs = [spec for spec in TOOL_SPECS if spec.tool in tools]
-        metrics["tool_categories"] = sorted({spec.category for spec in selected_specs})
-        metrics["tool_risks"] = sorted({spec.risk for spec in selected_specs})
+        metrics["tool_categories"] = sorted({card.category for card in decision.cards})
+        metrics["tool_risks"] = sorted({card.risk for card in decision.cards})
+        metrics["route_layer"] = decision.layer
+        metrics["route_reason"] = decision.reason
+        metrics["route_domains"] = list(decision.domains)
+        metrics["route_confidence"] = round(decision.confidence, 4)
+        metrics["route_candidates"] = [
+            {
+                "name": scored.card.name,
+                "score": round(scored.score, 4),
+                "lexical": round(scored.lexical, 4),
+                "dense": round(scored.dense, 4),
+            }
+            for scored in decision.candidates
+        ]
+        metrics["route_dropped"] = [dict(item) for item in decision.dropped]
+        metrics["route_latency_ms"] = decision.latency_ms
+        allowed_names = {card.name for card in decision.cards}
         metrics["tool_definition_token_count"] = self.tool_token_count(tools)
         metrics["system_prompt_token_count"] = self.count_tokens(SYSTEM_PROMPT)
         metrics["history_token_count"] = self.count_tokens(
@@ -299,9 +327,16 @@ class ChatService:
                     elif kind == "on_tool_start":
                         metrics["tool_call_count"] = metrics.get("tool_call_count", 0) + 1
                         event_data = event.get("data", {})
+                        tool_name = event.get("name", "unknown")
+                        # 执行期兜底：候选集之外的工具名一律标记为越权，不当作正常调用。
+                        authorized = (not simple_chat) and check_tool_authorized(
+                            tool_name, allowed_names
+                        )
+                        if not authorized:
+                            logger.warning("unauthorized_tool_call", extra={"tool": tool_name})
                         call = {
-                            "name": event.get("name", "unknown"),
-                            "status": "running",
+                            "name": tool_name,
+                            "status": "running" if authorized else "unauthorized",
                             "started_at": time.perf_counter(),
                             "args_fingerprint": self._args_fingerprint(event_data.get("input", {})),
                         }
